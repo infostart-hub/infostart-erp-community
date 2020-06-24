@@ -1,7 +1,7 @@
 @chcp 65001
 
-@rem Сборка основной разработческой ИБ. по умолчанию в каталоге build/ib
-call vrunner init-dev --src src/cf %*
+@rem формирование файла конфигурации. для включения раскомментируйте код ниже
+REM call vrunner compile --src src/cf --out build/1cv8.cf %*
 
 @rem собрать внешние обработчики и отчеты в каталоге build
 @rem call vrunner compileepf src/epf/МояВнешняяОбработка build %*
@@ -9,6 +9,3 @@ call vrunner init-dev --src src/cf %*
 
 @rem собрать расширения конфигурации внутри ИБ
 @rem call vrunner compileext src/cfe/МоеРасширение МоеРасширение %*
-
-@rem Обновление в режиме Предприятия
-call vrunner run --command "ЗапуститьОбновлениеИнформационнойБазы;ЗавершитьРаботуСистемы;" --execute $runnerRoot\epf\ЗакрытьПредприятие.epf %*
