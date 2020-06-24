@@ -18,7 +18,8 @@ git config --global core.safecrlf true
 
 git config --global http.postBuffer 1048576000
 
+@echo
 @echo do it only for administrator mode
-git config --system core.longpaths true
 
-SET LC_ALL=C.UTF-8
+@rem git config --system core.longpaths true
+@rem SET LC_ALL=C.UTF-8
