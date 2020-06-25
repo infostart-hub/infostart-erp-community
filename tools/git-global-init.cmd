@@ -1,6 +1,7 @@
 @chcp 65001
 
 @rem for current user
+
 git config --global user.name "Artur Ayukhanov"
 git config --global user.email aartbear@gmail.com
 
@@ -9,6 +10,7 @@ git config --global user.email aartbear@gmail.com
 git config --global core.quotePath false
 
 @rem for Windows
+
 git config --global core.autocrlf true
 git config --global core.safecrlf true
 
