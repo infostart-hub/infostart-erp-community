@@ -4,4 +4,5 @@
 
 git config --system core.longpaths true
 
-SET LC_ALL=C.UTF-8
+@rem SET LC_ALL=C.UTF-8
+setx LC_ALL C.UTF-8 /M
