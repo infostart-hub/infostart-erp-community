@@ -39,7 +39,7 @@ git clone https://github.com/vanessa-opensource/vanessa-bootstrap.git .
 * подпишитесь на обновление шаблона
 
 ```Shell
-git remote rename origin bootstrap
+git remote add -f --no-tags -m --mirror bootstrap https://github.com/vanessa-opensource/vanessa-bootstrap.git
 ```
 
 * подключите репозиторий к своему git серверу (GitHub, Bitbucket, GitLab, etc)
