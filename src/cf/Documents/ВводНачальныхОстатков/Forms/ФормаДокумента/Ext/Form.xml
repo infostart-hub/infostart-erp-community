@@ -1,0 +1,2333 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<HorizontalSpacing>Half</HorizontalSpacing>
+	<VerticalSpacing>Half</VerticalSpacing>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="17">
+			<VerticalStretch>false</VerticalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="18"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаИнформация" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информация</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" bold="false" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Group>Vertical</Group>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаИнформацияРасширеннаяПодсказка" id="2"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаДатаНомер" id="979">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа дата номер</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа дата номер</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДатаНомерРасширеннаяПодсказка" id="980"/>
+							<ChildItems>
+								<InputField name="Номер" id="976">
+									<DataPath>Объект.Number</DataPath>
+									<ContextMenu name="НомерКонтекстноеМеню" id="977"/>
+									<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="978"/>
+								</InputField>
+								<InputField name="Дата" id="973">
+									<DataPath>Объект.Date</DataPath>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="974"/>
+									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="975"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Организация" id="3">
+							<DataPath>Объект.Организация</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<OpenButton>false</OpenButton>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="4"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="5"/>
+						</InputField>
+						<InputField name="Ответственный" id="6">
+							<DataPath>Объект.Ответственный</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<OpenButton>false</OpenButton>
+							<ContextMenu name="ОтветственныйКонтекстноеМеню" id="7"/>
+							<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="8"/>
+						</InputField>
+						<InputField name="РазделУчета" id="9">
+							<DataPath>Объект.РазделУчета</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="РазделУчетаКонтекстноеМеню" id="10"/>
+							<ExtendedTooltip name="РазделУчетаРасширеннаяПодсказка" id="11"/>
+							<Events>
+								<Event name="OnChange">АтрибутФормы_ПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКомментарий" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" bold="false" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<Group>Vertical</Group>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаКомментарийРасширеннаяПодсказка" id="13"/>
+					<ChildItems>
+						<InputField name="Комментарий" id="14">
+							<DataPath>Объект.Комментарий</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="16"/>
+						</InputField>
+						<UsualGroup name="Группа2" id="971">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="972"/>
+							<ChildItems>
+								<CheckBoxField name="ФормироватьПроводки" id="22">
+									<DataPath>Объект.ФормироватьПроводки</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ФормироватьПроводкиКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="ФормироватьПроводкиРасширеннаяПодсказка" id="24"/>
+								</CheckBoxField>
+								<CheckBoxField name="ОтражатьВУправленческомУчете" id="19">
+									<DataPath>Объект.ОтражатьВУправленческомУчете</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОтражатьВУправленческомУчетеКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="ОтражатьВУправленческомУчетеРасширеннаяПодсказка" id="21"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<Page name="СтраницаОС" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основные средства</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница ОС</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаОСРасширеннаяПодсказка" id="28"/>
+					<ChildItems>
+						<Table name="ОС" id="29">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ОС</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ОСКонтекстноеМеню" id="30"/>
+							<AutoCommandBar name="ОСКоманднаяПанель" id="31"/>
+							<ExtendedTooltip name="ОСРасширеннаяПодсказка" id="32"/>
+							<SearchStringAddition name="ОССтрокаПоиска" id="33">
+								<AdditionSource>
+									<Item>ОС</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОССтрокаПоискаКонтекстноеМеню" id="34"/>
+								<ExtendedTooltip name="ОССтрокаПоискаРасширеннаяПодсказка" id="35"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОССостояниеПросмотра" id="36">
+								<AdditionSource>
+									<Item>ОС</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОССостояниеПросмотраКонтекстноеМеню" id="37"/>
+								<ExtendedTooltip name="ОССостояниеПросмотраРасширеннаяПодсказка" id="38"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОСУправлениеПоиском" id="39">
+								<AdditionSource>
+									<Item>ОС</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОСУправлениеПоискомКонтекстноеМеню" id="40"/>
+								<ExtendedTooltip name="ОСУправлениеПоискомРасширеннаяПодсказка" id="41"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ОСВыбор</Event>
+								<Event name="BeforeAddRow">ОСПередНачаломДобавления</Event>
+								<Event name="BeforeRowChange">ОСПередНачаломИзменения</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ОСНомерСтроки" id="42">
+									<DataPath>Объект.ОС.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСНомерСтрокиКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="ОСНомерСтрокиРасширеннаяПодсказка" id="44"/>
+								</LabelField>
+								<ColumnGroup name="ОСГруппа1" id="216">
+									<ExtendedTooltip name="ОСГруппа1РасширеннаяПодсказка" id="217"/>
+									<ChildItems>
+										<InputField name="ОСИнвентарныйНомерРегл" id="69">
+											<DataPath>Объект.ОС.ИнвентарныйНомерРегл</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОСИнвентарныйНомерРеглКонтекстноеМеню" id="70"/>
+											<ExtendedTooltip name="ОСИнвентарныйНомерРеглРасширеннаяПодсказка" id="71"/>
+										</InputField>
+										<InputField name="ОСОсновноеСредство" id="129">
+											<DataPath>Объект.ОС.ОсновноеСредство</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОСОсновноеСредствоКонтекстноеМеню" id="130"/>
+											<ExtendedTooltip name="ОСОсновноеСредствоРасширеннаяПодсказка" id="131"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОСГруппа5" id="224">
+									<ExtendedTooltip name="ОСГруппа5РасширеннаяПодсказка" id="225"/>
+									<ChildItems>
+										<InputField name="ОСПодразделениеОрганизации" id="144">
+											<DataPath>Объект.ОС.ПодразделениеОрганизации</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подразделение</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОСПодразделениеОрганизацииКонтекстноеМеню" id="145"/>
+											<ExtendedTooltip name="ОСПодразделениеОрганизацииРасширеннаяПодсказка" id="146"/>
+										</InputField>
+										<InputField name="ОСМОЛРегл" id="84">
+											<DataPath>Объект.ОС.МОЛРегл</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОСМОЛРеглКонтекстноеМеню" id="85"/>
+											<ExtendedTooltip name="ОСМОЛРеглРасширеннаяПодсказка" id="86"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОСГруппа4" id="222">
+									<ExtendedTooltip name="ОСГруппа4РасширеннаяПодсказка" id="223"/>
+									<ChildItems>
+										<InputField name="ОССчетУчетаБУ" id="201">
+											<DataPath>Объект.ОС.СчетУчетаБУ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОССчетУчетаБУКонтекстноеМеню" id="202"/>
+											<ExtendedTooltip name="ОССчетУчетаБУРасширеннаяПодсказка" id="203"/>
+										</InputField>
+										<InputField name="ОССчетАмортизацииБУ" id="198">
+											<DataPath>Объект.ОС.СчетАмортизацииБУ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОССчетАмортизацииБУКонтекстноеМеню" id="199"/>
+											<ExtendedTooltip name="ОССчетАмортизацииБУРасширеннаяПодсказка" id="200"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОСГруппа2" id="218">
+									<ExtendedTooltip name="ОСГруппа2РасширеннаяПодсказка" id="219"/>
+									<ChildItems>
+										<InputField name="ОСПервоначальнаяСтоимостьБУ" id="135">
+											<DataPath>Объект.ОС.ПервоначальнаяСтоимостьБУ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОСПервоначальнаяСтоимостьБУКонтекстноеМеню" id="136"/>
+											<ExtendedTooltip name="ОСПервоначальнаяСтоимостьБУРасширеннаяПодсказка" id="137"/>
+										</InputField>
+										<InputField name="ОСПервоначальнаяСтоимостьНУ" id="138">
+											<DataPath>Объект.ОС.ПервоначальнаяСтоимостьНУ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОСПервоначальнаяСтоимостьНУКонтекстноеМеню" id="139"/>
+											<ExtendedTooltip name="ОСПервоначальнаяСтоимостьНУРасширеннаяПодсказка" id="140"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОСГруппа3" id="220">
+									<ExtendedTooltip name="ОСГруппа3РасширеннаяПодсказка" id="221"/>
+									<ChildItems>
+										<InputField name="ОСТекущаяСтоимостьБУ" id="204">
+											<DataPath>Объект.ОС.ТекущаяСтоимостьБУ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОСТекущаяСтоимостьБУКонтекстноеМеню" id="205"/>
+											<ExtendedTooltip name="ОСТекущаяСтоимостьБУРасширеннаяПодсказка" id="206"/>
+										</InputField>
+										<InputField name="ОСТекущаяСтоимостьНУ" id="207">
+											<DataPath>Объект.ОС.ТекущаяСтоимостьНУ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОСТекущаяСтоимостьНУКонтекстноеМеню" id="208"/>
+											<ExtendedTooltip name="ОСТекущаяСтоимостьНУРасширеннаяПодсказка" id="209"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОСГруппа6" id="226">
+									<ExtendedTooltip name="ОСГруппа6РасширеннаяПодсказка" id="227"/>
+									<ChildItems>
+										<InputField name="ОСНакопленнаяАмортизацияБУ" id="96">
+											<DataPath>Объект.ОС.НакопленнаяАмортизацияБУ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОСНакопленнаяАмортизацияБУКонтекстноеМеню" id="97"/>
+											<ExtendedTooltip name="ОСНакопленнаяАмортизацияБУРасширеннаяПодсказка" id="98"/>
+										</InputField>
+										<InputField name="ОСНакопленнаяАмортизацияНУ" id="99">
+											<DataPath>Объект.ОС.НакопленнаяАмортизацияНУ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОСНакопленнаяАмортизацияНУКонтекстноеМеню" id="100"/>
+											<ExtendedTooltip name="ОСНакопленнаяАмортизацияНУРасширеннаяПодсказка" id="101"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ОСАмортизацияДо2002НУ" id="45">
+									<DataPath>Объект.ОС.АмортизацияДо2002НУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСАмортизацияДо2002НУКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="ОСАмортизацияДо2002НУРасширеннаяПодсказка" id="47"/>
+								</InputField>
+								<CheckBoxField name="ОСВводВЭксплуатациюПриПринятииРегл" id="48">
+									<DataPath>Объект.ОС.ВводВЭксплуатациюПриПринятииРегл</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОСВводВЭксплуатациюПриПринятииРеглКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="ОСВводВЭксплуатациюПриПринятииРеглРасширеннаяПодсказка" id="50"/>
+								</CheckBoxField>
+								<InputField name="ОСВыработкаКоличествоБУ" id="51">
+									<DataPath>Объект.ОС.ВыработкаКоличествоБУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСВыработкаКоличествоБУКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="ОСВыработкаКоличествоБУРасширеннаяПодсказка" id="53"/>
+								</InputField>
+								<InputField name="ОСДатаВводаВЭксплуатациюРегл" id="54">
+									<DataPath>Объект.ОС.ДатаВводаВЭксплуатациюРегл</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСДатаВводаВЭксплуатациюРеглКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="ОСДатаВводаВЭксплуатациюРеглРасширеннаяПодсказка" id="56"/>
+								</InputField>
+								<InputField name="ОСДатаПереходаКРасчетуПоБазовойСтоимостиНУ" id="57">
+									<DataPath>Объект.ОС.ДатаПереходаКРасчетуПоБазовойСтоимостиНУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСДатаПереходаКРасчетуПоБазовойСтоимостиНУКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="ОСДатаПереходаКРасчетуПоБазовойСтоимостиНУРасширеннаяПодсказка" id="59"/>
+								</InputField>
+								<InputField name="ОСДатаПоследнейМодернизацииРегл" id="60">
+									<DataPath>Объект.ОС.ДатаПоследнейМодернизацииРегл</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСДатаПоследнейМодернизацииРеглКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="ОСДатаПоследнейМодернизацииРеглРасширеннаяПодсказка" id="62"/>
+								</InputField>
+								<InputField name="ОСДатаПринятияКУчетуРегл" id="63">
+									<DataPath>Объект.ОС.ДатаПринятияКУчетуРегл</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСДатаПринятияКУчетуРеглКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="ОСДатаПринятияКУчетуРеглРасширеннаяПодсказка" id="65"/>
+								</InputField>
+								<InputField name="ОСДатаПриобретенияУСН" id="66">
+									<DataPath>Объект.ОС.ДатаПриобретенияУСН</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСДатаПриобретенияУСНКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="ОСДатаПриобретенияУСНРасширеннаяПодсказка" id="68"/>
+								</InputField>
+								<InputField name="ОСКоэффициентАмортизацииБУ" id="72">
+									<DataPath>Объект.ОС.КоэффициентАмортизацииБУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСКоэффициентАмортизацииБУКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ОСКоэффициентАмортизацииБУРасширеннаяПодсказка" id="74"/>
+								</InputField>
+								<InputField name="ОСКоэффициентАмортизацииНУ" id="75">
+									<DataPath>Объект.ОС.КоэффициентАмортизацииНУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСКоэффициентАмортизацииНУКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="ОСКоэффициентАмортизацииНУРасширеннаяПодсказка" id="77"/>
+								</InputField>
+								<InputField name="ОСКоэффициентУскоренияБУ" id="78">
+									<DataPath>Объект.ОС.КоэффициентУскоренияБУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСКоэффициентУскоренияБУКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="ОСКоэффициентУскоренияБУРасширеннаяПодсказка" id="80"/>
+								</InputField>
+								<InputField name="ОСМетодНачисленияАмортизацииНУ" id="81">
+									<DataPath>Объект.ОС.МетодНачисленияАмортизацииНУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСМетодНачисленияАмортизацииНУКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="ОСМетодНачисленияАмортизацииНУРасширеннаяПодсказка" id="83"/>
+								</InputField>
+								<InputField name="ОСНазваниеДокументаВводаВЭксплуатациюРегл" id="87">
+									<DataPath>Объект.ОС.НазваниеДокументаВводаВЭксплуатациюРегл</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСНазваниеДокументаВводаВЭксплуатациюРеглКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="ОСНазваниеДокументаВводаВЭксплуатациюРеглРасширеннаяПодсказка" id="89"/>
+								</InputField>
+								<InputField name="ОСНазваниеДокументаМодернизацииРегл" id="90">
+									<DataPath>Объект.ОС.НазваниеДокументаМодернизацииРегл</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСНазваниеДокументаМодернизацииРеглКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="ОСНазваниеДокументаМодернизацииРеглРасширеннаяПодсказка" id="92"/>
+								</InputField>
+								<InputField name="ОСНазваниеДокументаПринятияКУчетуРегл" id="93">
+									<DataPath>Объект.ОС.НазваниеДокументаПринятияКУчетуРегл</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСНазваниеДокументаПринятияКУчетуРеглКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="ОСНазваниеДокументаПринятияКУчетуРеглРасширеннаяПодсказка" id="95"/>
+								</InputField>
+								<InputField name="ОСНакопленнаяАмортизацияПР" id="102">
+									<DataPath>Объект.ОС.НакопленнаяАмортизацияПР</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСНакопленнаяАмортизацияПРКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="ОСНакопленнаяАмортизацияПРРасширеннаяПодсказка" id="104"/>
+								</InputField>
+								<CheckBoxField name="ОСНачислятьАмортизациюБУ" id="105">
+									<DataPath>Объект.ОС.НачислятьАмортизациюБУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОСНачислятьАмортизациюБУКонтекстноеМеню" id="106"/>
+									<ExtendedTooltip name="ОСНачислятьАмортизациюБУРасширеннаяПодсказка" id="107"/>
+								</CheckBoxField>
+								<CheckBoxField name="ОСНачислятьАмортизациюНУ" id="108">
+									<DataPath>Объект.ОС.НачислятьАмортизациюНУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОСНачислятьАмортизациюНУКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="ОСНачислятьАмортизациюНУРасширеннаяПодсказка" id="110"/>
+								</CheckBoxField>
+								<CheckBoxField name="ОСНачислятьПоБазовойСтоимостиНУ" id="111">
+									<DataPath>Объект.ОС.НачислятьПоБазовойСтоимостиНУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОСНачислятьПоБазовойСтоимостиНУКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="ОСНачислятьПоБазовойСтоимостиНУРасширеннаяПодсказка" id="113"/>
+								</CheckBoxField>
+								<InputField name="ОСНомерДокументаВводаВЭксплуатациюРегл" id="114">
+									<DataPath>Объект.ОС.НомерДокументаВводаВЭксплуатациюРегл</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСНомерДокументаВводаВЭксплуатациюРеглКонтекстноеМеню" id="115"/>
+									<ExtendedTooltip name="ОСНомерДокументаВводаВЭксплуатациюРеглРасширеннаяПодсказка" id="116"/>
+								</InputField>
+								<InputField name="ОСНомерДокументаМодернизацииРегл" id="117">
+									<DataPath>Объект.ОС.НомерДокументаМодернизацииРегл</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСНомерДокументаМодернизацииРеглКонтекстноеМеню" id="118"/>
+									<ExtendedTooltip name="ОСНомерДокументаМодернизацииРеглРасширеннаяПодсказка" id="119"/>
+								</InputField>
+								<InputField name="ОСНомерДокументаПринятияКУчетуРегл" id="120">
+									<DataPath>Объект.ОС.НомерДокументаПринятияКУчетуРегл</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСНомерДокументаПринятияКУчетуРеглКонтекстноеМеню" id="121"/>
+									<ExtendedTooltip name="ОСНомерДокументаПринятияКУчетуРеглРасширеннаяПодсказка" id="122"/>
+								</InputField>
+								<InputField name="ОСОбъемПродукцииРаботБУ" id="123">
+									<DataPath>Объект.ОС.ОбъемПродукцииРаботБУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСОбъемПродукцииРаботБУКонтекстноеМеню" id="124"/>
+									<ExtendedTooltip name="ОСОбъемПродукцииРаботБУРасширеннаяПодсказка" id="125"/>
+								</InputField>
+								<InputField name="ОСОбъемПродукцииРаботДляВычисленияАмортизацииБУ" id="126">
+									<DataPath>Объект.ОС.ОбъемПродукцииРаботДляВычисленияАмортизацииБУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСОбъемПродукцииРаботДляВычисленияАмортизацииБУКонтекстноеМеню" id="127"/>
+									<ExtendedTooltip name="ОСОбъемПродукцииРаботДляВычисленияАмортизацииБУРасширеннаяПодсказка" id="128"/>
+								</InputField>
+								<InputField name="ОСПараметрВыработкиБУ" id="132">
+									<DataPath>Объект.ОС.ПараметрВыработкиБУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСПараметрВыработкиБУКонтекстноеМеню" id="133"/>
+									<ExtendedTooltip name="ОСПараметрВыработкиБУРасширеннаяПодсказка" id="134"/>
+								</InputField>
+								<InputField name="ОСПервоначальнаяСтоимостьУСН" id="141">
+									<DataPath>Объект.ОС.ПервоначальнаяСтоимостьУСН</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСПервоначальнаяСтоимостьУСНКонтекстноеМеню" id="142"/>
+									<ExtendedTooltip name="ОСПервоначальнаяСтоимостьУСНРасширеннаяПодсказка" id="143"/>
+								</InputField>
+								<InputField name="ОСПорядокВключенияСтоимостиВСоставРасходовНУ" id="147">
+									<DataPath>Объект.ОС.ПорядокВключенияСтоимостиВСоставРасходовНУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСПорядокВключенияСтоимостиВСоставРасходовНУКонтекстноеМеню" id="148"/>
+									<ExtendedTooltip name="ОСПорядокВключенияСтоимостиВСоставРасходовНУРасширеннаяПодсказка" id="149"/>
+								</InputField>
+								<InputField name="ОСПорядокПогашенияСтоимостиБУ" id="150">
+									<DataPath>Объект.ОС.ПорядокПогашенияСтоимостиБУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСПорядокПогашенияСтоимостиБУКонтекстноеМеню" id="151"/>
+									<ExtendedTooltip name="ОСПорядокПогашенияСтоимостиБУРасширеннаяПодсказка" id="152"/>
+								</InputField>
+								<InputField name="ОСРеквизитыДокументаОплаты" id="153">
+									<DataPath>Объект.ОС.РеквизитыДокументаОплаты</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСРеквизитыДокументаОплатыКонтекстноеМеню" id="154"/>
+									<ExtendedTooltip name="ОСРеквизитыДокументаОплатыРасширеннаяПодсказка" id="155"/>
+								</InputField>
+								<InputField name="ОССпециальныйКоэффициентНУ" id="156">
+									<DataPath>Объект.ОС.СпециальныйКоэффициентНУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОССпециальныйКоэффициентНУКонтекстноеМеню" id="157"/>
+									<ExtendedTooltip name="ОССпециальныйКоэффициентНУРасширеннаяПодсказка" id="158"/>
+								</InputField>
+								<InputField name="ОССпособНачисленияАмортизацииБУ" id="159">
+									<DataPath>Объект.ОС.СпособНачисленияАмортизацииБУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОССпособНачисленияАмортизацииБУКонтекстноеМеню" id="160"/>
+									<ExtendedTooltip name="ОССпособНачисленияАмортизацииБУРасширеннаяПодсказка" id="161"/>
+								</InputField>
+								<InputField name="ОССпособОтраженияРасходовПоАмортизацииБУ" id="162">
+									<DataPath>Объект.ОС.СпособОтраженияРасходовПоАмортизацииБУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОССпособОтраженияРасходовПоАмортизацииБУКонтекстноеМеню" id="163"/>
+									<ExtendedTooltip name="ОССпособОтраженияРасходовПоАмортизацииБУРасширеннаяПодсказка" id="164"/>
+								</InputField>
+								<InputField name="ОССрокИспользованияДляВычисленияАмортизацииБУ" id="165">
+									<DataPath>Объект.ОС.СрокИспользованияДляВычисленияАмортизацииБУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОССрокИспользованияДляВычисленияАмортизацииБУКонтекстноеМеню" id="166"/>
+									<ExtendedTooltip name="ОССрокИспользованияДляВычисленияАмортизацииБУРасширеннаяПодсказка" id="167"/>
+								</InputField>
+								<InputField name="ОССрокПолезногоИспользованияБУ" id="168">
+									<DataPath>Объект.ОС.СрокПолезногоИспользованияБУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОССрокПолезногоИспользованияБУКонтекстноеМеню" id="169"/>
+									<ExtendedTooltip name="ОССрокПолезногоИспользованияБУРасширеннаяПодсказка" id="170"/>
+								</InputField>
+								<InputField name="ОССрокПолезногоИспользованияНУ" id="171">
+									<DataPath>Объект.ОС.СрокПолезногоИспользованияНУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОССрокПолезногоИспользованияНУКонтекстноеМеню" id="172"/>
+									<ExtendedTooltip name="ОССрокПолезногоИспользованияНУРасширеннаяПодсказка" id="173"/>
+								</InputField>
+								<InputField name="ОССрокПолезногоИспользованияУСН" id="174">
+									<DataPath>Объект.ОС.СрокПолезногоИспользованияУСН</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОССрокПолезногоИспользованияУСНКонтекстноеМеню" id="175"/>
+									<ExtendedTooltip name="ОССрокПолезногоИспользованияУСНРасширеннаяПодсказка" id="176"/>
+								</InputField>
+								<InputField name="ОССтоимостьДляВычисленияАмортизацииБУ" id="177">
+									<DataPath>Объект.ОС.СтоимостьДляВычисленияАмортизацииБУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОССтоимостьДляВычисленияАмортизацииБУКонтекстноеМеню" id="178"/>
+									<ExtendedTooltip name="ОССтоимостьДляВычисленияАмортизацииБУРасширеннаяПодсказка" id="179"/>
+								</InputField>
+								<InputField name="ОССтоимостьДляВычисленияАмортизацииНУ" id="180">
+									<DataPath>Объект.ОС.СтоимостьДляВычисленияАмортизацииНУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОССтоимостьДляВычисленияАмортизацииНУКонтекстноеМеню" id="181"/>
+									<ExtendedTooltip name="ОССтоимостьДляВычисленияАмортизацииНУРасширеннаяПодсказка" id="182"/>
+								</InputField>
+								<InputField name="ОССтоимостьДо2002НУ" id="183">
+									<DataPath>Объект.ОС.СтоимостьДо2002НУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОССтоимостьДо2002НУКонтекстноеМеню" id="184"/>
+									<ExtendedTooltip name="ОССтоимостьДо2002НУРасширеннаяПодсказка" id="185"/>
+								</InputField>
+								<InputField name="ОССуммаНакопленнойАмортизацииНУ" id="186">
+									<DataPath>Объект.ОС.СуммаНакопленнойАмортизацииНУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОССуммаНакопленнойАмортизацииНУКонтекстноеМеню" id="187"/>
+									<ExtendedTooltip name="ОССуммаНакопленнойАмортизацииНУРасширеннаяПодсказка" id="188"/>
+								</InputField>
+								<InputField name="ОССуммаНачисленнойАмортизацииУСН" id="189">
+									<DataPath>Объект.ОС.СуммаНачисленнойАмортизацииУСН</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОССуммаНачисленнойАмортизацииУСНКонтекстноеМеню" id="190"/>
+									<ExtendedTooltip name="ОССуммаНачисленнойАмортизацииУСНРасширеннаяПодсказка" id="191"/>
+								</InputField>
+								<InputField name="ОССуммаПоследнейМодернизацииБУ" id="192">
+									<DataPath>Объект.ОС.СуммаПоследнейМодернизацииБУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОССуммаПоследнейМодернизацииБУКонтекстноеМеню" id="193"/>
+									<ExtendedTooltip name="ОССуммаПоследнейМодернизацииБУРасширеннаяПодсказка" id="194"/>
+								</InputField>
+								<InputField name="ОССуммаПоследнейМодернизацииНУ" id="195">
+									<DataPath>Объект.ОС.СуммаПоследнейМодернизацииНУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОССуммаПоследнейМодернизацииНУКонтекстноеМеню" id="196"/>
+									<ExtendedTooltip name="ОССуммаПоследнейМодернизацииНУРасширеннаяПодсказка" id="197"/>
+								</InputField>
+								<InputField name="ОСТекущаяСтоимостьПР" id="210">
+									<DataPath>Объект.ОС.ТекущаяСтоимостьПР</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСТекущаяСтоимостьПРКонтекстноеМеню" id="211"/>
+									<ExtendedTooltip name="ОСТекущаяСтоимостьПРРасширеннаяПодсказка" id="212"/>
+								</InputField>
+								<InputField name="ОСФактическийСрокИспользованияНУ" id="213">
+									<DataPath>Объект.ОС.ФактическийСрокИспользованияНУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОСФактическийСрокИспользованияНУКонтекстноеМеню" id="214"/>
+									<ExtendedTooltip name="ОСФактическийСрокИспользованияНУРасширеннаяПодсказка" id="215"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНМА" id="228">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нематериальные активы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница НМА</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаНМАРасширеннаяПодсказка" id="229"/>
+					<ChildItems>
+						<Table name="НМА" id="230">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.НМА</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НМАКонтекстноеМеню" id="231"/>
+							<AutoCommandBar name="НМАКоманднаяПанель" id="232"/>
+							<ExtendedTooltip name="НМАРасширеннаяПодсказка" id="233"/>
+							<SearchStringAddition name="НМАСтрокаПоиска" id="234">
+								<AdditionSource>
+									<Item>НМА</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НМАСтрокаПоискаКонтекстноеМеню" id="235"/>
+								<ExtendedTooltip name="НМАСтрокаПоискаРасширеннаяПодсказка" id="236"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НМАСостояниеПросмотра" id="237">
+								<AdditionSource>
+									<Item>НМА</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НМАСостояниеПросмотраКонтекстноеМеню" id="238"/>
+								<ExtendedTooltip name="НМАСостояниеПросмотраРасширеннаяПодсказка" id="239"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НМАУправлениеПоиском" id="240">
+								<AdditionSource>
+									<Item>НМА</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НМАУправлениеПоискомКонтекстноеМеню" id="241"/>
+								<ExtendedTooltip name="НМАУправлениеПоискомРасширеннаяПодсказка" id="242"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">НМАВыбор</Event>
+								<Event name="BeforeAddRow">НМАПередНачаломДобавления</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="НМАНомерСтроки" id="243">
+									<DataPath>Объект.НМА.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НМАНомерСтрокиКонтекстноеМеню" id="244"/>
+									<ExtendedTooltip name="НМАНомерСтрокиРасширеннаяПодсказка" id="245"/>
+								</LabelField>
+								<InputField name="НМАНематериальныйАктив" id="270">
+									<DataPath>Объект.НМА.НематериальныйАктив</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НМАНематериальныйАктивКонтекстноеМеню" id="271"/>
+									<ExtendedTooltip name="НМАНематериальныйАктивРасширеннаяПодсказка" id="272"/>
+								</InputField>
+								<InputField name="НМАСчетУчетаБУ" id="315">
+									<DataPath>Объект.НМА.СчетУчетаБУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НМАСчетУчетаБУКонтекстноеМеню" id="316"/>
+									<ExtendedTooltip name="НМАСчетУчетаБУРасширеннаяПодсказка" id="317"/>
+								</InputField>
+								<ColumnGroup name="НМАГруппа1" id="333">
+									<ExtendedTooltip name="НМАГруппа1РасширеннаяПодсказка" id="334"/>
+									<ChildItems>
+										<InputField name="НМАПервоначальнаяСтоимостьБУ" id="276">
+											<DataPath>Объект.НМА.ПервоначальнаяСтоимостьБУ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НМАПервоначальнаяСтоимостьБУКонтекстноеМеню" id="277"/>
+											<ExtendedTooltip name="НМАПервоначальнаяСтоимостьБУРасширеннаяПодсказка" id="278"/>
+										</InputField>
+										<InputField name="НМАПервоначальнаяСтоимостьНУ" id="279">
+											<DataPath>Объект.НМА.ПервоначальнаяСтоимостьНУ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НМАПервоначальнаяСтоимостьНУКонтекстноеМеню" id="280"/>
+											<ExtendedTooltip name="НМАПервоначальнаяСтоимостьНУРасширеннаяПодсказка" id="281"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="НМАГруппа2" id="335">
+									<ExtendedTooltip name="НМАГруппа2РасширеннаяПодсказка" id="336"/>
+									<ChildItems>
+										<InputField name="НМАНакопленнаяАмортизацияБУ" id="252">
+											<DataPath>Объект.НМА.НакопленнаяАмортизацияБУ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НМАНакопленнаяАмортизацияБУКонтекстноеМеню" id="253"/>
+											<ExtendedTooltip name="НМАНакопленнаяАмортизацияБУРасширеннаяПодсказка" id="254"/>
+										</InputField>
+										<InputField name="НМАНакопленнаяАмортизацияНУ" id="258">
+											<DataPath>Объект.НМА.НакопленнаяАмортизацияНУ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НМАНакопленнаяАмортизацияНУКонтекстноеМеню" id="259"/>
+											<ExtendedTooltip name="НМАНакопленнаяАмортизацияНУРасширеннаяПодсказка" id="260"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="НМАГруппа3" id="337">
+									<ExtendedTooltip name="НМАГруппа3РасширеннаяПодсказка" id="338"/>
+									<ChildItems>
+										<InputField name="НМАНакопленнаяАмортизацияВР" id="255">
+											<DataPath>Объект.НМА.НакопленнаяАмортизацияВР</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НМАНакопленнаяАмортизацияВРКонтекстноеМеню" id="256"/>
+											<ExtendedTooltip name="НМАНакопленнаяАмортизацияВРРасширеннаяПодсказка" id="257"/>
+										</InputField>
+										<InputField name="НМАНакопленнаяАмортизацияПР" id="261">
+											<DataPath>Объект.НМА.НакопленнаяАмортизацияПР</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НМАНакопленнаяАмортизацияПРКонтекстноеМеню" id="262"/>
+											<ExtendedTooltip name="НМАНакопленнаяАмортизацияПРРасширеннаяПодсказка" id="263"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="НМАДатаПриобретения" id="249">
+									<DataPath>Объект.НМА.ДатаПриобретения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НМАДатаПриобретенияКонтекстноеМеню" id="250"/>
+									<ExtendedTooltip name="НМАДатаПриобретенияРасширеннаяПодсказка" id="251"/>
+								</InputField>
+								<CheckBoxField name="НМАНачислятьАмортизациюБУ" id="264">
+									<DataPath>Объект.НМА.НачислятьАмортизациюБУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НМАНачислятьАмортизациюБУКонтекстноеМеню" id="265"/>
+									<ExtendedTooltip name="НМАНачислятьАмортизациюБУРасширеннаяПодсказка" id="266"/>
+								</CheckBoxField>
+								<CheckBoxField name="НМАНачислятьАмортизациюНУ" id="267">
+									<DataPath>Объект.НМА.НачислятьАмортизациюНУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НМАНачислятьАмортизациюНУКонтекстноеМеню" id="268"/>
+									<ExtendedTooltip name="НМАНачислятьАмортизациюНУРасширеннаяПодсказка" id="269"/>
+								</CheckBoxField>
+								<InputField name="НМАОбъемПродукцииРаботДляВычисленияАмортизации" id="273">
+									<DataPath>Объект.НМА.ОбъемПродукцииРаботДляВычисленияАмортизации</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НМАОбъемПродукцииРаботДляВычисленияАмортизацииКонтекстноеМеню" id="274"/>
+									<ExtendedTooltip name="НМАОбъемПродукцииРаботДляВычисленияАмортизацииРасширеннаяПодсказка" id="275"/>
+								</InputField>
+								<InputField name="НМАПервоначальнаяСтоимостьУСН" id="282">
+									<DataPath>Объект.НМА.ПервоначальнаяСтоимостьУСН</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НМАПервоначальнаяСтоимостьУСНКонтекстноеМеню" id="283"/>
+									<ExtendedTooltip name="НМАПервоначальнаяСтоимостьУСНРасширеннаяПодсказка" id="284"/>
+								</InputField>
+								<InputField name="НМАРеквизитыДокументаОплаты" id="285">
+									<DataPath>Объект.НМА.РеквизитыДокументаОплаты</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НМАРеквизитыДокументаОплатыКонтекстноеМеню" id="286"/>
+									<ExtendedTooltip name="НМАРеквизитыДокументаОплатыРасширеннаяПодсказка" id="287"/>
+								</InputField>
+								<InputField name="НМАСпециальныйКоэффициентНУ" id="288">
+									<DataPath>Объект.НМА.СпециальныйКоэффициентНУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НМАСпециальныйКоэффициентНУКонтекстноеМеню" id="289"/>
+									<ExtendedTooltip name="НМАСпециальныйКоэффициентНУРасширеннаяПодсказка" id="290"/>
+								</InputField>
+								<InputField name="НМАСпособНачисленияАмортизацииБУ" id="291">
+									<DataPath>Объект.НМА.СпособНачисленияАмортизацииБУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НМАСпособНачисленияАмортизацииБУКонтекстноеМеню" id="292"/>
+									<ExtendedTooltip name="НМАСпособНачисленияАмортизацииБУРасширеннаяПодсказка" id="293"/>
+								</InputField>
+								<InputField name="НМАМетодНачисленияАмортизацииНУ" id="294">
+									<DataPath>Объект.НМА.МетодНачисленияАмортизацииНУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НМАМетодНачисленияАмортизацииНУКонтекстноеМеню" id="295"/>
+									<ExtendedTooltip name="НМАМетодНачисленияАмортизацииНУРасширеннаяПодсказка" id="296"/>
+								</InputField>
+								<InputField name="НМАВидОбъектаУчета" id="246">
+									<DataPath>Объект.НМА.ВидОбъектаУчета</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НМАВидОбъектаУчетаКонтекстноеМеню" id="247"/>
+									<ExtendedTooltip name="НМАВидОбъектаУчетаРасширеннаяПодсказка" id="248"/>
+								</InputField>
+								<InputField name="НМАСпособОтраженияРасходов" id="297">
+									<DataPath>Объект.НМА.СпособОтраженияРасходов</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НМАСпособОтраженияРасходовКонтекстноеМеню" id="298"/>
+									<ExtendedTooltip name="НМАСпособОтраженияРасходовРасширеннаяПодсказка" id="299"/>
+								</InputField>
+								<InputField name="НМАСрокПолезногоИспользованияБУ" id="300">
+									<DataPath>Объект.НМА.СрокПолезногоИспользованияБУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НМАСрокПолезногоИспользованияБУКонтекстноеМеню" id="301"/>
+									<ExtendedTooltip name="НМАСрокПолезногоИспользованияБУРасширеннаяПодсказка" id="302"/>
+								</InputField>
+								<InputField name="НМАСрокПолезногоИспользованияНУ" id="303">
+									<DataPath>Объект.НМА.СрокПолезногоИспользованияНУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НМАСрокПолезногоИспользованияНУКонтекстноеМеню" id="304"/>
+									<ExtendedTooltip name="НМАСрокПолезногоИспользованияНУРасширеннаяПодсказка" id="305"/>
+								</InputField>
+								<InputField name="НМАСрокПолезногоИспользованияУСН" id="306">
+									<DataPath>Объект.НМА.СрокПолезногоИспользованияУСН</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НМАСрокПолезногоИспользованияУСНКонтекстноеМеню" id="307"/>
+									<ExtendedTooltip name="НМАСрокПолезногоИспользованияУСНРасширеннаяПодсказка" id="308"/>
+								</InputField>
+								<InputField name="НМАНакопленнаяАмортизацияУСН" id="309">
+									<DataPath>Объект.НМА.НакопленнаяАмортизацияУСН</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НМАНакопленнаяАмортизацияУСНКонтекстноеМеню" id="310"/>
+									<ExtendedTooltip name="НМАНакопленнаяАмортизацияУСНРасширеннаяПодсказка" id="311"/>
+								</InputField>
+								<InputField name="НМАСчетНачисленияАмортизацииБУ" id="312">
+									<DataPath>Объект.НМА.СчетНачисленияАмортизацииБУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НМАСчетНачисленияАмортизацииБУКонтекстноеМеню" id="313"/>
+									<ExtendedTooltip name="НМАСчетНачисленияАмортизацииБУРасширеннаяПодсказка" id="314"/>
+								</InputField>
+								<InputField name="НМАТекущаяСтоимостьБУ" id="318">
+									<DataPath>Объект.НМА.ТекущаяСтоимостьБУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НМАТекущаяСтоимостьБУКонтекстноеМеню" id="319"/>
+									<ExtendedTooltip name="НМАТекущаяСтоимостьБУРасширеннаяПодсказка" id="320"/>
+								</InputField>
+								<InputField name="НМАТекущаяСтоимостьВР" id="321">
+									<DataPath>Объект.НМА.ТекущаяСтоимостьВР</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НМАТекущаяСтоимостьВРКонтекстноеМеню" id="322"/>
+									<ExtendedTooltip name="НМАТекущаяСтоимостьВРРасширеннаяПодсказка" id="323"/>
+								</InputField>
+								<InputField name="НМАТекущаяСтоимостьНУ" id="324">
+									<DataPath>Объект.НМА.ТекущаяСтоимостьНУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НМАТекущаяСтоимостьНУКонтекстноеМеню" id="325"/>
+									<ExtendedTooltip name="НМАТекущаяСтоимостьНУРасширеннаяПодсказка" id="326"/>
+								</InputField>
+								<InputField name="НМАТекущаяСтоимостьПР" id="327">
+									<DataPath>Объект.НМА.ТекущаяСтоимостьПР</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НМАТекущаяСтоимостьПРКонтекстноеМеню" id="328"/>
+									<ExtendedTooltip name="НМАТекущаяСтоимостьПРРасширеннаяПодсказка" id="329"/>
+								</InputField>
+								<InputField name="НМАДатаПринятияКУчетуРегл" id="330">
+									<DataPath>Объект.НМА.ДатаПринятияКУчетуРегл</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НМАДатаПринятияКУчетуРеглКонтекстноеМеню" id="331"/>
+									<ExtendedTooltip name="НМАДатаПринятияКУчетуРеглРасширеннаяПодсказка" id="332"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаРасчетыСКонтрагентами" id="339">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расчеты с контрагентами</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница расчеты с контрагентами</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаРасчетыСКонтрагентамиРасширеннаяПодсказка" id="340"/>
+					<ChildItems>
+						<Table name="РасчетыСКонтрагентами" id="341">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.РасчетыСКонтрагентами</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РасчетыСКонтрагентамиКонтекстноеМеню" id="342"/>
+							<AutoCommandBar name="РасчетыСКонтрагентамиКоманднаяПанель" id="343"/>
+							<ExtendedTooltip name="РасчетыСКонтрагентамиРасширеннаяПодсказка" id="344"/>
+							<SearchStringAddition name="РасчетыСКонтрагентамиСтрокаПоиска" id="345">
+								<AdditionSource>
+									<Item>РасчетыСКонтрагентами</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РасчетыСКонтрагентамиСтрокаПоискаКонтекстноеМеню" id="346"/>
+								<ExtendedTooltip name="РасчетыСКонтрагентамиСтрокаПоискаРасширеннаяПодсказка" id="347"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РасчетыСКонтрагентамиСостояниеПросмотра" id="348">
+								<AdditionSource>
+									<Item>РасчетыСКонтрагентами</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РасчетыСКонтрагентамиСостояниеПросмотраКонтекстноеМеню" id="349"/>
+								<ExtendedTooltip name="РасчетыСКонтрагентамиСостояниеПросмотраРасширеннаяПодсказка" id="350"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РасчетыСКонтрагентамиУправлениеПоиском" id="351">
+								<AdditionSource>
+									<Item>РасчетыСКонтрагентами</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РасчетыСКонтрагентамиУправлениеПоискомКонтекстноеМеню" id="352"/>
+								<ExtendedTooltip name="РасчетыСКонтрагентамиУправлениеПоискомРасширеннаяПодсказка" id="353"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="РасчетыСКонтрагентамиНомерСтроки" id="354">
+									<DataPath>Объект.РасчетыСКонтрагентами.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетыСКонтрагентамиНомерСтрокиКонтекстноеМеню" id="355"/>
+									<ExtendedTooltip name="РасчетыСКонтрагентамиНомерСтрокиРасширеннаяПодсказка" id="356"/>
+								</LabelField>
+								<CheckBoxField name="РасчетыСКонтрагентамиАванс" id="390">
+									<DataPath>Объект.РасчетыСКонтрагентами.Аванс</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РасчетыСКонтрагентамиАвансКонтекстноеМеню" id="391"/>
+									<ExtendedTooltip name="РасчетыСКонтрагентамиАвансРасширеннаяПодсказка" id="392"/>
+								</CheckBoxField>
+								<InputField name="РасчетыСКонтрагентамиСчетУчета" id="384">
+									<DataPath>Объект.РасчетыСКонтрагентами.СчетУчета</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетыСКонтрагентамиСчетУчетаКонтекстноеМеню" id="385"/>
+									<ExtendedTooltip name="РасчетыСКонтрагентамиСчетУчетаРасширеннаяПодсказка" id="386"/>
+								</InputField>
+								<ColumnGroup name="РасчетыСКонтрагентамиГруппа1" id="408">
+									<ExtendedTooltip name="РасчетыСКонтрагентамиГруппа1РасширеннаяПодсказка" id="409"/>
+									<ChildItems>
+										<InputField name="РасчетыСКонтрагентамиКонтрагент" id="369">
+											<DataPath>Объект.РасчетыСКонтрагентами.Контрагент</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РасчетыСКонтрагентамиКонтрагентКонтекстноеМеню" id="370"/>
+											<ExtendedTooltip name="РасчетыСКонтрагентамиКонтрагентРасширеннаяПодсказка" id="371"/>
+										</InputField>
+										<InputField name="РасчетыСКонтрагентамиДоговорКонтрагента" id="360">
+											<DataPath>Объект.РасчетыСКонтрагентами.ДоговорКонтрагента</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РасчетыСКонтрагентамиДоговорКонтрагентаКонтекстноеМеню" id="361"/>
+											<ExtendedTooltip name="РасчетыСКонтрагентамиДоговорКонтрагентаРасширеннаяПодсказка" id="362"/>
+											<Events>
+												<Event name="OnChange">тпРасчетыСКонтрагентами_Колонка_ПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="РасчетыСКонтрагентамиДокумент" id="366">
+											<DataPath>Объект.РасчетыСКонтрагентами.Документ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РасчетыСКонтрагентамиДокументКонтекстноеМеню" id="367"/>
+											<ExtendedTooltip name="РасчетыСКонтрагентамиДокументРасширеннаяПодсказка" id="368"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="РасчетыСКонтрагентамиТипДоговораКонтрагента" id="363">
+									<DataPath>Объект.РасчетыСКонтрагентами.ТипДоговораКонтрагента</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетыСКонтрагентамиТипДоговораКонтрагентаКонтекстноеМеню" id="364"/>
+									<ExtendedTooltip name="РасчетыСКонтрагентамиТипДоговораКонтрагентаРасширеннаяПодсказка" id="365"/>
+								</InputField>
+								<InputField name="РасчетыСКонтрагентамиСумма" id="381">
+									<DataPath>Объект.РасчетыСКонтрагентами.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетыСКонтрагентамиСуммаКонтекстноеМеню" id="382"/>
+									<ExtendedTooltip name="РасчетыСКонтрагентамиСуммаРасширеннаяПодсказка" id="383"/>
+								</InputField>
+								<InputField name="РасчетыСКонтрагентамиСуммаКт" id="399">
+									<DataPath>Объект.РасчетыСКонтрагентами.СуммаКт</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетыСКонтрагентамиСуммаКтКонтекстноеМеню" id="400"/>
+									<ExtendedTooltip name="РасчетыСКонтрагентамиСуммаКтРасширеннаяПодсказка" id="401"/>
+								</InputField>
+								<ColumnGroup name="РасчетыСКонтрагентамиГруппа2" id="410">
+									<ExtendedTooltip name="РасчетыСКонтрагентамиГруппа2РасширеннаяПодсказка" id="411"/>
+									<ChildItems>
+										<InputField name="РасчетыСКонтрагентамиВалюта" id="357">
+											<DataPath>Объект.РасчетыСКонтрагентами.Валюта</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РасчетыСКонтрагентамиВалютаКонтекстноеМеню" id="358"/>
+											<ExtendedTooltip name="РасчетыСКонтрагентамиВалютаРасширеннаяПодсказка" id="359"/>
+										</InputField>
+										<InputField name="РасчетыСКонтрагентамиВалютнаяСумма" id="378">
+											<DataPath>Объект.РасчетыСКонтрагентами.ВалютнаяСумма</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РасчетыСКонтрагентамиВалютнаяСуммаКонтекстноеМеню" id="379"/>
+											<ExtendedTooltip name="РасчетыСКонтрагентамиВалютнаяСуммаРасширеннаяПодсказка" id="380"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="РасчетыСКонтрагентамиКратностьВзаиморасчетов" id="372">
+									<DataPath>Объект.РасчетыСКонтрагентами.КратностьВзаиморасчетов</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетыСКонтрагентамиКратностьВзаиморасчетовКонтекстноеМеню" id="373"/>
+									<ExtendedTooltip name="РасчетыСКонтрагентамиКратностьВзаиморасчетовРасширеннаяПодсказка" id="374"/>
+								</InputField>
+								<InputField name="РасчетыСКонтрагентамиКурсВзаиморасчетов" id="375">
+									<DataPath>Объект.РасчетыСКонтрагентами.КурсВзаиморасчетов</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетыСКонтрагентамиКурсВзаиморасчетовКонтекстноеМеню" id="376"/>
+									<ExtendedTooltip name="РасчетыСКонтрагентамиКурсВзаиморасчетовРасширеннаяПодсказка" id="377"/>
+								</InputField>
+								<InputField name="РасчетыСКонтрагентамиСуммаНДС" id="387">
+									<DataPath>Объект.РасчетыСКонтрагентами.СуммаНДС</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетыСКонтрагентамиСуммаНДСКонтекстноеМеню" id="388"/>
+									<ExtendedTooltip name="РасчетыСКонтрагентамиСуммаНДСРасширеннаяПодсказка" id="389"/>
+								</InputField>
+								<InputField name="РасчетыСКонтрагентамиДоходЕНВД" id="393">
+									<DataPath>Объект.РасчетыСКонтрагентами.ДоходЕНВД</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетыСКонтрагентамиДоходЕНВДКонтекстноеМеню" id="394"/>
+									<ExtendedTooltip name="РасчетыСКонтрагентамиДоходЕНВДРасширеннаяПодсказка" id="395"/>
+								</InputField>
+								<InputField name="РасчетыСКонтрагентамиДоходКомитента" id="396">
+									<DataPath>Объект.РасчетыСКонтрагентами.ДоходКомитента</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетыСКонтрагентамиДоходКомитентаКонтекстноеМеню" id="397"/>
+									<ExtendedTooltip name="РасчетыСКонтрагентамиДоходКомитентаРасширеннаяПодсказка" id="398"/>
+								</InputField>
+								<InputField name="РасчетыСКонтрагентамиСуммаНУ" id="402">
+									<DataPath>Объект.РасчетыСКонтрагентами.СуммаНУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетыСКонтрагентамиСуммаНУКонтекстноеМеню" id="403"/>
+									<ExtendedTooltip name="РасчетыСКонтрагентамиСуммаНУРасширеннаяПодсказка" id="404"/>
+								</InputField>
+								<InputField name="РасчетыСКонтрагентамиСделка" id="405">
+									<DataPath>Объект.РасчетыСКонтрагентами.Сделка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетыСКонтрагентамиСделкаКонтекстноеМеню" id="406"/>
+									<ExtendedTooltip name="РасчетыСКонтрагентамиСделкаРасширеннаяПодсказка" id="407"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПодотчетныеЛица" id="412">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подотчетные лица</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница подотчетные лица</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаПодотчетныеЛицаРасширеннаяПодсказка" id="413"/>
+					<ChildItems>
+						<Table name="РасчетыСПодотчетнымиЛицами" id="414">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.РасчетыСПодотчетнымиЛицами</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РасчетыСПодотчетнымиЛицамиКонтекстноеМеню" id="415"/>
+							<AutoCommandBar name="РасчетыСПодотчетнымиЛицамиКоманднаяПанель" id="416"/>
+							<ExtendedTooltip name="РасчетыСПодотчетнымиЛицамиРасширеннаяПодсказка" id="417"/>
+							<SearchStringAddition name="РасчетыСПодотчетнымиЛицамиСтрокаПоиска" id="418">
+								<AdditionSource>
+									<Item>РасчетыСПодотчетнымиЛицами</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РасчетыСПодотчетнымиЛицамиСтрокаПоискаКонтекстноеМеню" id="419"/>
+								<ExtendedTooltip name="РасчетыСПодотчетнымиЛицамиСтрокаПоискаРасширеннаяПодсказка" id="420"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РасчетыСПодотчетнымиЛицамиСостояниеПросмотра" id="421">
+								<AdditionSource>
+									<Item>РасчетыСПодотчетнымиЛицами</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РасчетыСПодотчетнымиЛицамиСостояниеПросмотраКонтекстноеМеню" id="422"/>
+								<ExtendedTooltip name="РасчетыСПодотчетнымиЛицамиСостояниеПросмотраРасширеннаяПодсказка" id="423"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РасчетыСПодотчетнымиЛицамиУправлениеПоиском" id="424">
+								<AdditionSource>
+									<Item>РасчетыСПодотчетнымиЛицами</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РасчетыСПодотчетнымиЛицамиУправлениеПоискомКонтекстноеМеню" id="425"/>
+								<ExtendedTooltip name="РасчетыСПодотчетнымиЛицамиУправлениеПоискомРасширеннаяПодсказка" id="426"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="РасчетыСПодотчетнымиЛицамиНомерСтроки" id="427">
+									<DataPath>Объект.РасчетыСПодотчетнымиЛицами.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетыСПодотчетнымиЛицамиНомерСтрокиКонтекстноеМеню" id="428"/>
+									<ExtendedTooltip name="РасчетыСПодотчетнымиЛицамиНомерСтрокиРасширеннаяПодсказка" id="429"/>
+								</LabelField>
+								<InputField name="РасчетыСПодотчетнымиЛицамиСчетУчета" id="430">
+									<DataPath>Объект.РасчетыСПодотчетнымиЛицами.СчетУчета</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетыСПодотчетнымиЛицамиСчетУчетаКонтекстноеМеню" id="431"/>
+									<ExtendedTooltip name="РасчетыСПодотчетнымиЛицамиСчетУчетаРасширеннаяПодсказка" id="432"/>
+								</InputField>
+								<InputField name="РасчетыСПодотчетнымиЛицамиРаботникОрганизации" id="433">
+									<DataPath>Объект.РасчетыСПодотчетнымиЛицами.РаботникОрганизации</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетыСПодотчетнымиЛицамиРаботникОрганизацииКонтекстноеМеню" id="434"/>
+									<ExtendedTooltip name="РасчетыСПодотчетнымиЛицамиРаботникОрганизацииРасширеннаяПодсказка" id="435"/>
+								</InputField>
+								<InputField name="РасчетыСПодотчетнымиЛицамиСумма" id="436">
+									<DataPath>Объект.РасчетыСПодотчетнымиЛицами.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетыСПодотчетнымиЛицамиСуммаКонтекстноеМеню" id="437"/>
+									<ExtendedTooltip name="РасчетыСПодотчетнымиЛицамиСуммаРасширеннаяПодсказка" id="438"/>
+								</InputField>
+								<InputField name="РасчетыСПодотчетнымиЛицамиВалюта" id="439">
+									<DataPath>Объект.РасчетыСПодотчетнымиЛицами.Валюта</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетыСПодотчетнымиЛицамиВалютаКонтекстноеМеню" id="440"/>
+									<ExtendedTooltip name="РасчетыСПодотчетнымиЛицамиВалютаРасширеннаяПодсказка" id="441"/>
+								</InputField>
+								<InputField name="РасчетыСПодотчетнымиЛицамиВалютнаяСумма" id="442">
+									<DataPath>Объект.РасчетыСПодотчетнымиЛицами.ВалютнаяСумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетыСПодотчетнымиЛицамиВалютнаяСуммаКонтекстноеМеню" id="443"/>
+									<ExtendedTooltip name="РасчетыСПодотчетнымиЛицамиВалютнаяСуммаРасширеннаяПодсказка" id="444"/>
+								</InputField>
+								<InputField name="РасчетыСПодотчетнымиЛицамиРасчетныйДокумент" id="445">
+									<DataPath>Объект.РасчетыСПодотчетнымиЛицами.РасчетныйДокумент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетыСПодотчетнымиЛицамиРасчетныйДокументКонтекстноеМеню" id="446"/>
+									<ExtendedTooltip name="РасчетыСПодотчетнымиЛицамиРасчетныйДокументРасширеннаяПодсказка" id="447"/>
+								</InputField>
+								<InputField name="РасчетыСПодотчетнымиЛицамиСуммаКт" id="448">
+									<DataPath>Объект.РасчетыСПодотчетнымиЛицами.СуммаКт</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасчетыСПодотчетнымиЛицамиСуммаКтКонтекстноеМеню" id="449"/>
+									<ExtendedTooltip name="РасчетыСПодотчетнымиЛицамиСуммаКтРасширеннаяПодсказка" id="450"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПрочиеСчета" id="451">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочие счета</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница прочие счета</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаПрочиеСчетаРасширеннаяПодсказка" id="452"/>
+					<ChildItems>
+						<Table name="БухСправка" id="453">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.БухСправка</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="БухСправкаКонтекстноеМеню" id="454"/>
+							<AutoCommandBar name="БухСправкаКоманднаяПанель" id="455"/>
+							<ExtendedTooltip name="БухСправкаРасширеннаяПодсказка" id="456"/>
+							<SearchStringAddition name="БухСправкаСтрокаПоиска" id="457">
+								<AdditionSource>
+									<Item>БухСправка</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="БухСправкаСтрокаПоискаКонтекстноеМеню" id="458"/>
+								<ExtendedTooltip name="БухСправкаСтрокаПоискаРасширеннаяПодсказка" id="459"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="БухСправкаСостояниеПросмотра" id="460">
+								<AdditionSource>
+									<Item>БухСправка</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="БухСправкаСостояниеПросмотраКонтекстноеМеню" id="461"/>
+								<ExtendedTooltip name="БухСправкаСостояниеПросмотраРасширеннаяПодсказка" id="462"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="БухСправкаУправлениеПоиском" id="463">
+								<AdditionSource>
+									<Item>БухСправка</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="БухСправкаУправлениеПоискомКонтекстноеМеню" id="464"/>
+								<ExtendedTooltip name="БухСправкаУправлениеПоискомРасширеннаяПодсказка" id="465"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="БухСправкаНомерСтроки" id="466">
+									<DataPath>Объект.БухСправка.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="БухСправкаНомерСтрокиКонтекстноеМеню" id="467"/>
+									<ExtendedTooltip name="БухСправкаНомерСтрокиРасширеннаяПодсказка" id="468"/>
+								</LabelField>
+								<InputField name="БухСправкаСчетУчета" id="469">
+									<DataPath>Объект.БухСправка.СчетУчета</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="БухСправкаСчетУчетаКонтекстноеМеню" id="470"/>
+									<ExtendedTooltip name="БухСправкаСчетУчетаРасширеннаяПодсказка" id="471"/>
+									<Events>
+										<Event name="OnChange">БухСправкаСчетУчетаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<ColumnGroup name="БухСправкаГруппа1" id="532">
+									<ExtendedTooltip name="БухСправкаГруппа1РасширеннаяПодсказка" id="533"/>
+									<ChildItems>
+										<InputField name="БухСправкаСубконто1" id="472">
+											<DataPath>Объект.БухСправка.Субконто1</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="БухСправкаСубконто1КонтекстноеМеню" id="473"/>
+											<ExtendedTooltip name="БухСправкаСубконто1РасширеннаяПодсказка" id="474"/>
+										</InputField>
+										<InputField name="БухСправкаСубконто2" id="475">
+											<DataPath>Объект.БухСправка.Субконто2</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="БухСправкаСубконто2КонтекстноеМеню" id="476"/>
+											<ExtendedTooltip name="БухСправкаСубконто2РасширеннаяПодсказка" id="477"/>
+										</InputField>
+										<InputField name="БухСправкаСубконто3" id="478">
+											<DataPath>Объект.БухСправка.Субконто3</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="БухСправкаСубконто3КонтекстноеМеню" id="479"/>
+											<ExtendedTooltip name="БухСправкаСубконто3РасширеннаяПодсказка" id="480"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="БухСправкаКоличество" id="481">
+									<DataPath>Объект.БухСправка.Количество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="БухСправкаКоличествоКонтекстноеМеню" id="482"/>
+									<ExtendedTooltip name="БухСправкаКоличествоРасширеннаяПодсказка" id="483"/>
+								</InputField>
+								<ColumnGroup name="БухСправкаГруппа2" id="534">
+									<ExtendedTooltip name="БухСправкаГруппа2РасширеннаяПодсказка" id="535"/>
+									<ChildItems>
+										<InputField name="БухСправкаСумма" id="484">
+											<DataPath>Объект.БухСправка.Сумма</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="БухСправкаСуммаКонтекстноеМеню" id="485"/>
+											<ExtendedTooltip name="БухСправкаСуммаРасширеннаяПодсказка" id="486"/>
+										</InputField>
+										<InputField name="БухСправкаСуммаКт" id="502">
+											<DataPath>Объект.БухСправка.СуммаКт</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="БухСправкаСуммаКтКонтекстноеМеню" id="503"/>
+											<ExtendedTooltip name="БухСправкаСуммаКтРасширеннаяПодсказка" id="504"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="БухСправкаГруппа4" id="538">
+									<ExtendedTooltip name="БухСправкаГруппа4РасширеннаяПодсказка" id="539"/>
+									<ChildItems>
+										<InputField name="БухСправкаВалюта" id="487">
+											<DataPath>Объект.БухСправка.Валюта</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="БухСправкаВалютаКонтекстноеМеню" id="488"/>
+											<ExtendedTooltip name="БухСправкаВалютаРасширеннаяПодсказка" id="489"/>
+										</InputField>
+										<InputField name="БухСправкаВалютнаяСумма" id="490">
+											<DataPath>Объект.БухСправка.ВалютнаяСумма</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="БухСправкаВалютнаяСуммаКонтекстноеМеню" id="491"/>
+											<ExtendedTooltip name="БухСправкаВалютнаяСуммаРасширеннаяПодсказка" id="492"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="БухСправкаГруппа3" id="536">
+									<ExtendedTooltip name="БухСправкаГруппа3РасширеннаяПодсказка" id="537"/>
+									<ChildItems>
+										<InputField name="БухСправкаСуммаНУ" id="493">
+											<DataPath>Объект.БухСправка.СуммаНУ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="БухСправкаСуммаНУКонтекстноеМеню" id="494"/>
+											<ExtendedTooltip name="БухСправкаСуммаНУРасширеннаяПодсказка" id="495"/>
+										</InputField>
+										<InputField name="БухСправкаСуммаВР" id="499">
+											<DataPath>Объект.БухСправка.СуммаВР</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="БухСправкаСуммаВРКонтекстноеМеню" id="500"/>
+											<ExtendedTooltip name="БухСправкаСуммаВРРасширеннаяПодсказка" id="501"/>
+										</InputField>
+										<InputField name="БухСправкаСуммаПР" id="496">
+											<DataPath>Объект.БухСправка.СуммаПР</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="БухСправкаСуммаПРКонтекстноеМеню" id="497"/>
+											<ExtendedTooltip name="БухСправкаСуммаПРРасширеннаяПодсказка" id="498"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="БухСправкаСрокГодности" id="505">
+									<DataPath>Объект.БухСправка.СрокГодности</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="БухСправкаСрокГодностиКонтекстноеМеню" id="506"/>
+									<ExtendedTooltip name="БухСправкаСрокГодностиРасширеннаяПодсказка" id="507"/>
+								</InputField>
+								<InputField name="БухСправкаПервоначальнаяСтоимость" id="508">
+									<DataPath>Объект.БухСправка.ПервоначальнаяСтоимость</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="БухСправкаПервоначальнаяСтоимостьКонтекстноеМеню" id="509"/>
+									<ExtendedTooltip name="БухСправкаПервоначальнаяСтоимостьРасширеннаяПодсказка" id="510"/>
+								</InputField>
+								<CheckBoxField name="БухСправкаУчетХозинвентарь" id="511">
+									<DataPath>Объект.БухСправка.УчетХозинвентарь</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="БухСправкаУчетХозинвентарьКонтекстноеМеню" id="512"/>
+									<ExtendedTooltip name="БухСправкаУчетХозинвентарьРасширеннаяПодсказка" id="513"/>
+								</CheckBoxField>
+								<CheckBoxField name="БухСправкаУчетТМЦ" id="514">
+									<DataPath>Объект.БухСправка.УчетТМЦ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="БухСправкаУчетТМЦКонтекстноеМеню" id="515"/>
+									<ExtendedTooltip name="БухСправкаУчетТМЦРасширеннаяПодсказка" id="516"/>
+								</CheckBoxField>
+								<InputField name="БухСправкаКачество" id="517">
+									<DataPath>Объект.БухСправка.Качество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="БухСправкаКачествоКонтекстноеМеню" id="518"/>
+									<ExtendedTooltip name="БухСправкаКачествоРасширеннаяПодсказка" id="519"/>
+								</InputField>
+								<InputField name="БухСправкаВидДенежныхСредств" id="520">
+									<DataPath>Объект.БухСправка.ВидДенежныхСредств</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="БухСправкаВидДенежныхСредствКонтекстноеМеню" id="521"/>
+									<ExtendedTooltip name="БухСправкаВидДенежныхСредствРасширеннаяПодсказка" id="522"/>
+								</InputField>
+								<InputField name="БухСправкаКасса" id="523">
+									<DataPath>Объект.БухСправка.Касса</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="БухСправкаКассаКонтекстноеМеню" id="524"/>
+									<ExtendedTooltip name="БухСправкаКассаРасширеннаяПодсказка" id="525"/>
+								</InputField>
+								<InputField name="БухСправкаПараметрыСписанияРасходов" id="526">
+									<DataPath>Объект.БухСправка.ПараметрыСписанияРасходов</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="БухСправкаПараметрыСписанияРасходовКонтекстноеМеню" id="527"/>
+									<ExtendedTooltip name="БухСправкаПараметрыСписанияРасходовРасширеннаяПодсказка" id="528"/>
+								</InputField>
+								<InputField name="БухСправкаПодразделение" id="529">
+									<DataPath>Объект.БухСправка.Подразделение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="БухСправкаПодразделениеКонтекстноеМеню" id="530"/>
+									<ExtendedTooltip name="БухСправкаПодразделениеРасширеннаяПодсказка" id="531"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНДС" id="540">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>НДС</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница НДС</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаНДСРасширеннаяПодсказка" id="541"/>
+					<ChildItems>
+						<Table name="ДанныеПоСФНДС" id="542">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ДанныеПоСФНДС</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДанныеПоСФНДСКонтекстноеМеню" id="543"/>
+							<AutoCommandBar name="ДанныеПоСФНДСКоманднаяПанель" id="544"/>
+							<ExtendedTooltip name="ДанныеПоСФНДСРасширеннаяПодсказка" id="545"/>
+							<SearchStringAddition name="ДанныеПоСФНДССтрокаПоиска" id="546">
+								<AdditionSource>
+									<Item>ДанныеПоСФНДС</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДанныеПоСФНДССтрокаПоискаКонтекстноеМеню" id="547"/>
+								<ExtendedTooltip name="ДанныеПоСФНДССтрокаПоискаРасширеннаяПодсказка" id="548"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДанныеПоСФНДССостояниеПросмотра" id="549">
+								<AdditionSource>
+									<Item>ДанныеПоСФНДС</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДанныеПоСФНДССостояниеПросмотраКонтекстноеМеню" id="550"/>
+								<ExtendedTooltip name="ДанныеПоСФНДССостояниеПросмотраРасширеннаяПодсказка" id="551"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДанныеПоСФНДСУправлениеПоиском" id="552">
+								<AdditionSource>
+									<Item>ДанныеПоСФНДС</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДанныеПоСФНДСУправлениеПоискомКонтекстноеМеню" id="553"/>
+								<ExtendedTooltip name="ДанныеПоСФНДСУправлениеПоискомРасширеннаяПодсказка" id="554"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ДанныеПоСФНДСНомерСтроки" id="555">
+									<DataPath>Объект.ДанныеПоСФНДС.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеПоСФНДСНомерСтрокиКонтекстноеМеню" id="556"/>
+									<ExtendedTooltip name="ДанныеПоСФНДСНомерСтрокиРасширеннаяПодсказка" id="557"/>
+								</LabelField>
+								<ColumnGroup name="ДанныеПоСФНДСГруппа1" id="705">
+									<ExtendedTooltip name="ДанныеПоСФНДСГруппа1РасширеннаяПодсказка" id="706"/>
+									<ChildItems>
+										<InputField name="ДанныеПоСФНДССчетУчета" id="558">
+											<DataPath>Объект.ДанныеПоСФНДС.СчетУчета</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДССчетУчетаКонтекстноеМеню" id="559"/>
+											<ExtendedTooltip name="ДанныеПоСФНДССчетУчетаРасширеннаяПодсказка" id="560"/>
+										</InputField>
+										<InputField name="ДанныеПоСФНДССтавкаНДС" id="561">
+											<DataPath>Объект.ДанныеПоСФНДС.СтавкаНДС</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДССтавкаНДСКонтекстноеМеню" id="562"/>
+											<ExtendedTooltip name="ДанныеПоСФНДССтавкаНДСРасширеннаяПодсказка" id="563"/>
+										</InputField>
+										<InputField name="ДанныеПоСФНДСВидЦенности" id="564">
+											<DataPath>Объект.ДанныеПоСФНДС.ВидЦенности</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДСВидЦенностиКонтекстноеМеню" id="565"/>
+											<ExtendedTooltip name="ДанныеПоСФНДСВидЦенностиРасширеннаяПодсказка" id="566"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ДанныеПоСФНДСГруппа2" id="707">
+									<ExtendedTooltip name="ДанныеПоСФНДСГруппа2РасширеннаяПодсказка" id="708"/>
+									<ChildItems>
+										<InputField name="ДанныеПоСФНДСКонтрагент" id="567">
+											<DataPath>Объект.ДанныеПоСФНДС.Контрагент</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДСКонтрагентКонтекстноеМеню" id="568"/>
+											<ExtendedTooltip name="ДанныеПоСФНДСКонтрагентРасширеннаяПодсказка" id="569"/>
+										</InputField>
+										<InputField name="ДанныеПоСФНДСДоговорКонтрагента" id="570">
+											<DataPath>Объект.ДанныеПоСФНДС.ДоговорКонтрагента</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДСДоговорКонтрагентаКонтекстноеМеню" id="571"/>
+											<ExtendedTooltip name="ДанныеПоСФНДСДоговорКонтрагентаРасширеннаяПодсказка" id="572"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ДанныеПоСФНДСГруппа3" id="709">
+									<ExtendedTooltip name="ДанныеПоСФНДСГруппа3РасширеннаяПодсказка" id="710"/>
+									<ChildItems>
+										<InputField name="ДанныеПоСФНДССчетФактура" id="573">
+											<DataPath>Объект.ДанныеПоСФНДС.СчетФактура</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДССчетФактураКонтекстноеМеню" id="574"/>
+											<ExtendedTooltip name="ДанныеПоСФНДССчетФактураРасширеннаяПодсказка" id="575"/>
+										</InputField>
+										<ColumnGroup name="ДанныеПоСФНДСГруппа4" id="711">
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ДанныеПоСФНДСГруппа4РасширеннаяПодсказка" id="712"/>
+											<ChildItems>
+												<CheckBoxField name="ДанныеПоСФНДСПредъявленСФ" id="576">
+													<DataPath>Объект.ДанныеПоСФНДС.ПредъявленСФ</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДанныеПоСФНДСПредъявленСФКонтекстноеМеню" id="577"/>
+													<ExtendedTooltip name="ДанныеПоСФНДСПредъявленСФРасширеннаяПодсказка" id="578"/>
+												</CheckBoxField>
+												<InputField name="ДанныеПоСФНДСДатаСФ" id="690">
+													<DataPath>Объект.ДанныеПоСФНДС.ДатаСФ</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ДанныеПоСФНДСДатаСФКонтекстноеМеню" id="691"/>
+													<ExtendedTooltip name="ДанныеПоСФНДСДатаСФРасширеннаяПодсказка" id="692"/>
+												</InputField>
+												<InputField name="ДанныеПоСФНДСНомерСФ" id="693">
+													<DataPath>Объект.ДанныеПоСФНДС.НомерСФ</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ДанныеПоСФНДСНомерСФКонтекстноеМеню" id="694"/>
+													<ExtendedTooltip name="ДанныеПоСФНДСНомерСФРасширеннаяПодсказка" id="695"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ДанныеПоСФНДСГруппа5" id="713">
+									<ExtendedTooltip name="ДанныеПоСФНДСГруппа5РасширеннаяПодсказка" id="714"/>
+									<ChildItems>
+										<InputField name="ДанныеПоСФНДССуммаБезНДС" id="579">
+											<DataPath>Объект.ДанныеПоСФНДС.СуммаБезНДС</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДССуммаБезНДСКонтекстноеМеню" id="580"/>
+											<ExtendedTooltip name="ДанныеПоСФНДССуммаБезНДСРасширеннаяПодсказка" id="581"/>
+										</InputField>
+										<InputField name="ДанныеПоСФНДСНДС" id="582">
+											<DataPath>Объект.ДанныеПоСФНДС.НДС</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДСНДСКонтекстноеМеню" id="583"/>
+											<ExtendedTooltip name="ДанныеПоСФНДСНДСРасширеннаяПодсказка" id="584"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ДанныеПоСФНДСДокументОплаты" id="687">
+									<DataPath>Объект.ДанныеПоСФНДС.ДокументОплаты</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеПоСФНДСДокументОплатыКонтекстноеМеню" id="688"/>
+									<ExtendedTooltip name="ДанныеПоСФНДСДокументОплатыРасширеннаяПодсказка" id="689"/>
+								</InputField>
+								<ColumnGroup name="ДанныеПоСФНДСГруппа6" id="715">
+									<ExtendedTooltip name="ДанныеПоСФНДСГруппа6РасширеннаяПодсказка" id="716"/>
+									<ChildItems>
+										<InputField name="ДанныеПоСФНДССуммаБезНДСОплата" id="585">
+											<DataPath>Объект.ДанныеПоСФНДС.СуммаБезНДСОплата</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДССуммаБезНДСОплатаКонтекстноеМеню" id="586"/>
+											<ExtendedTooltip name="ДанныеПоСФНДССуммаБезНДСОплатаРасширеннаяПодсказка" id="587"/>
+										</InputField>
+										<InputField name="ДанныеПоСФНДСНДСОплата" id="588">
+											<DataPath>Объект.ДанныеПоСФНДС.НДСОплата</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДСНДСОплатаКонтекстноеМеню" id="589"/>
+											<ExtendedTooltip name="ДанныеПоСФНДСНДСОплатаРасширеннаяПодсказка" id="590"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ДанныеПоСФНДСГруппа7" id="717">
+									<ExtendedTooltip name="ДанныеПоСФНДСГруппа7РасширеннаяПодсказка" id="718"/>
+									<ChildItems>
+										<InputField name="ДанныеПоСФНДССуммаБезНДСПредъявлено" id="615">
+											<DataPath>Объект.ДанныеПоСФНДС.СуммаБезНДСПредъявлено</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДССуммаБезНДСПредъявленоКонтекстноеМеню" id="616"/>
+											<ExtendedTooltip name="ДанныеПоСФНДССуммаБезНДСПредъявленоРасширеннаяПодсказка" id="617"/>
+										</InputField>
+										<InputField name="ДанныеПоСФНДСНДСПредъявлено" id="618">
+											<DataPath>Объект.ДанныеПоСФНДС.НДСПредъявлено</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДСНДСПредъявленоКонтекстноеМеню" id="619"/>
+											<ExtendedTooltip name="ДанныеПоСФНДСНДСПредъявленоРасширеннаяПодсказка" id="620"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ДанныеПоСФНДСГруппа17" id="737">
+									<ExtendedTooltip name="ДанныеПоСФНДСГруппа17РасширеннаяПодсказка" id="738"/>
+									<ChildItems>
+										<InputField name="ДанныеПоСФНДСОбъектСтроительства" id="669">
+											<DataPath>Объект.ДанныеПоСФНДС.ОбъектСтроительства</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДСОбъектСтроительстваКонтекстноеМеню" id="670"/>
+											<ExtendedTooltip name="ДанныеПоСФНДСОбъектСтроительстваРасширеннаяПодсказка" id="671"/>
+										</InputField>
+										<CheckBoxField name="ДанныеПоСФНДСНеВлияетНаВычет" id="675">
+											<DataPath>Объект.ДанныеПоСФНДС.НеВлияетНаВычет</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ДанныеПоСФНДСНеВлияетНаВычетКонтекстноеМеню" id="676"/>
+											<ExtendedTooltip name="ДанныеПоСФНДСНеВлияетНаВычетРасширеннаяПодсказка" id="677"/>
+										</CheckBoxField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ДанныеПоСФНДСГруппа8" id="719">
+									<ExtendedTooltip name="ДанныеПоСФНДСГруппа8РасширеннаяПодсказка" id="720"/>
+									<ChildItems>
+										<InputField name="ДанныеПоСФНДССуммаБезНДССтроительство" id="591">
+											<DataPath>Объект.ДанныеПоСФНДС.СуммаБезНДССтроительство</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДССуммаБезНДССтроительствоКонтекстноеМеню" id="592"/>
+											<ExtendedTooltip name="ДанныеПоСФНДССуммаБезНДССтроительствоРасширеннаяПодсказка" id="593"/>
+										</InputField>
+										<InputField name="ДанныеПоСФНДСНДССтроительство" id="594">
+											<DataPath>Объект.ДанныеПоСФНДС.НДССтроительство</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДСНДССтроительствоКонтекстноеМеню" id="595"/>
+											<ExtendedTooltip name="ДанныеПоСФНДСНДССтроительствоРасширеннаяПодсказка" id="596"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ДанныеПоСФНДСГруппа9" id="721">
+									<ExtendedTooltip name="ДанныеПоСФНДСГруппа9РасширеннаяПодсказка" id="722"/>
+									<ChildItems>
+										<InputField name="ДанныеПоСФНДССуммаБезНДСВведеноВЭксплуатацию" id="597">
+											<DataPath>Объект.ДанныеПоСФНДС.СуммаБезНДСВведеноВЭксплуатацию</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДССуммаБезНДСВведеноВЭксплуатациюКонтекстноеМеню" id="598"/>
+											<ExtendedTooltip name="ДанныеПоСФНДССуммаБезНДСВведеноВЭксплуатациюРасширеннаяПодсказка" id="599"/>
+										</InputField>
+										<InputField name="ДанныеПоСФНДСНДСВведеноВЭксплуатацию" id="600">
+											<DataPath>Объект.ДанныеПоСФНДС.НДСВведеноВЭксплуатацию</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДСНДСВведеноВЭксплуатациюКонтекстноеМеню" id="601"/>
+											<ExtendedTooltip name="ДанныеПоСФНДСНДСВведеноВЭксплуатациюРасширеннаяПодсказка" id="602"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ДанныеПоСФНДСГруппа10" id="723">
+									<ExtendedTooltip name="ДанныеПоСФНДСГруппа10РасширеннаяПодсказка" id="724"/>
+									<ChildItems>
+										<InputField name="ДанныеПоСФНДССуммаБезНДСВключеноВСтоимость" id="603">
+											<DataPath>Объект.ДанныеПоСФНДС.СуммаБезНДСВключеноВСтоимость</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДССуммаБезНДСВключеноВСтоимостьКонтекстноеМеню" id="604"/>
+											<ExtendedTooltip name="ДанныеПоСФНДССуммаБезНДСВключеноВСтоимостьРасширеннаяПодсказка" id="605"/>
+										</InputField>
+										<InputField name="ДанныеПоСФНДСНДСВключеноВСтоимость" id="606">
+											<DataPath>Объект.ДанныеПоСФНДС.НДСВключеноВСтоимость</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДСНДСВключеноВСтоимостьКонтекстноеМеню" id="607"/>
+											<ExtendedTooltip name="ДанныеПоСФНДСНДСВключеноВСтоимостьРасширеннаяПодсказка" id="608"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ДанныеПоСФНДСДокументОтгрузки" id="672">
+									<DataPath>Объект.ДанныеПоСФНДС.ДокументОтгрузки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеПоСФНДСДокументОтгрузкиКонтекстноеМеню" id="673"/>
+									<ExtendedTooltip name="ДанныеПоСФНДСДокументОтгрузкиРасширеннаяПодсказка" id="674"/>
+								</InputField>
+								<ColumnGroup name="ДанныеПоСФНДСГруппа11" id="725">
+									<ExtendedTooltip name="ДанныеПоСФНДСГруппа11РасширеннаяПодсказка" id="726"/>
+									<ChildItems>
+										<InputField name="ДанныеПоСФНДССуммаБезНДССтавка0" id="609">
+											<DataPath>Объект.ДанныеПоСФНДС.СуммаБезНДССтавка0</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДССуммаБезНДССтавка0КонтекстноеМеню" id="610"/>
+											<ExtendedTooltip name="ДанныеПоСФНДССуммаБезНДССтавка0РасширеннаяПодсказка" id="611"/>
+										</InputField>
+										<InputField name="ДанныеПоСФНДСНДССтавка0" id="612">
+											<DataPath>Объект.ДанныеПоСФНДС.НДССтавка0</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДСНДССтавка0КонтекстноеМеню" id="613"/>
+											<ExtendedTooltip name="ДанныеПоСФНДСНДССтавка0РасширеннаяПодсказка" id="614"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ДанныеПоСФНДСГруппа12" id="727">
+									<ExtendedTooltip name="ДанныеПоСФНДСГруппа12РасширеннаяПодсказка" id="728"/>
+									<ChildItems>
+										<InputField name="ДанныеПоСФНДССуммаБезНДСПодтверждено0" id="651">
+											<DataPath>Объект.ДанныеПоСФНДС.СуммаБезНДСПодтверждено0</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДССуммаБезНДСПодтверждено0КонтекстноеМеню" id="652"/>
+											<ExtendedTooltip name="ДанныеПоСФНДССуммаБезНДСПодтверждено0РасширеннаяПодсказка" id="653"/>
+										</InputField>
+										<InputField name="ДанныеПоСФНДСНДСПодтверждено0" id="654">
+											<DataPath>Объект.ДанныеПоСФНДС.НДСПодтверждено0</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДСНДСПодтверждено0КонтекстноеМеню" id="655"/>
+											<ExtendedTooltip name="ДанныеПоСФНДСНДСПодтверждено0РасширеннаяПодсказка" id="656"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ДанныеПоСФНДСГруппа13" id="729">
+									<ExtendedTooltip name="ДанныеПоСФНДСГруппа13РасширеннаяПодсказка" id="730"/>
+									<ChildItems>
+										<InputField name="ДанныеПоСФНДССуммаБезНДСПредъявлено0" id="621">
+											<DataPath>Объект.ДанныеПоСФНДС.СуммаБезНДСПредъявлено0</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДССуммаБезНДСПредъявлено0КонтекстноеМеню" id="622"/>
+											<ExtendedTooltip name="ДанныеПоСФНДССуммаБезНДСПредъявлено0РасширеннаяПодсказка" id="623"/>
+										</InputField>
+										<InputField name="ДанныеПоСФНДСНДСПредъявлено0" id="624">
+											<DataPath>Объект.ДанныеПоСФНДС.НДСПредъявлено0</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДСНДСПредъявлено0КонтекстноеМеню" id="625"/>
+											<ExtendedTooltip name="ДанныеПоСФНДСНДСПредъявлено0РасширеннаяПодсказка" id="626"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ДанныеПоСФНДССтавкаНДСНеПодтверждена0" id="696">
+									<DataPath>Объект.ДанныеПоСФНДС.СтавкаНДСНеПодтверждена0</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеПоСФНДССтавкаНДСНеПодтверждена0КонтекстноеМеню" id="697"/>
+									<ExtendedTooltip name="ДанныеПоСФНДССтавкаНДСНеПодтверждена0РасширеннаяПодсказка" id="698"/>
+								</InputField>
+								<ColumnGroup name="ДанныеПоСФНДСГруппа14" id="731">
+									<ExtendedTooltip name="ДанныеПоСФНДСГруппа14РасширеннаяПодсказка" id="732"/>
+									<ChildItems>
+										<InputField name="ДанныеПоСФНДССуммаБезНДСНеПодтверждено0" id="657">
+											<DataPath>Объект.ДанныеПоСФНДС.СуммаБезНДСНеПодтверждено0</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДССуммаБезНДСНеПодтверждено0КонтекстноеМеню" id="658"/>
+											<ExtendedTooltip name="ДанныеПоСФНДССуммаБезНДСНеПодтверждено0РасширеннаяПодсказка" id="659"/>
+										</InputField>
+										<InputField name="ДанныеПоСФНДСНДСНеПодтверждено0" id="660">
+											<DataPath>Объект.ДанныеПоСФНДС.НДСНеПодтверждено0</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДСНДСНеПодтверждено0КонтекстноеМеню" id="661"/>
+											<ExtendedTooltip name="ДанныеПоСФНДСНДСНеПодтверждено0РасширеннаяПодсказка" id="662"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ДанныеПоСФНДСГруппа15" id="733">
+									<ExtendedTooltip name="ДанныеПоСФНДСГруппа15РасширеннаяПодсказка" id="734"/>
+									<ChildItems>
+										<InputField name="ДанныеПоСФНДССуммаБезНДСПредъявленоНеПодтверждено0" id="663">
+											<DataPath>Объект.ДанныеПоСФНДС.СуммаБезНДСПредъявленоНеПодтверждено0</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДССуммаБезНДСПредъявленоНеПодтверждено0КонтекстноеМеню" id="664"/>
+											<ExtendedTooltip name="ДанныеПоСФНДССуммаБезНДСПредъявленоНеПодтверждено0РасширеннаяПодсказка" id="665"/>
+										</InputField>
+										<InputField name="ДанныеПоСФНДСНДСПредъявленоНеПодтверждено0" id="666">
+											<DataPath>Объект.ДанныеПоСФНДС.НДСПредъявленоНеПодтверждено0</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДСНДСПредъявленоНеПодтверждено0КонтекстноеМеню" id="667"/>
+											<ExtendedTooltip name="ДанныеПоСФНДСНДСПредъявленоНеПодтверждено0РасширеннаяПодсказка" id="668"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ДанныеПоСФНДСГруппа16" id="735">
+									<ExtendedTooltip name="ДанныеПоСФНДСГруппа16РасширеннаяПодсказка" id="736"/>
+									<ChildItems>
+										<InputField name="ДанныеПоСФНДСВалютаАванса" id="645">
+											<DataPath>Объект.ДанныеПоСФНДС.ВалютаАванса</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДСВалютаАвансаКонтекстноеМеню" id="646"/>
+											<ExtendedTooltip name="ДанныеПоСФНДСВалютаАвансаРасширеннаяПодсказка" id="647"/>
+										</InputField>
+										<InputField name="ДанныеПоСФНДСВалютнаяСуммаСНДС" id="648">
+											<DataPath>Объект.ДанныеПоСФНДС.ВалютнаяСуммаСНДС</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДанныеПоСФНДСВалютнаяСуммаСНДСКонтекстноеМеню" id="649"/>
+											<ExtendedTooltip name="ДанныеПоСФНДСВалютнаяСуммаСНДСРасширеннаяПодсказка" id="650"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ДанныеПоСФНДССчетУчетаРасчетовСКонтрагентом" id="627">
+									<DataPath>Объект.ДанныеПоСФНДС.СчетУчетаРасчетовСКонтрагентом</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеПоСФНДССчетУчетаРасчетовСКонтрагентомКонтекстноеМеню" id="628"/>
+									<ExtendedTooltip name="ДанныеПоСФНДССчетУчетаРасчетовСКонтрагентомРасширеннаяПодсказка" id="629"/>
+								</InputField>
+								<InputField name="ДанныеПоСФНДССуммаРасчетов" id="630">
+									<DataPath>Объект.ДанныеПоСФНДС.СуммаРасчетов</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеПоСФНДССуммаРасчетовКонтекстноеМеню" id="631"/>
+									<ExtendedTooltip name="ДанныеПоСФНДССуммаРасчетовРасширеннаяПодсказка" id="632"/>
+								</InputField>
+								<InputField name="ДанныеПоСФНДСКурсВзаиморасчетов" id="633">
+									<DataPath>Объект.ДанныеПоСФНДС.КурсВзаиморасчетов</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеПоСФНДСКурсВзаиморасчетовКонтекстноеМеню" id="634"/>
+									<ExtendedTooltip name="ДанныеПоСФНДСКурсВзаиморасчетовРасширеннаяПодсказка" id="635"/>
+								</InputField>
+								<InputField name="ДанныеПоСФНДСКратностьВзаиморасчетов" id="636">
+									<DataPath>Объект.ДанныеПоСФНДС.КратностьВзаиморасчетов</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеПоСФНДСКратностьВзаиморасчетовКонтекстноеМеню" id="637"/>
+									<ExtendedTooltip name="ДанныеПоСФНДСКратностьВзаиморасчетовРасширеннаяПодсказка" id="638"/>
+								</InputField>
+								<InputField name="ДанныеПоСФНДССуммаВзаиморасчетов" id="639">
+									<DataPath>Объект.ДанныеПоСФНДС.СуммаВзаиморасчетов</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеПоСФНДССуммаВзаиморасчетовКонтекстноеМеню" id="640"/>
+									<ExtendedTooltip name="ДанныеПоСФНДССуммаВзаиморасчетовРасширеннаяПодсказка" id="641"/>
+								</InputField>
+								<InputField name="ДанныеПоСФНДСВалютаВзаиморасчетов" id="642">
+									<DataPath>Объект.ДанныеПоСФНДС.ВалютаВзаиморасчетов</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеПоСФНДСВалютаВзаиморасчетовКонтекстноеМеню" id="643"/>
+									<ExtendedTooltip name="ДанныеПоСФНДСВалютаВзаиморасчетовРасширеннаяПодсказка" id="644"/>
+								</InputField>
+								<InputField name="ДанныеПоСФНДССтранаПроисхождения" id="678">
+									<DataPath>Объект.ДанныеПоСФНДС.СтранаПроисхождения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеПоСФНДССтранаПроисхожденияКонтекстноеМеню" id="679"/>
+									<ExtendedTooltip name="ДанныеПоСФНДССтранаПроисхожденияРасширеннаяПодсказка" id="680"/>
+								</InputField>
+								<InputField name="ДанныеПоСФНДСНомерГТД" id="681">
+									<DataPath>Объект.ДанныеПоСФНДС.НомерГТД</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеПоСФНДСНомерГТДКонтекстноеМеню" id="682"/>
+									<ExtendedTooltip name="ДанныеПоСФНДСНомерГТДРасширеннаяПодсказка" id="683"/>
+								</InputField>
+								<InputField name="ДанныеПоСФНДСВидВнеоборотногоАктива" id="684">
+									<DataPath>Объект.ДанныеПоСФНДС.ВидВнеоборотногоАктива</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеПоСФНДСВидВнеоборотногоАктиваКонтекстноеМеню" id="685"/>
+									<ExtendedTooltip name="ДанныеПоСФНДСВидВнеоборотногоАктиваРасширеннаяПодсказка" id="686"/>
+								</InputField>
+								<InputField name="ДанныеПоСФНДСДатаПлатежноРасчетногоДокумента" id="699">
+									<DataPath>Объект.ДанныеПоСФНДС.ДатаПлатежноРасчетногоДокумента</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеПоСФНДСДатаПлатежноРасчетногоДокументаКонтекстноеМеню" id="700"/>
+									<ExtendedTooltip name="ДанныеПоСФНДСДатаПлатежноРасчетногоДокументаРасширеннаяПодсказка" id="701"/>
+								</InputField>
+								<InputField name="ДанныеПоСФНДСНомерПлатежноРасчетногоДокумента" id="702">
+									<DataPath>Объект.ДанныеПоСФНДС.НомерПлатежноРасчетногоДокумента</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеПоСФНДСНомерПлатежноРасчетногоДокументаКонтекстноеМеню" id="703"/>
+									<ExtendedTooltip name="ДанныеПоСФНДСНомерПлатежноРасчетногоДокументаРасширеннаяПодсказка" id="704"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНоменклатура" id="739">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ТМЦ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница номенклатура</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаНоменклатураРасширеннаяПодсказка" id="740"/>
+					<ChildItems>
+						<Table name="МПЗПриобретенные" id="741">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.МПЗПриобретенные</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="МПЗПриобретенныеКонтекстноеМеню" id="742"/>
+							<AutoCommandBar name="МПЗПриобретенныеКоманднаяПанель" id="743"/>
+							<ExtendedTooltip name="МПЗПриобретенныеРасширеннаяПодсказка" id="744"/>
+							<SearchStringAddition name="МПЗПриобретенныеСтрокаПоиска" id="745">
+								<AdditionSource>
+									<Item>МПЗПриобретенные</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МПЗПриобретенныеСтрокаПоискаКонтекстноеМеню" id="746"/>
+								<ExtendedTooltip name="МПЗПриобретенныеСтрокаПоискаРасширеннаяПодсказка" id="747"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="МПЗПриобретенныеСостояниеПросмотра" id="748">
+								<AdditionSource>
+									<Item>МПЗПриобретенные</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МПЗПриобретенныеСостояниеПросмотраКонтекстноеМеню" id="749"/>
+								<ExtendedTooltip name="МПЗПриобретенныеСостояниеПросмотраРасширеннаяПодсказка" id="750"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="МПЗПриобретенныеУправлениеПоиском" id="751">
+								<AdditionSource>
+									<Item>МПЗПриобретенные</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="МПЗПриобретенныеУправлениеПоискомКонтекстноеМеню" id="752"/>
+								<ExtendedTooltip name="МПЗПриобретенныеУправлениеПоискомРасширеннаяПодсказка" id="753"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="МПЗПриобретенныеНомерСтроки" id="754">
+									<DataPath>Объект.МПЗПриобретенные.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МПЗПриобретенныеНомерСтрокиКонтекстноеМеню" id="755"/>
+									<ExtendedTooltip name="МПЗПриобретенныеНомерСтрокиРасширеннаяПодсказка" id="756"/>
+								</LabelField>
+								<InputField name="МПЗПриобретенныеСчетУчета" id="757">
+									<DataPath>Объект.МПЗПриобретенные.СчетУчета</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МПЗПриобретенныеСчетУчетаКонтекстноеМеню" id="758"/>
+									<ExtendedTooltip name="МПЗПриобретенныеСчетУчетаРасширеннаяПодсказка" id="759"/>
+								</InputField>
+								<ColumnGroup name="МПЗПриобретенныеГруппа1" id="850">
+									<ExtendedTooltip name="МПЗПриобретенныеГруппа1РасширеннаяПодсказка" id="851"/>
+									<ChildItems>
+										<InputField name="МПЗПриобретенныеНоменклатура" id="760">
+											<DataPath>Объект.МПЗПриобретенные.Номенклатура</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗПриобретенныеНоменклатураКонтекстноеМеню" id="761"/>
+											<ExtendedTooltip name="МПЗПриобретенныеНоменклатураРасширеннаяПодсказка" id="762"/>
+										</InputField>
+										<InputField name="МПЗПриобретенныеСпособСтроительства" id="829">
+											<DataPath>Объект.МПЗПриобретенные.СпособСтроительства</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗПриобретенныеСпособСтроительстваКонтекстноеМеню" id="830"/>
+											<ExtendedTooltip name="МПЗПриобретенныеСпособСтроительстваРасширеннаяПодсказка" id="831"/>
+										</InputField>
+										<InputField name="МПЗПриобретенныеСклад" id="763">
+											<DataPath>Объект.МПЗПриобретенные.Склад</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗПриобретенныеСкладКонтекстноеМеню" id="764"/>
+											<ExtendedTooltip name="МПЗПриобретенныеСкладРасширеннаяПодсказка" id="765"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="МПЗПриобретенныеСерияНоменклатуры" id="844">
+									<DataPath>Объект.МПЗПриобретенные.СерияНоменклатуры</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МПЗПриобретенныеСерияНоменклатурыКонтекстноеМеню" id="845"/>
+									<ExtendedTooltip name="МПЗПриобретенныеСерияНоменклатурыРасширеннаяПодсказка" id="846"/>
+								</InputField>
+								<InputField name="МПЗПриобретенныеХарактеристикаНоменклатуры" id="847">
+									<DataPath>Объект.МПЗПриобретенные.ХарактеристикаНоменклатуры</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МПЗПриобретенныеХарактеристикаНоменклатурыКонтекстноеМеню" id="848"/>
+									<ExtendedTooltip name="МПЗПриобретенныеХарактеристикаНоменклатурыРасширеннаяПодсказка" id="849"/>
+								</InputField>
+								<InputField name="МПЗПриобретенныеСтавкаНДС" id="838">
+									<DataPath>Объект.МПЗПриобретенные.СтавкаНДС</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МПЗПриобретенныеСтавкаНДСКонтекстноеМеню" id="839"/>
+									<ExtendedTooltip name="МПЗПриобретенныеСтавкаНДСРасширеннаяПодсказка" id="840"/>
+								</InputField>
+								<ColumnGroup name="МПЗПриобретенныеГруппа2" id="852">
+									<ExtendedTooltip name="МПЗПриобретенныеГруппа2РасширеннаяПодсказка" id="853"/>
+									<ChildItems>
+										<InputField name="МПЗПриобретенныеПартия" id="766">
+											<DataPath>Объект.МПЗПриобретенные.Партия</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗПриобретенныеПартияКонтекстноеМеню" id="767"/>
+											<ExtendedTooltip name="МПЗПриобретенныеПартияРасширеннаяПодсказка" id="768"/>
+										</InputField>
+										<InputField name="МПЗПриобретенныеРасчетныйДокумент" id="775">
+											<DataPath>Объект.МПЗПриобретенные.РасчетныйДокумент</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗПриобретенныеРасчетныйДокументКонтекстноеМеню" id="776"/>
+											<ExtendedTooltip name="МПЗПриобретенныеРасчетныйДокументРасширеннаяПодсказка" id="777"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="МПЗПриобретенныеКонтрагент" id="823">
+									<DataPath>Объект.МПЗПриобретенные.Контрагент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МПЗПриобретенныеКонтрагентКонтекстноеМеню" id="824"/>
+									<ExtendedTooltip name="МПЗПриобретенныеКонтрагентРасширеннаяПодсказка" id="825"/>
+								</InputField>
+								<ColumnGroup name="МПЗПриобретенныеГруппа3" id="854">
+									<ExtendedTooltip name="МПЗПриобретенныеГруппа3РасширеннаяПодсказка" id="855"/>
+									<ChildItems>
+										<InputField name="МПЗПриобретенныеСпецМатериалНазначениеИспользования" id="802">
+											<DataPath>Объект.МПЗПриобретенные.СпецМатериалНазначениеИспользования</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗПриобретенныеСпецМатериалНазначениеИспользованияКонтекстноеМеню" id="803"/>
+											<ExtendedTooltip name="МПЗПриобретенныеСпецМатериалНазначениеИспользованияРасширеннаяПодсказка" id="804"/>
+										</InputField>
+										<InputField name="МПЗПриобретенныеСпецМатериалПартияМатериалаВЭксплуатации" id="811">
+											<DataPath>Объект.МПЗПриобретенные.СпецМатериалПартияМатериалаВЭксплуатации</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗПриобретенныеСпецМатериалПартияМатериалаВЭксплуатацииКонтекстноеМеню" id="812"/>
+											<ExtendedTooltip name="МПЗПриобретенныеСпецМатериалПартияМатериалаВЭксплуатацииРасширеннаяПодсказка" id="813"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="МПЗПриобретенныеСпецМатериалПодразделениеФизЛицо" id="808">
+									<DataPath>Объект.МПЗПриобретенные.СпецМатериалПодразделениеФизЛицо</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МПЗПриобретенныеСпецМатериалПодразделениеФизЛицоКонтекстноеМеню" id="809"/>
+									<ExtendedTooltip name="МПЗПриобретенныеСпецМатериалПодразделениеФизЛицоРасширеннаяПодсказка" id="810"/>
+								</InputField>
+								<InputField name="МПЗПриобретенныеКоличество" id="781">
+									<DataPath>Объект.МПЗПриобретенные.Количество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МПЗПриобретенныеКоличествоКонтекстноеМеню" id="782"/>
+									<ExtendedTooltip name="МПЗПриобретенныеКоличествоРасширеннаяПодсказка" id="783"/>
+								</InputField>
+								<InputField name="МПЗПриобретенныеСпецМатериалПервоначальнаяСтоимость" id="805">
+									<DataPath>Объект.МПЗПриобретенные.СпецМатериалПервоначальнаяСтоимость</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МПЗПриобретенныеСпецМатериалПервоначальнаяСтоимостьКонтекстноеМеню" id="806"/>
+									<ExtendedTooltip name="МПЗПриобретенныеСпецМатериалПервоначальнаяСтоимостьРасширеннаяПодсказка" id="807"/>
+								</InputField>
+								<ColumnGroup name="МПЗПриобретенныеГруппа4" id="856">
+									<ExtendedTooltip name="МПЗПриобретенныеГруппа4РасширеннаяПодсказка" id="857"/>
+									<ChildItems>
+										<InputField name="МПЗПриобретенныеСумма" id="784">
+											<DataPath>Объект.МПЗПриобретенные.Сумма</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗПриобретенныеСуммаКонтекстноеМеню" id="785"/>
+											<ExtendedTooltip name="МПЗПриобретенныеСуммаРасширеннаяПодсказка" id="786"/>
+										</InputField>
+										<InputField name="МПЗПриобретенныеСуммаНУ" id="814">
+											<DataPath>Объект.МПЗПриобретенные.СуммаНУ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗПриобретенныеСуммаНУКонтекстноеМеню" id="815"/>
+											<ExtendedTooltip name="МПЗПриобретенныеСуммаНУРасширеннаяПодсказка" id="816"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="МПЗПриобретенныеГруппа5" id="858">
+									<ExtendedTooltip name="МПЗПриобретенныеГруппа5РасширеннаяПодсказка" id="859"/>
+									<ChildItems>
+										<InputField name="МПЗПриобретенныеНДС" id="787">
+											<DataPath>Объект.МПЗПриобретенные.НДС</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗПриобретенныеНДСКонтекстноеМеню" id="788"/>
+											<ExtendedTooltip name="МПЗПриобретенныеНДСРасширеннаяПодсказка" id="789"/>
+										</InputField>
+										<CheckBoxField name="МПЗПриобретенныеНДСВключенВстоимость" id="790">
+											<DataPath>Объект.МПЗПриобретенные.НДСВключенВстоимость</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="МПЗПриобретенныеНДСВключенВстоимостьКонтекстноеМеню" id="791"/>
+											<ExtendedTooltip name="МПЗПриобретенныеНДСВключенВстоимостьРасширеннаяПодсказка" id="792"/>
+										</CheckBoxField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="МПЗПриобретенныеТорговаяНаценка" id="835">
+									<DataPath>Объект.МПЗПриобретенные.ТорговаяНаценка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МПЗПриобретенныеТорговаяНаценкаКонтекстноеМеню" id="836"/>
+									<ExtendedTooltip name="МПЗПриобретенныеТорговаяНаценкаРасширеннаяПодсказка" id="837"/>
+								</InputField>
+								<ColumnGroup name="МПЗПриобретенныеГруппа6" id="860">
+									<ExtendedTooltip name="МПЗПриобретенныеГруппа6РасширеннаяПодсказка" id="861"/>
+									<ChildItems>
+										<InputField name="МПЗПриобретенныеВалюта" id="778">
+											<DataPath>Объект.МПЗПриобретенные.Валюта</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗПриобретенныеВалютаКонтекстноеМеню" id="779"/>
+											<ExtendedTooltip name="МПЗПриобретенныеВалютаРасширеннаяПодсказка" id="780"/>
+										</InputField>
+										<InputField name="МПЗПриобретенныеВалютнаяСумма" id="793">
+											<DataPath>Объект.МПЗПриобретенные.ВалютнаяСумма</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗПриобретенныеВалютнаяСуммаКонтекстноеМеню" id="794"/>
+											<ExtendedTooltip name="МПЗПриобретенныеВалютнаяСуммаРасширеннаяПодсказка" id="795"/>
+										</InputField>
+										<InputField name="МПЗПриобретенныеВалютныйНДС" id="796">
+											<DataPath>Объект.МПЗПриобретенные.ВалютныйНДС</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗПриобретенныеВалютныйНДСКонтекстноеМеню" id="797"/>
+											<ExtendedTooltip name="МПЗПриобретенныеВалютныйНДСРасширеннаяПодсказка" id="798"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="МПЗПриобретенныеГруппа7" id="862">
+									<ExtendedTooltip name="МПЗПриобретенныеГруппа7РасширеннаяПодсказка" id="863"/>
+									<ChildItems>
+										<InputField name="МПЗПриобретенныеСуммаВР" id="820">
+											<DataPath>Объект.МПЗПриобретенные.СуммаВР</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗПриобретенныеСуммаВРКонтекстноеМеню" id="821"/>
+											<ExtendedTooltip name="МПЗПриобретенныеСуммаВРРасширеннаяПодсказка" id="822"/>
+										</InputField>
+										<InputField name="МПЗПриобретенныеСуммаПР" id="817">
+											<DataPath>Объект.МПЗПриобретенные.СуммаПР</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗПриобретенныеСуммаПРКонтекстноеМеню" id="818"/>
+											<ExtendedTooltip name="МПЗПриобретенныеСуммаПРРасширеннаяПодсказка" id="819"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<CheckBoxField name="МПЗПриобретенныеПараметрыСпецматериала" id="826">
+									<DataPath>Объект.МПЗПриобретенные.ПараметрыСпецматериала</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="МПЗПриобретенныеПараметрыСпецматериалаКонтекстноеМеню" id="827"/>
+									<ExtendedTooltip name="МПЗПриобретенныеПараметрыСпецматериалаРасширеннаяПодсказка" id="828"/>
+								</CheckBoxField>
+								<InputField name="МПЗПриобретенныеРеквизитыДокументаОплаты" id="769">
+									<DataPath>Объект.МПЗПриобретенные.РеквизитыДокументаОплаты</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МПЗПриобретенныеРеквизитыДокументаОплатыКонтекстноеМеню" id="770"/>
+									<ExtendedTooltip name="МПЗПриобретенныеРеквизитыДокументаОплатыРасширеннаяПодсказка" id="771"/>
+								</InputField>
+								<InputField name="МПЗПриобретенныеСтатусыОплатыРасходовУСН" id="772">
+									<DataPath>Объект.МПЗПриобретенные.СтатусыОплатыРасходовУСН</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МПЗПриобретенныеСтатусыОплатыРасходовУСНКонтекстноеМеню" id="773"/>
+									<ExtendedTooltip name="МПЗПриобретенныеСтатусыОплатыРасходовУСНРасширеннаяПодсказка" id="774"/>
+								</InputField>
+								<CheckBoxField name="МПЗПриобретенныеОплачен" id="799">
+									<DataPath>Объект.МПЗПриобретенные.Оплачен</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="МПЗПриобретенныеОплаченКонтекстноеМеню" id="800"/>
+									<ExtendedTooltip name="МПЗПриобретенныеОплаченРасширеннаяПодсказка" id="801"/>
+								</CheckBoxField>
+								<InputField name="МПЗПриобретенныеКлюч" id="832">
+									<DataPath>Объект.МПЗПриобретенные.Ключ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МПЗПриобретенныеКлючКонтекстноеМеню" id="833"/>
+									<ExtendedTooltip name="МПЗПриобретенныеКлючРасширеннаяПодсказка" id="834"/>
+								</InputField>
+								<InputField name="МПЗПриобретенныеНомерСтрокиТЧ" id="841">
+									<DataPath>Объект.МПЗПриобретенные.НомерСтрокиТЧ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МПЗПриобретенныеНомерСтрокиТЧКонтекстноеМеню" id="842"/>
+									<ExtendedTooltip name="МПЗПриобретенныеНомерСтрокиТЧРасширеннаяПодсказка" id="843"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаТМЦОтгруженные" id="864">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ТМЦ отгруженные</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница ТМЦОтгруженные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаТМЦОтгруженныеРасширеннаяПодсказка" id="865"/>
+					<ChildItems>
+						<Table name="МПЗОтгруженные" id="866">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.МПЗОтгруженные</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="МПЗОтгруженныеКонтекстноеМеню" id="867"/>
+							<AutoCommandBar name="МПЗОтгруженныеКоманднаяПанель" id="868"/>
+							<ExtendedTooltip name="МПЗОтгруженныеРасширеннаяПодсказка" id="869"/>
+							<SearchStringAddition name="МПЗОтгруженныеСтрокаПоиска" id="870">
+								<AdditionSource>
+									<Item>МПЗОтгруженные</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МПЗОтгруженныеСтрокаПоискаКонтекстноеМеню" id="871"/>
+								<ExtendedTooltip name="МПЗОтгруженныеСтрокаПоискаРасширеннаяПодсказка" id="872"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="МПЗОтгруженныеСостояниеПросмотра" id="873">
+								<AdditionSource>
+									<Item>МПЗОтгруженные</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МПЗОтгруженныеСостояниеПросмотраКонтекстноеМеню" id="874"/>
+								<ExtendedTooltip name="МПЗОтгруженныеСостояниеПросмотраРасширеннаяПодсказка" id="875"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="МПЗОтгруженныеУправлениеПоиском" id="876">
+								<AdditionSource>
+									<Item>МПЗОтгруженные</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="МПЗОтгруженныеУправлениеПоискомКонтекстноеМеню" id="877"/>
+								<ExtendedTooltip name="МПЗОтгруженныеУправлениеПоискомРасширеннаяПодсказка" id="878"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="МПЗОтгруженныеНомерСтроки" id="879">
+									<DataPath>Объект.МПЗОтгруженные.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МПЗОтгруженныеНомерСтрокиКонтекстноеМеню" id="880"/>
+									<ExtendedTooltip name="МПЗОтгруженныеНомерСтрокиРасширеннаяПодсказка" id="881"/>
+								</LabelField>
+								<ColumnGroup name="МПЗОтгруженныеГруппа1" id="957">
+									<ExtendedTooltip name="МПЗОтгруженныеГруппа1РасширеннаяПодсказка" id="958"/>
+									<ChildItems>
+										<InputField name="МПЗОтгруженныеСчетУчета" id="882">
+											<DataPath>Объект.МПЗОтгруженные.СчетУчета</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗОтгруженныеСчетУчетаКонтекстноеМеню" id="883"/>
+											<ExtendedTooltip name="МПЗОтгруженныеСчетУчетаРасширеннаяПодсказка" id="884"/>
+										</InputField>
+										<InputField name="МПЗОтгруженныеНоменклатура" id="885">
+											<DataPath>Объект.МПЗОтгруженные.Номенклатура</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗОтгруженныеНоменклатураКонтекстноеМеню" id="886"/>
+											<ExtendedTooltip name="МПЗОтгруженныеНоменклатураРасширеннаяПодсказка" id="887"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="МПЗОтгруженныеНоменклатурнаяГруппа" id="888">
+									<DataPath>Объект.МПЗОтгруженные.НоменклатурнаяГруппа</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МПЗОтгруженныеНоменклатурнаяГруппаКонтекстноеМеню" id="889"/>
+									<ExtendedTooltip name="МПЗОтгруженныеНоменклатурнаяГруппаРасширеннаяПодсказка" id="890"/>
+								</InputField>
+								<ColumnGroup name="МПЗОтгруженныеГруппа2" id="959">
+									<ExtendedTooltip name="МПЗОтгруженныеГруппа2РасширеннаяПодсказка" id="960"/>
+									<ChildItems>
+										<InputField name="МПЗОтгруженныеПокупатель" id="891">
+											<DataPath>Объект.МПЗОтгруженные.Покупатель</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗОтгруженныеПокупательКонтекстноеМеню" id="892"/>
+											<ExtendedTooltip name="МПЗОтгруженныеПокупательРасширеннаяПодсказка" id="893"/>
+										</InputField>
+										<InputField name="МПЗОтгруженныеДоговорПокупателя" id="894">
+											<DataPath>Объект.МПЗОтгруженные.ДоговорПокупателя</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗОтгруженныеДоговорПокупателяКонтекстноеМеню" id="895"/>
+											<ExtendedTooltip name="МПЗОтгруженныеДоговорПокупателяРасширеннаяПодсказка" id="896"/>
+										</InputField>
+										<InputField name="МПЗОтгруженныеДокументОтгрузки" id="897">
+											<DataPath>Объект.МПЗОтгруженные.ДокументОтгрузки</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗОтгруженныеДокументОтгрузкиКонтекстноеМеню" id="898"/>
+											<ExtendedTooltip name="МПЗОтгруженныеДокументОтгрузкиРасширеннаяПодсказка" id="899"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="МПЗОтгруженныеГруппа3" id="961">
+									<ExtendedTooltip name="МПЗОтгруженныеГруппа3РасширеннаяПодсказка" id="962"/>
+									<ChildItems>
+										<InputField name="МПЗОтгруженныеПоставщик" id="906">
+											<DataPath>Объект.МПЗОтгруженные.Поставщик</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗОтгруженныеПоставщикКонтекстноеМеню" id="907"/>
+											<ExtendedTooltip name="МПЗОтгруженныеПоставщикРасширеннаяПодсказка" id="908"/>
+										</InputField>
+										<InputField name="МПЗОтгруженныеДоговорПоставщика" id="909">
+											<DataPath>Объект.МПЗОтгруженные.ДоговорПоставщика</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗОтгруженныеДоговорПоставщикаКонтекстноеМеню" id="910"/>
+											<ExtendedTooltip name="МПЗОтгруженныеДоговорПоставщикаРасширеннаяПодсказка" id="911"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="МПЗОтгруженныеПартия" id="912">
+									<DataPath>Объект.МПЗОтгруженные.Партия</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МПЗОтгруженныеПартияКонтекстноеМеню" id="913"/>
+									<ExtendedTooltip name="МПЗОтгруженныеПартияРасширеннаяПодсказка" id="914"/>
+								</InputField>
+								<InputField name="МПЗОтгруженныеКоличество" id="915">
+									<DataPath>Объект.МПЗОтгруженные.Количество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МПЗОтгруженныеКоличествоКонтекстноеМеню" id="916"/>
+									<ExtendedTooltip name="МПЗОтгруженныеКоличествоРасширеннаяПодсказка" id="917"/>
+								</InputField>
+								<ColumnGroup name="МПЗОтгруженныеГруппа4" id="963">
+									<ExtendedTooltip name="МПЗОтгруженныеГруппа4РасширеннаяПодсказка" id="964"/>
+									<ChildItems>
+										<InputField name="МПЗОтгруженныеВыручка" id="918">
+											<DataPath>Объект.МПЗОтгруженные.Выручка</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗОтгруженныеВыручкаКонтекстноеМеню" id="919"/>
+											<ExtendedTooltip name="МПЗОтгруженныеВыручкаРасширеннаяПодсказка" id="920"/>
+										</InputField>
+										<InputField name="МПЗОтгруженныеНДСНачисленный" id="921">
+											<DataPath>Объект.МПЗОтгруженные.НДСНачисленный</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗОтгруженныеНДСНачисленныйКонтекстноеМеню" id="922"/>
+											<ExtendedTooltip name="МПЗОтгруженныеНДСНачисленныйРасширеннаяПодсказка" id="923"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="МПЗОтгруженныеГруппа5" id="965">
+									<ExtendedTooltip name="МПЗОтгруженныеГруппа5РасширеннаяПодсказка" id="966"/>
+									<ChildItems>
+										<InputField name="МПЗОтгруженныеСумма" id="924">
+											<DataPath>Объект.МПЗОтгруженные.Сумма</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗОтгруженныеСуммаКонтекстноеМеню" id="925"/>
+											<ExtendedTooltip name="МПЗОтгруженныеСуммаРасширеннаяПодсказка" id="926"/>
+										</InputField>
+										<InputField name="МПЗОтгруженныеНДС" id="927">
+											<DataPath>Объект.МПЗОтгруженные.НДС</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗОтгруженныеНДСКонтекстноеМеню" id="928"/>
+											<ExtendedTooltip name="МПЗОтгруженныеНДСРасширеннаяПодсказка" id="929"/>
+										</InputField>
+										<CheckBoxField name="МПЗОтгруженныеНДСВключенВстоимость" id="930">
+											<DataPath>Объект.МПЗОтгруженные.НДСВключенВстоимость</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="МПЗОтгруженныеНДСВключенВстоимостьКонтекстноеМеню" id="931"/>
+											<ExtendedTooltip name="МПЗОтгруженныеНДСВключенВстоимостьРасширеннаяПодсказка" id="932"/>
+										</CheckBoxField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="МПЗОтгруженныеГруппа6" id="967">
+									<ExtendedTooltip name="МПЗОтгруженныеГруппа6РасширеннаяПодсказка" id="968"/>
+									<ChildItems>
+										<InputField name="МПЗОтгруженныеВалюта" id="951">
+											<DataPath>Объект.МПЗОтгруженные.Валюта</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗОтгруженныеВалютаКонтекстноеМеню" id="952"/>
+											<ExtendedTooltip name="МПЗОтгруженныеВалютаРасширеннаяПодсказка" id="953"/>
+										</InputField>
+										<InputField name="МПЗОтгруженныеВалютнаяСумма" id="933">
+											<DataPath>Объект.МПЗОтгруженные.ВалютнаяСумма</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗОтгруженныеВалютнаяСуммаКонтекстноеМеню" id="934"/>
+											<ExtendedTooltip name="МПЗОтгруженныеВалютнаяСуммаРасширеннаяПодсказка" id="935"/>
+										</InputField>
+										<InputField name="МПЗОтгруженныеВалютныйНДС" id="936">
+											<DataPath>Объект.МПЗОтгруженные.ВалютныйНДС</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗОтгруженныеВалютныйНДСКонтекстноеМеню" id="937"/>
+											<ExtendedTooltip name="МПЗОтгруженныеВалютныйНДСРасширеннаяПодсказка" id="938"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="МПЗОтгруженныеГруппа7" id="969">
+									<ExtendedTooltip name="МПЗОтгруженныеГруппа7РасширеннаяПодсказка" id="970"/>
+									<ChildItems>
+										<InputField name="МПЗОтгруженныеСуммаНУ" id="939">
+											<DataPath>Объект.МПЗОтгруженные.СуммаНУ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗОтгруженныеСуммаНУКонтекстноеМеню" id="940"/>
+											<ExtendedTooltip name="МПЗОтгруженныеСуммаНУРасширеннаяПодсказка" id="941"/>
+										</InputField>
+										<InputField name="МПЗОтгруженныеСуммаПР" id="942">
+											<DataPath>Объект.МПЗОтгруженные.СуммаПР</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗОтгруженныеСуммаПРКонтекстноеМеню" id="943"/>
+											<ExtendedTooltip name="МПЗОтгруженныеСуммаПРРасширеннаяПодсказка" id="944"/>
+										</InputField>
+										<InputField name="МПЗОтгруженныеСуммаВР" id="945">
+											<DataPath>Объект.МПЗОтгруженные.СуммаВР</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МПЗОтгруженныеСуммаВРКонтекстноеМеню" id="946"/>
+											<ExtendedTooltip name="МПЗОтгруженныеСуммаВРРасширеннаяПодсказка" id="947"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<CheckBoxField name="МПЗОтгруженныеОплачен" id="900">
+									<DataPath>Объект.МПЗОтгруженные.Оплачен</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="МПЗОтгруженныеОплаченКонтекстноеМеню" id="901"/>
+									<ExtendedTooltip name="МПЗОтгруженныеОплаченРасширеннаяПодсказка" id="902"/>
+								</CheckBoxField>
+								<InputField name="МПЗОтгруженныеРеквизитыДокументаОплаты" id="903">
+									<DataPath>Объект.МПЗОтгруженные.РеквизитыДокументаОплаты</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МПЗОтгруженныеРеквизитыДокументаОплатыКонтекстноеМеню" id="904"/>
+									<ExtendedTooltip name="МПЗОтгруженныеРеквизитыДокументаОплатыРасширеннаяПодсказка" id="905"/>
+								</InputField>
+								<InputField name="МПЗОтгруженныеСтатусыОплатыРасходовУСН" id="948">
+									<DataPath>Объект.МПЗОтгруженные.СтатусыОплатыРасходовУСН</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МПЗОтгруженныеСтатусыОплатыРасходовУСНКонтекстноеМеню" id="949"/>
+									<ExtendedTooltip name="МПЗОтгруженныеСтатусыОплатыРасходовУСНРасширеннаяПодсказка" id="950"/>
+								</InputField>
+								<InputField name="МПЗОтгруженныеКлюч" id="954">
+									<DataPath>Объект.МПЗОтгруженные.Ключ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МПЗОтгруженныеКлючКонтекстноеМеню" id="955"/>
+									<ExtendedTooltip name="МПЗОтгруженныеКлючРасширеннаяПодсказка" id="956"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ВводНачальныхОстатков</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="РазделыУчета" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разделы учета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

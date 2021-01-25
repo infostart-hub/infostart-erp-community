@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Enum uuid="95553374-f6b4-49cd-b35e-dbe811aff065">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.РазделыУчетаДляВводаОстатков" category="Ref">
+				<xr:TypeId>c0cfc8d9-ff07-4f5b-b42d-9d7b84d3f2b9</xr:TypeId>
+				<xr:ValueId>33df67c2-9503-461d-8a00-100536b14bae</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.РазделыУчетаДляВводаОстатков" category="Manager">
+				<xr:TypeId>d6c5c169-40fb-41bd-ab7d-3b24095d7c94</xr:TypeId>
+				<xr:ValueId>bd09bb8c-040b-4764-a27e-003cf0b6f3e0</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.РазделыУчетаДляВводаОстатков" category="List">
+				<xr:TypeId>f50d21e4-35a0-4113-ac58-f1a3a9415a68</xr:TypeId>
+				<xr:ValueId>671d6aa8-14d9-43e8-a213-7a9200b1e04e</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>РазделыУчетаДляВводаОстатков</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разделы учета для ввода остатков</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>QuickChoice</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="bd9069cf-7879-4233-9c3a-134d5442cb30">
+				<Properties>
+					<Name>ОсновныеСредства</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основные средства и доходные вложения (счета 01, 02, 03, 010)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="84565084-c317-4fb6-bb5d-0bb9f424e006">
+				<Properties>
+					<Name>НематериальныеАктивыИНИОКР</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нематериальные активы и расходы на НИОКР (счета 04, 05)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="de11c78a-c92b-4656-b477-fa55cf48656b">
+				<Properties>
+					<Name>КапитальныеВложения</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Капитальные вложения (счета 07, 08)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="3afd2359-f165-4dd6-9e21-2cb3daf01102">
+				<Properties>
+					<Name>Материалы</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Материалы (счет 10)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="85ca42db-31ff-483a-9654-1afb06faf4d6">
+				<Properties>
+					<Name>НДСПоПриобретеннымЦенностям</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>НДС по приобретенным ценностям (счет 19)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="75732cf3-b707-49c8-96e9-0f7818166562">
+				<Properties>
+					<Name>НезавершенноеПроизводство</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Незавершенное производство (счета 20, 23)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="f74d9d2d-e65c-4015-8151-6ab75753004f">
+				<Properties>
+					<Name>Товары</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Товары и торговая наценка (счета 41, 42)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a413b22e-5f09-44ae-b7f8-d564269957c2">
+				<Properties>
+					<Name>ГотоваяПродукцияИПолуфабрикаты</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Готовая продукция и полуфабрикаты (счета 43, 21)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="4bfeb4bf-2418-4227-bc8e-61c6f10d3ea2">
+				<Properties>
+					<Name>ТоварыОтгруженные</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Товары отгруженные (счет 45)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c1811270-d5f3-458d-84ef-bfe8901d7584">
+				<Properties>
+					<Name>ДенежныеСредства</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Денежные средства (счета 50-59)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="1a1e3c6c-c83c-4f55-8bc4-fda459c40111">
+				<Properties>
+					<Name>РасчетыСПоставщикамиИПодрядчиками</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расчеты с поставщиками и подрядчиками (счет 60)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="e46f8c2f-da57-4718-9766-8204fe7f7b9f">
+				<Properties>
+					<Name>РасчетыСПокупателямиИЗаказчиками</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расчеты с покупателями и заказчиками (счет 62)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="57163d02-4293-4820-a817-a50e967e51fa">
+				<Properties>
+					<Name>РасчетыПоНалогамИСборам</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расчеты по налогам и сборам (счета 68, 69)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="cfab9a45-a452-4808-ab7e-be8ddf4009a7">
+				<Properties>
+					<Name>РасчетыСПодотчетнымиЛицами</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расчеты с подотчетными лицами (счет 71)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="e62cede4-ca39-4fce-8cac-6790b6f64458">
+				<Properties>
+					<Name>РасчетыСУчредителями</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расчеты с учредителями (счет 75)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="5f192fec-00ad-49fa-ba83-e08cb30ea9b4">
+				<Properties>
+					<Name>РасчетыСПрочимиДебиторамиИКредиторами</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расчеты с разными дебиторами и кредиторами (счет 76)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="f6c7b55c-2392-40f5-9e94-1519975a2705">
+				<Properties>
+					<Name>НДСПоАвансамПолученным</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>НДС по авансам (счета 76.АВ, 76.ВА)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="1171e841-347e-41dd-a112-e2ddd3fc60cd">
+				<Properties>
+					<Name>Капитал</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Капитал (счета 80-86)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d427d98c-e76e-4335-aa9e-659ba1f3c2ac">
+				<Properties>
+					<Name>РасходыБудущихПериодов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расходы будущих периодов (счета 97, 76.01.2)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="54b7aae3-0be8-4154-a450-babfb854bf3b">
+				<Properties>
+					<Name>ОтложенныеНалоговыеАктивыОбязательства</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отложенные налоговые активы/обязательства (счета 09, 77)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="362c2ce8-f915-4f15-b8b9-9d676c8cdf51">
+				<Properties>
+					<Name>ПрочиеСчетаБухгалтерскогоУчета</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочие счета бухгалтерского учета</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="9a81e1cc-1ed3-4660-993a-3aaf77ea1f12">
+				<Properties>
+					<Name>НДСНачисленный</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>НДС по реализации</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

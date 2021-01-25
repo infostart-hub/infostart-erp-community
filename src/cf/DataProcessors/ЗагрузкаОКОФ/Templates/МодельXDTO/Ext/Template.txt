@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Model xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Model">
+
+	<!-- XML -->
+	<package targetNamespace="http://www.w3.org/XML/1998/namespace">
+		<property name="xmllang" form="Attribute" localName="lang">
+			<typeDef xsi:type="ValueType" memberTypes="xs:language">
+				<typeDef base="xs:string">
+					<enumeration/>
+				</typeDef>
+			</typeDef>
+		</property>
+		<property name="xmlspace" form="Attribute" localName="space">
+			<typeDef xsi:type="ValueType" base="xs:NCName">
+				<enumeration>default</enumeration>
+				<enumeration>preserve</enumeration>
+			</typeDef>
+		</property>
+		<property name="xmlbase" type="xs:anyURI" form="Attribute" localName="base"/>
+		<property name="xmlid" type="xs:ID" form="Attribute" localName="id"/>
+	</package>
+
+	<!-- Список типов классификаторов -->
+	<package targetNamespace="urn:uuid:101fa9a0-ea86-11dc-afc4-0002a5d5c51b"
+		xmlns:ctl="urn:uuid:101fa9a0-ea86-11dc-afc4-0002a5d5c51b">
+		<import namespace="http://www.w3.org/XML/1998/namespace"/>
+		<property name="СписокТиповКлассификаторов" type="ctl:ClassifierTypeListType" localName="classifier-type-list"/>
+		<objectType name="ClassifierTypeListType" open="true" ordered="false" sequenced="true">
+			<property name="ТипыКлассификаторов" type="ctl:ClassifierTypeType" upperBound="-1" localName="classifier-type"/>
+		</objectType>
+		<objectType name="ClassifierTypeType" open="true" sequenced="true">
+			<property ref="xml:xmlid"/>
+			<property name="ИмяСправочника" type="xs:NMTOKEN" localName="catalog-name"/>
+			<property name="ИмяРеквизитаПолнНаименование" type="xs:NMTOKEN" lowerBound="0" localName="full-name-property"/>
+			<property name="МаскиФайлов" type="xs:string" lowerBound="0" upperBound="-1" localName="filename-mask"/>
+			<property name="URLs" type="xs:anyURI" lowerBound="0" upperBound="-1" localName="location"/>
+		</objectType>
+	</package>
+
+	<!-- Классификатор -->
+	<package targetNamespace="urn:uuid:be515360-d4a7-11dc-8abf-0002a5d5c51b"
+		xmlns:csf="urn:uuid:be515360-d4a7-11dc-8abf-0002a5d5c51b">
+		<import namespace="http://v8.1c.ru/8.1/xdto"/>
+		<property name="classifier" type="csf:ClassifierType"/>
+		<valueType name="CodeType" base="xs:string" minLength="1" maxLength="50"/>
+		<valueType name="ControlDigitType" base="xs:string" minLength="0" maxLength="1"/>
+		<valueType name="DescriptionType" base="xs:string" minLength="0" maxLength="8000"/>
+		<objectType name="ClassifierType" open="true" ordered="false" sequenced="true">
+			<property name="classifier-type-id" type="xs:anyURI" form="Attribute"/>
+			<property name="allow-partial-load" type="xs:boolean" lowerBound="0" default="true" form="Attribute"/>
+			<property name="remove-obsolete" type="xs:boolean" lowerBound="0" default="false" form="Attribute"/>
+			<property name="desc" type="csf:DescriptionType" lowerBound="0" upperBound="1"/>
+			<property xmlns:xdto="http://v8.1c.ru/8.1/xdto" name="additional-packages" type="xdto:Model" lowerBound="0"/>
+			<property name="data" type="csf:ClassifierDataType" lowerBound="1" upperBound="1"/>
+		</objectType>
+		<objectType name="ClassifierDataType" open="true" ordered="false" sequenced="true">
+			<property name="КоличествоЭлементов" type="xs:positiveInteger" lowerBound="0" upperBound="1" form="Attribute" localName="item-count"/>
+			<property name="МаксимальноеЗначениеПрогрессора" type="xs:positiveInteger" lowerBound="0" upperBound="1" form="Attribute" localName="custom-progress-max-value"/>
+			<property name="Строки" type="csf:GroupType" lowerBound="0" upperBound="-1" localName="group"/>
+			<property name="Элементы" type="csf:ItemType" lowerBound="0" upperBound="-1" localName="item"/>
+		</objectType>
+		<objectType name="GroupType" base="csf:ItemBaseType" open="true" ordered="false" sequenced="true">
+			<property name="Строки" type="csf:GroupType" lowerBound="0" upperBound="-1" localName="group"/>
+			<property name="Элементы" type="csf:ItemType" lowerBound="0" upperBound="-1" localName="item"/>
+		</objectType>
+		<objectType name="ItemBaseType" open="true" sequenced="true">
+			<property name="Код" type="csf:CodeType" lowerBound="0" form="Attribute" localName="code"/>
+			<property name="КонтрольноеЧисло" type="csf:ControlDigitType" lowerBound="0" form="Attribute" localName="chk-digit"/>
+			<property name="Наименование" type="csf:DescriptionType" lowerBound="0" localName="desc"/>
+		</objectType>
+		<objectType name="ItemType" base="csf:ItemBaseType" open="true" ordered="false" sequenced="true"/>
+	</package>
+
+	<!-- Ссылки на нормативные акты -->
+	<package targetNamespace="urn:uuid:4c9a8080-e11c-11dc-a7e6-0002a5d5c51b"
+		xmlns:lr="urn:uuid:4c9a8080-e11c-11dc-a7e6-0002a5d5c51b">
+		<property name="НормативныйАкт" type="lr:LegalRefWithRevisionsType" localName="legal-ref"/>
+		<objectType name="LegalRefType" open="true" sequenced="true">
+			<property name="ВыпустившийОрган" localName="issued-by" type="xs:string"/>
+			<property name="Вид" localName="class" type="xs:string"/>
+			<property name="Название" localName="name" lowerBound="0" type="xs:string"/>
+			<property name="Номер" localName="number" type="xs:string"/>
+			<property name="ДатаОпубликования" localName="issue-date" type="xs:date"/>
+			<property name="ДатаВведенияВДействие" localName="in-effect-from" type="xs:date"/>
+			<property name="Примечания" localName="notes" lowerBound="0" type="xs:string"/>
+		</objectType>
+		<objectType name="LegalRefWithRevisionsType" base="lr:LegalRefType" open="true" sequenced="true">
+			<property name="Редакция" localName="revision" lowerBound="0" upperBound="-1">
+				<typeDef xsi:type="ObjectType" base="lr:LegalRefType" open="true" sequenced="true">
+					<property name="Действующая" type="xs:boolean" lowerBound="0" default="false" form="Attribute" localName="in-effect"/>
+				</typeDef>
+			</property>
+		</objectType>
+	</package>
+</Model>

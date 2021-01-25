@@ -1,0 +1,1103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выбор периода</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoURL>false</AutoURL>
+	<HorizontalSpacing>Half</HorizontalSpacing>
+	<VerticalSpacing>Half</VerticalSpacing>
+	<AutoFillCheck>false</AutoFillCheck>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>None</CommandBarLocation>
+	<ConversationsRepresentation>DontShow</ConversationsRepresentation>
+	<ShowTitle>false</ShowTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа2" id="22">
+			<EnableContentChange>true</EnableContentChange>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>false</VerticalStretch>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<GroupVerticalAlign>Center</GroupVerticalAlign>
+			<Group>Vertical</Group>
+			<HorizontalSpacing>Half</HorizontalSpacing>
+			<VerticalSpacing>Half</VerticalSpacing>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<VerticalAlign>Center</VerticalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<LabelDecoration name="Декорация2" id="82">
+					<Height>1</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<TextColor>style:AccentColor</TextColor>
+					<Font ref="style:NormalTextFont" bold="false" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<ContextMenu name="Декорация2КонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="84"/>
+				</LabelDecoration>
+				<UsualGroup name="Группа3" id="85">
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="86"/>
+					<ChildItems>
+						<Button name="ГодНазад" id="89">
+							<Type>UsualButton</Type>
+							<Width>7</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<CommandName>Form.Command.НазадГод</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;&lt;</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ГодНазадРасширеннаяПодсказка" id="90"/>
+						</Button>
+						<Button name="ВыбратьГод" id="91">
+							<Type>UsualButton</Type>
+							<Width>10</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<CommandName>Form.Command.ВыбратьГод</CommandName>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>2019</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ВыбратьГодРасширеннаяПодсказка" id="92"/>
+						</Button>
+						<Button name="ГодВперед" id="87">
+							<Type>UsualButton</Type>
+							<Width>7</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<CommandName>Form.Command.ВпередГод</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&gt;&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ГодВпередРасширеннаяПодсказка" id="88"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа6" id="54">
+					<HorizontalStretch>true</HorizontalStretch>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<GroupVerticalAlign>Top</GroupVerticalAlign>
+					<Group>AlwaysHorizontal</Group>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<VerticalAlign>Top</VerticalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="55"/>
+					<ChildItems>
+						<UsualGroup name="Группа8" id="64">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="65"/>
+							<ChildItems>
+								<UsualGroup name="Группа5" id="46">
+									<Width>17</Width>
+									<HorizontalStretch>true</HorizontalStretch>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalSpacing>Half</HorizontalSpacing>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="47"/>
+									<ChildItems>
+										<RadioButtonField name="Квартал1" id="48">
+											<DataPath>Квартал</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>I</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<RadioButtonType>Tumbler</RadioButtonType>
+											<ItemWidth>7</ItemWidth>
+											<ItemHeight>3</ItemHeight>
+											<ColumnsCount>1</ColumnsCount>
+											<EqualColumnsWidth>true</EqualColumnsWidth>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>1 кв.</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">1</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ContextMenu name="Квартал1КонтекстноеМеню" id="49"/>
+											<ExtendedTooltip name="Квартал1РасширеннаяПодсказка" id="50"/>
+											<Events>
+												<Event name="OnChange">Атрибут_ПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+										<RadioButtonField name="Месяцы1" id="51">
+											<DataPath>Месяц</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<RadioButtonType>Tumbler</RadioButtonType>
+											<ItemWidth>10</ItemWidth>
+											<ItemHeight>1</ItemHeight>
+											<ColumnsCount>1</ColumnsCount>
+											<EqualColumnsWidth>true</EqualColumnsWidth>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Январь</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">1</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Февраль</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">2</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Март</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">3</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="Месяцы1КонтекстноеМеню" id="52"/>
+											<ExtendedTooltip name="Месяцы1РасширеннаяПодсказка" id="53"/>
+											<Events>
+												<Event name="OnChange">Атрибут_ПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа4" id="41">
+									<Width>17</Width>
+									<HorizontalStretch>true</HorizontalStretch>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalSpacing>Half</HorizontalSpacing>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="42"/>
+									<ChildItems>
+										<RadioButtonField name="Квартал2" id="43">
+											<DataPath>Квартал</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>I</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<RadioButtonType>Tumbler</RadioButtonType>
+											<ItemWidth>7</ItemWidth>
+											<ItemHeight>3</ItemHeight>
+											<ColumnsCount>1</ColumnsCount>
+											<EqualColumnsWidth>true</EqualColumnsWidth>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>2 кв.</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">2</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ContextMenu name="Квартал2КонтекстноеМеню" id="44"/>
+											<ExtendedTooltip name="Квартал2РасширеннаяПодсказка" id="45"/>
+											<Events>
+												<Event name="OnChange">Атрибут_ПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+										<RadioButtonField name="Месяцы2" id="38">
+											<DataPath>Месяц</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<RadioButtonType>Tumbler</RadioButtonType>
+											<ItemWidth>10</ItemWidth>
+											<ItemHeight>1</ItemHeight>
+											<ColumnsCount>1</ColumnsCount>
+											<EqualColumnsWidth>true</EqualColumnsWidth>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Апрель</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">4</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Май</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">5</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Июнь</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">6</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="Месяцы2КонтекстноеМеню" id="39"/>
+											<ExtendedTooltip name="Месяцы2РасширеннаяПодсказка" id="40"/>
+											<Events>
+												<Event name="OnChange">Атрибут_ПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
+								<RadioButtonField name="Полугодие1" id="32">
+									<DataPath>Полугодие</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Tumbler</RadioButtonType>
+									<ItemWidth>17</ItemWidth>
+									<ItemHeight>1</ItemHeight>
+									<ColumnsCount>1</ColumnsCount>
+									<EqualColumnsWidth>true</EqualColumnsWidth>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>I полугодие</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="Полугодие1КонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="Полугодие1РасширеннаяПодсказка" id="34"/>
+									<Events>
+										<Event name="OnChange">Атрибут_ПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа9" id="66">
+							<HorizontalStretch>true</HorizontalStretch>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<Group>Vertical</Group>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="67"/>
+							<ChildItems>
+								<UsualGroup name="Группа7" id="56">
+									<Width>17</Width>
+									<HorizontalStretch>true</HorizontalStretch>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalSpacing>Half</HorizontalSpacing>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="57"/>
+									<ChildItems>
+										<RadioButtonField name="Месяцы3" id="61">
+											<DataPath>Месяц</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<VerticalAlign>Center</VerticalAlign>
+											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<RadioButtonType>Tumbler</RadioButtonType>
+											<ItemWidth>10</ItemWidth>
+											<ItemHeight>1</ItemHeight>
+											<ColumnsCount>1</ColumnsCount>
+											<EqualColumnsWidth>true</EqualColumnsWidth>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Июль</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">7</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Август</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">8</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Сентябрь</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">9</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="Месяцы3КонтекстноеМеню" id="62"/>
+											<ExtendedTooltip name="Месяцы3РасширеннаяПодсказка" id="63"/>
+											<Events>
+												<Event name="OnChange">Атрибут_ПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+										<RadioButtonField name="Квартал3" id="58">
+											<DataPath>Квартал</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>I</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<VerticalAlign>Center</VerticalAlign>
+											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<RadioButtonType>Tumbler</RadioButtonType>
+											<ItemWidth>7</ItemWidth>
+											<ItemHeight>3</ItemHeight>
+											<ColumnsCount>1</ColumnsCount>
+											<EqualColumnsWidth>true</EqualColumnsWidth>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>3 кв.</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">3</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ContextMenu name="Квартал3КонтекстноеМеню" id="59"/>
+											<ExtendedTooltip name="Квартал3РасширеннаяПодсказка" id="60"/>
+											<Events>
+												<Event name="OnChange">Атрибут_ПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа10" id="68">
+									<Width>17</Width>
+									<HorizontalStretch>true</HorizontalStretch>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalSpacing>Half</HorizontalSpacing>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="69"/>
+									<ChildItems>
+										<RadioButtonField name="Месяцы4" id="73">
+											<DataPath>Месяц</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<VerticalAlign>Center</VerticalAlign>
+											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<RadioButtonType>Tumbler</RadioButtonType>
+											<ItemWidth>10</ItemWidth>
+											<ItemHeight>1</ItemHeight>
+											<ColumnsCount>1</ColumnsCount>
+											<EqualColumnsWidth>true</EqualColumnsWidth>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Октябрь</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">10</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ноябрь</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">11</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Декабрь</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">12</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="Месяцы4КонтекстноеМеню" id="74"/>
+											<ExtendedTooltip name="Месяцы4РасширеннаяПодсказка" id="75"/>
+											<Events>
+												<Event name="OnChange">Атрибут_ПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+										<RadioButtonField name="Квартал4" id="70">
+											<DataPath>Квартал</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>I</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<VerticalAlign>Center</VerticalAlign>
+											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<RadioButtonType>Tumbler</RadioButtonType>
+											<ItemWidth>7</ItemWidth>
+											<ItemHeight>3</ItemHeight>
+											<ColumnsCount>1</ColumnsCount>
+											<EqualColumnsWidth>true</EqualColumnsWidth>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content> 4 кв.</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">4</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ContextMenu name="Квартал4КонтекстноеМеню" id="71"/>
+											<ExtendedTooltip name="Квартал4РасширеннаяПодсказка" id="72"/>
+											<Events>
+												<Event name="OnChange">Атрибут_ПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
+								<RadioButtonField name="Полугодие2" id="76">
+									<DataPath>Полугодие</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Tumbler</RadioButtonType>
+									<ItemWidth>17</ItemWidth>
+									<ItemHeight>1</ItemHeight>
+									<ColumnsCount>1</ColumnsCount>
+									<EqualColumnsWidth>true</EqualColumnsWidth>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>II полугодие</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">2</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="Полугодие2КонтекстноеМеню" id="77"/>
+									<ExtendedTooltip name="Полугодие2РасширеннаяПодсказка" id="78"/>
+									<Events>
+										<Event name="OnChange">Атрибут_ПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа15" id="116">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интервал (начало \ конец)</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа15РасширеннаяПодсказка" id="117"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияИнтервал" id="118">
+					<Height>1</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<TextColor>style:AccentColor</TextColor>
+					<Font ref="style:NormalTextFont" bold="false" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Интервал</v8:content>
+						</v8:item>
+					</Title>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<Hyperlink>true</Hyperlink>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<VerticalAlign>Center</VerticalAlign>
+					<ContextMenu name="ДекорацияИнтервалКонтекстноеМеню" id="119"/>
+					<ExtendedTooltip name="ДекорацияИнтервалРасширеннаяПодсказка" id="120"/>
+					<Events>
+						<Event name="Click">Атрибут_Нажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<UsualGroup name="Группа13" id="106">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начало</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа13РасширеннаяПодсказка" id="107"/>
+					<ChildItems>
+						<RadioButtonField name="Интервал1" id="108">
+							<DataPath>Интервал1</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<TitleHeight>2</TitleHeight>
+							<RadioButtonType>Tumbler</RadioButtonType>
+							<ItemWidth>7</ItemWidth>
+							<ItemHeight>2</ItemHeight>
+							<ItemTitleHeight>2</ItemTitleHeight>
+							<ColumnsCount>5</ColumnsCount>
+							<EqualColumnsWidth>true</EqualColumnsWidth>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Начало года</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">НачалоГода</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Начало квартала</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">НачалоКвартала</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Начало  месяца</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">НачалоМесяца</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Начало недели</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">НачалоНедели</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Начало дня</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">НачалоДня</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="Интервал1КонтекстноеМеню" id="109"/>
+							<ExtendedTooltip name="Интервал1РасширеннаяПодсказка" id="110"/>
+							<Events>
+								<Event name="OnChange">Атрибут_ПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа14" id="114">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Конец</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа14РасширеннаяПодсказка" id="115"/>
+					<ChildItems>
+						<RadioButtonField name="Интервал2" id="111">
+							<DataPath>Интервал2</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<TitleHeight>2</TitleHeight>
+							<RadioButtonType>Tumbler</RadioButtonType>
+							<ItemWidth>7</ItemWidth>
+							<ItemHeight>2</ItemHeight>
+							<ItemTitleHeight>2</ItemTitleHeight>
+							<ColumnsCount>5</ColumnsCount>
+							<EqualColumnsWidth>true</EqualColumnsWidth>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Конец года</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">КонецГода</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Конец квартала</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">КонецКвартала</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Конец месяца</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">КонецМесяца</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Конец недели</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">КонецНедели</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Конец дня</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">КонецДня</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="Интервал2КонтекстноеМеню" id="112"/>
+							<ExtendedTooltip name="Интервал2РасширеннаяПодсказка" id="113"/>
+							<Events>
+								<Event name="OnChange">Атрибут_ПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа16" id="121">
+					<Visible>false</Visible>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа16РасширеннаяПодсказка" id="122"/>
+					<ChildItems>
+						<LabelDecoration name="ПредставлениеПериода" id="123">
+							<HorizontalStretch>true</HorizontalStretch>
+							<TextColor>#0000FF</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Представление периода</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<TitleHeight>2</TitleHeight>
+							<ContextMenu name="ПредставлениеПериодаКонтекстноеМеню" id="124"/>
+							<ExtendedTooltip name="ПредставлениеПериодаРасширеннаяПодсказка" id="125"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:TypeId>16921d40-28e6-4bcc-aff5-7d32d6797d40</v8:TypeId>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Реквизит1" id="2">
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="День" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>День</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Месяц" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Квартал" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>I</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Полугодие" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Полугодие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Год" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Год</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Интервал1" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интервал1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Интервал2" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интервал2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Дата1" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Дата2" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НазадГод" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад год</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад год</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НазадГод</Action>
+		</Command>
+		<Command name="ВыбратьГод" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать год</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать год</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьГод</Action>
+		</Command>
+		<Command name="ВпередГод" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вперед год</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вперед год</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВпередГод</Action>
+		</Command>
+	</Commands>
+</Form>

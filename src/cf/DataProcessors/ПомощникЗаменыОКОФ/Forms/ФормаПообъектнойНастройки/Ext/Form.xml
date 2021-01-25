@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<ChildItems>
+			<Button name="ФормаКнопкаОК" id="36">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаОК</CommandName>
+				<ExtendedTooltip name="ФормаКнопкаОКРасширеннаяПодсказка" id="37"/>
+			</Button>
+			<Button name="ФормаКнопкаОтмена" id="34">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ФормаКнопкаОтменаРасширеннаяПодсказка" id="35"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="Организация" id="20">
+			<DataPath>Объект.Организация</DataPath>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="21"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="22"/>
+		</LabelField>
+		<LabelField name="ГруппаОбъектов" id="23">
+			<DataPath>Объект.ГруппаОбъектов</DataPath>
+			<ContextMenu name="ГруппаОбъектовКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="ГруппаОбъектовРасширеннаяПодсказка" id="25"/>
+		</LabelField>
+		<UsualGroup name="СтарыйКод" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Старый код</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Старый код</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СтарыйКодРасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<LabelField name="Код1994" id="28">
+					<DataPath>Код1994</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По ОК 013-94</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="Код1994КонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="Код1994РасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<LabelField name="Наименование1994" id="31">
+					<DataPath>Наименование1994</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="Наименование1994КонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="Наименование1994РасширеннаяПодсказка" id="33"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ТаблицаЗамены" id="1">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ТаблицаЗамены</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>SelectAll</ExcludedCommand>
+				<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаЗаменыКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ТаблицаЗаменыКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ТаблицаЗаменыКнопкаПометитьВсе" id="51">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПометитьВсе</CommandName>
+						<ExtendedTooltip name="ТаблицаЗаменыКнопкаПометитьВсеРасширеннаяПодсказка" id="52"/>
+					</Button>
+					<Button name="ТаблицаЗаменыКнопкаСнятьПометки" id="53">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СнятьПометки</CommandName>
+						<ExtendedTooltip name="ТаблицаЗаменыКнопкаСнятьПометкиРасширеннаяПодсказка" id="54"/>
+					</Button>
+					<Button name="ТаблицаЗаменыКнопкаНайти" id="41">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ТаблицаЗамены.StandardCommand.Find</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ТаблицаЗаменыКнопкаНайтиРасширеннаяПодсказка" id="42"/>
+					</Button>
+					<Button name="ТаблицаЗаменыКнопкаОтменитьПоиск" id="43">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ТаблицаЗамены.StandardCommand.CancelSearch</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ТаблицаЗаменыКнопкаОтменитьПоискРасширеннаяПодсказка" id="44"/>
+					</Button>
+					<Button name="ТаблицаЗаменыКнопкаПоВозрастанию" id="45">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ТаблицаЗамены.StandardCommand.SortListAsc</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ТаблицаЗаменыКнопкаПоВозрастаниюРасширеннаяПодсказка" id="46"/>
+					</Button>
+					<Button name="ТаблицаЗаменыКнопкаПоУбыванию" id="47">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ТаблицаЗамены.StandardCommand.SortListDesc</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ТаблицаЗаменыКнопкаПоУбываниюРасширеннаяПодсказка" id="48"/>
+					</Button>
+					<Button name="ТаблицаЗаменыКнопкаВывестиСписок" id="49">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<CommandName>Form.Item.ТаблицаЗамены.StandardCommand.OutputList</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ТаблицаЗаменыКнопкаВывестиСписокРасширеннаяПодсказка" id="50"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаЗаменыРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="ТаблицаЗаменыСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>ТаблицаЗамены</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаЗаменыСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="ТаблицаЗаменыСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаЗаменыСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>ТаблицаЗамены</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаЗаменыСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ТаблицаЗаменыСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаЗаменыУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>ТаблицаЗамены</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаЗаменыУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ТаблицаЗаменыУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="ТаблицаЗаменыОтметка" id="38">
+					<DataPath>ТаблицаЗамены.Отметка</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТаблицаЗаменыОтметкаКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ТаблицаЗаменыОтметкаРасширеннаяПодсказка" id="40"/>
+				</CheckBoxField>
+				<InputField name="ТаблицаЗаменыКодОС" id="55">
+					<DataPath>ТаблицаЗамены.КодОС</DataPath>
+					<Enabled>false</Enabled>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаЗаменыКодОСКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ТаблицаЗаменыКодОСРасширеннаяПодсказка" id="57"/>
+				</InputField>
+				<InputField name="ТаблицаЗаменыИнвНомер" id="58">
+					<DataPath>ТаблицаЗамены.ИнвНомер</DataPath>
+					<Enabled>false</Enabled>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаЗаменыИнвНомерКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="ТаблицаЗаменыИнвНомерРасширеннаяПодсказка" id="60"/>
+				</InputField>
+				<InputField name="ТаблицаЗаменыОбъектОС" id="14">
+					<DataPath>ТаблицаЗамены.ОбъектОС</DataPath>
+					<Enabled>false</Enabled>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаЗаменыОбъектОСКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ТаблицаЗаменыОбъектОСРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<InputField name="ТаблицаЗаменыОКОФ2014" id="17">
+					<DataPath>ТаблицаЗамены.ОКОФ2014</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаЗаменыОКОФ2014КонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ТаблицаЗаменыОКОФ2014РасширеннаяПодсказка" id="19"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПомощникЗаменыОКОФ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТаблицаЗамены" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица замены</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ОбъектОС" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект ОС</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ОсновныеСредства</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ОКОФ2014" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код по ОК 013-2014</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ОбщероссийскийКлассификаторОсновныхФондов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Отметка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отметка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КодОС" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>18</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИнвНомер" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инв. номер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Код1994" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код1994</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>16</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Наименование1994" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование1994</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОКОФ2014" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОКОФ2014</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ОбщероссийскийКлассификаторОсновныхФондов</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать данные и закрыть форму</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОК</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПометитьВсе" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПометитьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СнятьПометки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять пометки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять пометки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьПометки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

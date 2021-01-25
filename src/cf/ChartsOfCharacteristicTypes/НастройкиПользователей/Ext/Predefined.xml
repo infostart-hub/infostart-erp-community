@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PlanOfCharacteristicKindPredefinedItems" version="2.11">
+	<Item id="8966c475-d626-4faa-88bf-4991ccf0b129">
+		<Name>ДругиеНастройки</Name>
+		<Code>000000060</Code>
+		<Description>Другие настройки</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="ad0b5395-4ab7-404c-aafd-b6bd41dc3b06">
+				<Name>ВыполнятьПоикДублейПередЗаписьюНовогоКонтрагента</Name>
+				<Code>000000097</Code>
+				<Description>Выполнять поиск дублей перед записью нового контрагента</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="7b275624-7fdc-4728-b2bf-009a44e2dfed">
+				<Name>ЗапрашиватьПодтверждениеПриЗакрытии</Name>
+				<Code>000000045</Code>
+				<Description>Запрашивать подтверждение при закрытии программы</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="cf8c7ea2-f527-4240-9368-48ec9ae1039c">
+				<Name>НеПредлагатьНеполныеСпецПредложения</Name>
+				<Code>000000095</Code>
+				<Description>Не предлагать неполные спец. предложения</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="b2de8b42-3009-422f-9c2c-1899e6625300">
+				<Name>ОсновнаяДатаНачалаОтчетов</Name>
+				<Code>000000015</Code>
+				<Description>Основная дата начала отчетов</Description>
+				<Type>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>Date</v8:DateFractions>
+					</v8:DateQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="e03864e8-0245-4a27-bb0c-7178fbb9e7f8">
+				<Name>ОсновнойКаталогФайлов</Name>
+				<Code>000000016</Code>
+				<Description>Основной каталог файлов</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>200</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="0371a512-550a-44bb-a59f-9153a5d7d8c3">
+				<Name>ПриИзмененииСуммыПересчитыватьСкидку</Name>
+				<Code>000000024</Code>
+				<Description>При изменении суммы пересчитывать скидку, а не цену</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="1da969a1-bf33-4fc2-8280-7b82c7d48bc2">
+				<Name>РегистрироватьЦеныПоставщика</Name>
+				<Code>000000063</Code>
+				<Description>Регистрировать цены поставщика</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="ab262f0a-53a0-48b3-bf73-840b8d516cbb">
+		<Name>Запасы</Name>
+		<Code>000000106</Code>
+		<Description>Запасы</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="fd3808f9-50e0-4d06-972a-d2a068f37319">
+				<Name>ОсновнаяЕдиницаПоКлассификатору</Name>
+				<Code>000000014</Code>
+				<Description>Основная единица по классификатору</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.КлассификаторЕдиницИзмерения</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="d192c20c-bb76-44ff-acc1-3af32050af63">
+				<Name>ОсновнойВидНоменклатуры</Name>
+				<Code>000000094</Code>
+				<Description>Основной вид номенклатуры</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ВидыНоменклатуры</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="f8cb179b-1eaf-4885-abb2-84c017577e45">
+				<Name>ОсновнойСклад</Name>
+				<Code>000000002</Code>
+				<Description>Основной склад</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Склады</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="7bbbf04c-d322-46ce-bd80-b295b1d69a91">
+		<Name>ОсновныеЗначенияДляПодстановки</Name>
+		<Code>000000056</Code>
+		<Description>Основные значения для подстановки в документы и справочники</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="0ae14077-9ae6-4f07-b029-7c141f5981fe">
+				<Name>ОсновнаяКасса</Name>
+				<Code>000000003</Code>
+				<Description>Основная касса</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Кассы</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="8b24aa92-d0e6-4674-bd50-d52e09fb7822">
+				<Name>ОсновнаяКассаККМ</Name>
+				<Code>000000004</Code>
+				<Description>Основная касса ККМ</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.КассыККМ</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="1d6571d0-fabb-457a-9626-9b2f77fa4d34">
+				<Name>ОсновнаяОрганизация</Name>
+				<Code>000000001</Code>
+				<Description>Основная организация</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Организации</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="0e773ac4-fd29-496f-bd07-a080dab9bc84">
+				<Name>ОсновнаяСтавкаНДС</Name>
+				<Code>000000012</Code>
+				<Description>Основная ставка НДС</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.СтавкиНДС</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="0082c7cb-fffa-436b-a8da-a078a716df98">
+				<Name>ОсновноеПодразделение</Name>
+				<Code>000000005</Code>
+				<Description>Основное подразделение</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Подразделения</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="3cf03431-9d01-464f-a183-d765cdad9458">
+				<Name>ОсновноеЦФО</Name>
+				<Code>000000112</Code>
+				<Description>Основное ЦФО</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ФинансоваяСтруктура</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="720c475f-652f-4d9c-8231-2cde515ea63e">
+				<Name>ОсновнойДоговорЭквайринга</Name>
+				<Code>000000088</Code>
+				<Description>Основной договор эквайринга</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ДоговорыЭквайринга</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="1a686fbc-8d97-4c60-8cb2-4faba573d12b">
+				<Name>ОсновнойКодГородаТелефона</Name>
+				<Code>000000082</Code>
+				<Description>Основной код города телефона</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>100</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="5fa05d27-4fe5-455a-ac42-2476cc3f1e64">
+				<Name>ОсновнойКодСтраныТелефона</Name>
+				<Code>000000081</Code>
+				<Description>Основной код страны телефона</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>100</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="f9f749f8-e52c-40ea-ba0e-210c3dd2d3b1">
+				<Name>ОсновнойОтветственный</Name>
+				<Code>000000006</Code>
+				<Description>Основной ответственный</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Пользователи</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="496a97fc-db99-467c-a1aa-0a9e07050868">
+				<Name>ОсновнойПокупатель</Name>
+				<Code>000000008</Code>
+				<Description>Основной покупатель</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Контрагенты</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="24f8f6ca-a3b6-4d29-8983-72e9bcd428d9">
+				<Name>ОсновнойПоставщик</Name>
+				<Code>000000007</Code>
+				<Description>Основной поставщик</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Контрагенты</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="273d085a-0fd2-4b9c-8f48-fb7c0296fcd5">
+		<Name>Ценообразование</Name>
+		<Code>000000105</Code>
+		<Description>Ценообразование</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="e9048823-d4fc-4bb0-ba79-f1dbc9d63d91">
+				<Name>ОсновнаяЦеноваяГруппа</Name>
+				<Code>000000086</Code>
+				<Description>Основная ценовая группа</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ЦеновыеГруппы</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="0c173527-ee3c-4b5b-82f7-b63a7b615406">
+				<Name>ОсновноеУсловиеПродаж</Name>
+				<Code>000000085</Code>
+				<Description>Основное условие продаж</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.УсловияПродаж</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="c7482eb2-164b-4b7e-a339-7b196ab1684a">
+				<Name>ОсновнойТипЦенПокупки</Name>
+				<Code>000000113</Code>
+				<Description>Основной тип цен покупки</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ТипыЦенНоменклатуры</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="3b0883eb-e367-40d5-ae6c-83f89b5a09cd">
+				<Name>ОсновнойТипЦенПродажи</Name>
+				<Code>000000010</Code>
+				<Description>Основной тип цен продажи</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ТипыЦенНоменклатуры</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+</PredefinedData>
