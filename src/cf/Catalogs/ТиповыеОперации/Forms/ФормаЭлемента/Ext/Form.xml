@@ -1,0 +1,1797 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+	</CommandSet>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<ChildItems>
+			<Button name="ФормаЗаписать" id="385">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="386"/>
+			</Button>
+			<Button name="ФормаСправка" id="387">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="388"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Родитель" id="4">
+			<DataPath>Объект.Parent</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Входит в группу</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="РодительКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Pages name="Страницы" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<Page name="СтраницаНастройкаАналитики" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка аналитики</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.DebitCredit</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СтраницаНастройкаАналитикиРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<Table name="НастройкаАналитики" id="85">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.НастройкаАналитики</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НастройкаАналитикиКонтекстноеМеню" id="86"/>
+							<AutoCommandBar name="НастройкаАналитикиКоманднаяПанель" id="87">
+								<ChildItems>
+									<Button name="НастройкаАналитикиНастройкаАналитикиОбщаяОбновить" id="113">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.НастройкаАналитикиОбщаяОбновить</CommandName>
+										<ExtendedTooltip name="НастройкаАналитикиНастройкаАналитикиОбщаяОбновитьРасширеннаяПодсказка" id="114"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="НастройкаАналитикиРасширеннаяПодсказка" id="88"/>
+							<SearchStringAddition name="НастройкаАналитикиСтрокаПоиска" id="89">
+								<AdditionSource>
+									<Item>НастройкаАналитики</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкаАналитикиСтрокаПоискаКонтекстноеМеню" id="90"/>
+								<ExtendedTooltip name="НастройкаАналитикиСтрокаПоискаРасширеннаяПодсказка" id="91"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НастройкаАналитикиСостояниеПросмотра" id="92">
+								<AdditionSource>
+									<Item>НастройкаАналитики</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкаАналитикиСостояниеПросмотраКонтекстноеМеню" id="93"/>
+								<ExtendedTooltip name="НастройкаАналитикиСостояниеПросмотраРасширеннаяПодсказка" id="94"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НастройкаАналитикиУправлениеПоиском" id="95">
+								<AdditionSource>
+									<Item>НастройкаАналитики</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкаАналитикиУправлениеПоискомКонтекстноеМеню" id="96"/>
+								<ExtendedTooltip name="НастройкаАналитикиУправлениеПоискомРасширеннаяПодсказка" id="97"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">тпНастройкаАналитики_Выбор</Event>
+								<Event name="OnActivateRow">тпНастройкаАналитики_ПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<PictureField name="НастройкаАналитикиКартинкаДК" id="148">
+									<DataPath>Объект.НастройкаАналитики.КартинкаДК</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Ref>StdPicture.DebitCredit</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<ContextMenu name="НастройкаАналитикиКартинкаДККонтекстноеМеню" id="149"/>
+									<ExtendedTooltip name="НастройкаАналитикиКартинкаДКРасширеннаяПодсказка" id="150"/>
+								</PictureField>
+								<InputField name="НастройкаАналитикиВидАналитики" id="101">
+									<DataPath>Объект.НастройкаАналитики.ВидАналитики</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChooseType>false</ChooseType>
+									<ContextMenu name="НастройкаАналитикиВидАналитикиКонтекстноеМеню" id="102"/>
+									<ExtendedTooltip name="НастройкаАналитикиВидАналитикиРасширеннаяПодсказка" id="103"/>
+									<Events>
+										<Event name="StartChoice">тпНастройкаАналитики_Колонка_НачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="НастройкаАналитикиЗначение" id="104">
+									<DataPath>Объект.НастройкаАналитики.Значение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="НастройкаАналитикиЗначениеКонтекстноеМеню" id="105"/>
+									<ExtendedTooltip name="НастройкаАналитикиЗначениеРасширеннаяПодсказка" id="106"/>
+									<Events>
+										<Event name="StartChoice">тпНастройкаАналитики_Колонка_НачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<PictureField name="НастройкаАналитикиКартинкаФК" id="151">
+									<DataPath>Объект.НастройкаАналитики.КартинкаФК</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Right</FixingInTable>
+									<HeaderPicture>
+										<xr:Ref>StdPicture.CustomExpression</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<ValuesPicture>
+										<xr:Ref>StdPicture.CustomExpression</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<ContextMenu name="НастройкаАналитикиКартинкаФККонтекстноеМеню" id="152"/>
+									<ExtendedTooltip name="НастройкаАналитикиКартинкаФКРасширеннаяПодсказка" id="153"/>
+									<Events>
+										<Event name="Click">тпНастройкаАналитики_Нажатие</Event>
+									</Events>
+								</PictureField>
+							</ChildItems>
+						</Table>
+						<CommandBar name="Группа1" id="146">
+							<Visible>false</Visible>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="147"/>
+						</CommandBar>
+						<TextDocumentField name="ТекстМодуля" id="143">
+							<DataPath>ТекстМодуля</DataPath>
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Текст модуля текущей строки настройки аналитики</v8:content>
+								</v8:item>
+							</Title>
+							<Height>5</Height>
+							<ContextMenu name="ТекстМодуляКонтекстноеМеню" id="144"/>
+							<ExtendedTooltip name="ТекстМодуляРасширеннаяПодсказка" id="145"/>
+						</TextDocumentField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПроводкиБУ" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Бухгалтерский учет</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.AccountingRegister</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СтраницаПроводкиБУРасширеннаяПодсказка" id="12"/>
+					<ChildItems>
+						<Table name="ПроводкиБУ" id="19">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ПроводкиБУ</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПроводкиБУКонтекстноеМеню" id="20"/>
+							<AutoCommandBar name="ПроводкиБУКоманднаяПанель" id="21"/>
+							<ExtendedTooltip name="ПроводкиБУРасширеннаяПодсказка" id="22"/>
+							<SearchStringAddition name="ПроводкиБУСтрокаПоиска" id="23">
+								<AdditionSource>
+									<Item>ПроводкиБУ</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроводкиБУСтрокаПоискаКонтекстноеМеню" id="24"/>
+								<ExtendedTooltip name="ПроводкиБУСтрокаПоискаРасширеннаяПодсказка" id="25"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПроводкиБУСостояниеПросмотра" id="26">
+								<AdditionSource>
+									<Item>ПроводкиБУ</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроводкиБУСостояниеПросмотраКонтекстноеМеню" id="27"/>
+								<ExtendedTooltip name="ПроводкиБУСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПроводкиБУУправлениеПоиском" id="29">
+								<AdditionSource>
+									<Item>ПроводкиБУ</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроводкиБУУправлениеПоискомКонтекстноеМеню" id="30"/>
+								<ExtendedTooltip name="ПроводкиБУУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="DragCheck">тпПроводки_ПроверкаПеретаскивания</Event>
+								<Event name="BeforeEditEnd">тпПроводки_ПередОкончаниемРедактирования</Event>
+								<Event name="OnActivateRow">тпПроводки_ПриАктивизацииСтроки</Event>
+								<Event name="BeforeRowChange">тпПроводки_ПередНачаломИзменения</Event>
+								<Event name="DragEnd">тпПроводки_ОкончаниеПеретаскивания</Event>
+								<Event name="AfterDeleteRow">тпПроводки_ПослеУдаления</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ПроводкиБУСчетДебет" id="35">
+									<DataPath>Объект.ПроводкиБУ.СчетДебет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<Width>10</Width>
+									<ContextMenu name="ПроводкиБУСчетДебетКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ПроводкиБУСчетДебетРасширеннаяПодсказка" id="37"/>
+								</InputField>
+								<InputField name="ПроводкиБУСчетКредит" id="38">
+									<DataPath>Объект.ПроводкиБУ.СчетКредит</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
+									<ContextMenu name="ПроводкиБУСчетКредитКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="ПроводкиБУСчетКредитРасширеннаяПодсказка" id="40"/>
+								</InputField>
+								<ColumnGroup name="ПроводкиБУ_Сумма" id="77">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проводки б у сумма</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ПроводкиБУ_СуммаРасширеннаяПодсказка" id="78"/>
+									<ChildItems>
+										<InputField name="ПроводкиБУСумма" id="41">
+											<DataPath>Объект.ПроводкиБУ.Сумма</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<EditMode>EnterOnInput</EditMode>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<ClearButton>true</ClearButton>
+											<CreateButton>false</CreateButton>
+											<ChooseType>false</ChooseType>
+											<TextEdit>false</TextEdit>
+											<AutoShowClearButtonMode>FilledOnly</AutoShowClearButtonMode>
+											<AutoShowOpenButtonMode>FilledOnly</AutoShowOpenButtonMode>
+											<ContextMenu name="ПроводкиБУСуммаКонтекстноеМеню" id="42"/>
+											<ExtendedTooltip name="ПроводкиБУСуммаРасширеннаяПодсказка" id="43"/>
+											<Events>
+												<Event name="StartChoice">тпПроводки_Колонка_НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="ПроводкиБУКоличество" id="47">
+											<DataPath>Объект.ПроводкиБУ.Количество</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<EditMode>EnterOnInput</EditMode>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<ClearButton>true</ClearButton>
+											<CreateButton>false</CreateButton>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChooseType>false</ChooseType>
+											<TextEdit>false</TextEdit>
+											<AutoShowClearButtonMode>FilledOnly</AutoShowClearButtonMode>
+											<AutoShowOpenButtonMode>FilledOnly</AutoShowOpenButtonMode>
+											<ContextMenu name="ПроводкиБУКоличествоКонтекстноеМеню" id="48"/>
+											<ExtendedTooltip name="ПроводкиБУКоличествоРасширеннаяПодсказка" id="49"/>
+											<Events>
+												<Event name="StartChoice">тпПроводки_Колонка_НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="ПроводкиБУСуммаВал" id="44">
+											<DataPath>Объект.ПроводкиБУ.СуммаВал</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сумма вал.</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<ClearButton>true</ClearButton>
+											<CreateButton>false</CreateButton>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChooseType>false</ChooseType>
+											<TextEdit>false</TextEdit>
+											<AutoShowClearButtonMode>FilledOnly</AutoShowClearButtonMode>
+											<AutoShowOpenButtonMode>FilledOnly</AutoShowOpenButtonMode>
+											<ContextMenu name="ПроводкиБУСуммаВалКонтекстноеМеню" id="45"/>
+											<ExtendedTooltip name="ПроводкиБУСуммаВалРасширеннаяПодсказка" id="46"/>
+											<Events>
+												<Event name="StartChoice">тпПроводки_Колонка_НачалоВыбора</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ПроводкиБУ_Дт" id="79">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проводки б у дт</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ПроводкиБУ_ДтРасширеннаяПодсказка" id="80"/>
+									<ChildItems>
+										<InputField name="ПроводкиБУСуммаНУ_Дт" id="53">
+											<DataPath>Объект.ПроводкиБУ.СуммаНУ_Дт</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<EditMode>EnterOnInput</EditMode>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<ClearButton>true</ClearButton>
+											<CreateButton>false</CreateButton>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChooseType>false</ChooseType>
+											<TextEdit>false</TextEdit>
+											<AutoShowClearButtonMode>FilledOnly</AutoShowClearButtonMode>
+											<AutoShowOpenButtonMode>FilledOnly</AutoShowOpenButtonMode>
+											<ContextMenu name="ПроводкиБУСуммаНУ_ДтКонтекстноеМеню" id="54"/>
+											<ExtendedTooltip name="ПроводкиБУСуммаНУ_ДтРасширеннаяПодсказка" id="55"/>
+											<Events>
+												<Event name="StartChoice">тпПроводки_Колонка_НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="ПроводкиБУСуммаПР_Дт" id="59">
+											<DataPath>Объект.ПроводкиБУ.СуммаПР_Дт</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<EditMode>EnterOnInput</EditMode>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<ClearButton>true</ClearButton>
+											<CreateButton>false</CreateButton>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChooseType>false</ChooseType>
+											<TextEdit>false</TextEdit>
+											<AutoShowClearButtonMode>FilledOnly</AutoShowClearButtonMode>
+											<AutoShowOpenButtonMode>FilledOnly</AutoShowOpenButtonMode>
+											<ContextMenu name="ПроводкиБУСуммаПР_ДтКонтекстноеМеню" id="60"/>
+											<ExtendedTooltip name="ПроводкиБУСуммаПР_ДтРасширеннаяПодсказка" id="61"/>
+											<Events>
+												<Event name="StartChoice">тпПроводки_Колонка_НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="ПроводкиБУСуммаВР_Дт" id="65">
+											<DataPath>Объект.ПроводкиБУ.СуммаВР_Дт</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<EditMode>EnterOnInput</EditMode>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<ClearButton>true</ClearButton>
+											<CreateButton>false</CreateButton>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChooseType>false</ChooseType>
+											<TextEdit>false</TextEdit>
+											<AutoShowClearButtonMode>FilledOnly</AutoShowClearButtonMode>
+											<AutoShowOpenButtonMode>FilledOnly</AutoShowOpenButtonMode>
+											<ContextMenu name="ПроводкиБУСуммаВР_ДтКонтекстноеМеню" id="66"/>
+											<ExtendedTooltip name="ПроводкиБУСуммаВР_ДтРасширеннаяПодсказка" id="67"/>
+											<Events>
+												<Event name="StartChoice">тпПроводки_Колонка_НачалоВыбора</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ПроводкиБУ_Кт" id="81">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проводки б у кт</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ПроводкиБУ_КтРасширеннаяПодсказка" id="82"/>
+									<ChildItems>
+										<InputField name="ПроводкиБУСуммаНУ_Кт" id="56">
+											<DataPath>Объект.ПроводкиБУ.СуммаНУ_Кт</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<EditMode>EnterOnInput</EditMode>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<ClearButton>true</ClearButton>
+											<CreateButton>false</CreateButton>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChooseType>false</ChooseType>
+											<TextEdit>false</TextEdit>
+											<AutoShowClearButtonMode>FilledOnly</AutoShowClearButtonMode>
+											<AutoShowOpenButtonMode>FilledOnly</AutoShowOpenButtonMode>
+											<ContextMenu name="ПроводкиБУСуммаНУ_КтКонтекстноеМеню" id="57"/>
+											<ExtendedTooltip name="ПроводкиБУСуммаНУ_КтРасширеннаяПодсказка" id="58"/>
+											<Events>
+												<Event name="StartChoice">тпПроводки_Колонка_НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="ПроводкиБУСуммаПР_Кт" id="62">
+											<DataPath>Объект.ПроводкиБУ.СуммаПР_Кт</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<EditMode>EnterOnInput</EditMode>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<ClearButton>true</ClearButton>
+											<CreateButton>false</CreateButton>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChooseType>false</ChooseType>
+											<TextEdit>false</TextEdit>
+											<AutoShowClearButtonMode>FilledOnly</AutoShowClearButtonMode>
+											<AutoShowOpenButtonMode>FilledOnly</AutoShowOpenButtonMode>
+											<ContextMenu name="ПроводкиБУСуммаПР_КтКонтекстноеМеню" id="63"/>
+											<ExtendedTooltip name="ПроводкиБУСуммаПР_КтРасширеннаяПодсказка" id="64"/>
+											<Events>
+												<Event name="StartChoice">тпПроводки_Колонка_НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="ПроводкиБУСуммаВР_Кт" id="68">
+											<DataPath>Объект.ПроводкиБУ.СуммаВР_Кт</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<EditMode>EnterOnInput</EditMode>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<ClearButton>true</ClearButton>
+											<CreateButton>false</CreateButton>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChooseType>false</ChooseType>
+											<TextEdit>false</TextEdit>
+											<AutoShowClearButtonMode>FilledOnly</AutoShowClearButtonMode>
+											<AutoShowOpenButtonMode>FilledOnly</AutoShowOpenButtonMode>
+											<ContextMenu name="ПроводкиБУСуммаВР_КтКонтекстноеМеню" id="69"/>
+											<ExtendedTooltip name="ПроводкиБУСуммаВР_КтРасширеннаяПодсказка" id="70"/>
+											<Events>
+												<Event name="StartChoice">тпПроводки_Колонка_НачалоВыбора</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ПроводкиБУ_Доп" id="83">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проводки б у доп</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проводки б у доп</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ПроводкиБУ_ДопРасширеннаяПодсказка" id="84"/>
+									<ChildItems>
+										<InputField name="ПроводкиБУКоэфСуммы" id="50">
+											<DataPath>Объект.ПроводкиБУ.КоэфСуммы</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Коэф. суммы</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<ContextMenu name="ПроводкиБУКоэфСуммыКонтекстноеМеню" id="51"/>
+											<ExtendedTooltip name="ПроводкиБУКоэфСуммыРасширеннаяПодсказка" id="52"/>
+										</InputField>
+										<CheckBoxField name="ПроводкиБУЗначениеРесурсаПоМодулю" id="74">
+											<DataPath>Объект.ПроводкиБУ.ЗначениеРесурсаПоМодулю</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>По модулю</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПроводкиБУЗначениеРесурсаПоМодулюКонтекстноеМеню" id="75"/>
+											<ExtendedTooltip name="ПроводкиБУЗначениеРесурсаПоМодулюРасширеннаяПодсказка" id="76"/>
+										</CheckBoxField>
+										<CheckBoxField name="ПроводкиБУИнвертироватьЗначениеРесурсов" id="71">
+											<DataPath>Объект.ПроводкиБУ.ИнвертироватьЗначениеРесурсов</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Инвертировать</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Инвертировать значение</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПроводкиБУИнвертироватьЗначениеРесурсовКонтекстноеМеню" id="72"/>
+											<ExtendedTooltip name="ПроводкиБУИнвертироватьЗначениеРесурсовРасширеннаяПодсказка" id="73"/>
+										</CheckBoxField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="ГруппаНастройкаАналитикиБУ" id="383">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Аналитики текущей операции</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Height>10</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<Behavior>Collapsible</Behavior>
+							<CollapsedRepresentationTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Показать индивидуальную аналитику текущей операции</v8:content>
+								</v8:item>
+							</CollapsedRepresentationTitle>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаНастройкаАналитикиБУРасширеннаяПодсказка" id="384"/>
+							<ChildItems>
+								<Table name="НастройкаАналитикиБУ" id="154">
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.НастройкаАналитики</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="НастройкаАналитикиБУКонтекстноеМеню" id="155"/>
+									<AutoCommandBar name="НастройкаАналитикиБУКоманднаяПанель" id="156">
+										<ChildItems>
+											<Button name="НастройкаАналитикиОбновитьБУ" id="375">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.НастройкаАналитикиОбновитьБУ</CommandName>
+												<ExtendedTooltip name="НастройкаАналитикиОбновитьБУРасширеннаяПодсказка" id="376"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="НастройкаАналитикиБУРасширеннаяПодсказка" id="157"/>
+									<SearchStringAddition name="НастройкаАналитикиБУСтрокаПоиска" id="158">
+										<AdditionSource>
+											<Item>НастройкаАналитикиБУ</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="НастройкаАналитикиБУСтрокаПоискаКонтекстноеМеню" id="159"/>
+										<ExtendedTooltip name="НастройкаАналитикиБУСтрокаПоискаРасширеннаяПодсказка" id="160"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="НастройкаАналитикиБУСостояниеПросмотра" id="161">
+										<AdditionSource>
+											<Item>НастройкаАналитикиБУ</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="НастройкаАналитикиБУСостояниеПросмотраКонтекстноеМеню" id="162"/>
+										<ExtendedTooltip name="НастройкаАналитикиБУСостояниеПросмотраРасширеннаяПодсказка" id="163"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="НастройкаАналитикиБУУправлениеПоиском" id="164">
+										<AdditionSource>
+											<Item>НастройкаАналитикиБУ</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="НастройкаАналитикиБУУправлениеПоискомКонтекстноеМеню" id="165"/>
+										<ExtendedTooltip name="НастройкаАналитикиБУУправлениеПоискомРасширеннаяПодсказка" id="166"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">тпНастройкаАналитики_Выбор</Event>
+										<Event name="BeforeAddRow">тпНастройкаАналитикиБУ_ПередНачаломДобавления</Event>
+										<Event name="BeforeEditEnd">тпНастройкаАналитикиБУ_ПередОкончаниемРедактирования</Event>
+									</Events>
+									<ChildItems>
+										<PictureField name="НастройкаАналитикиБУКартинкаДК" id="185">
+											<DataPath>Объект.НастройкаАналитики.КартинкаДК</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<FixingInTable>Left</FixingInTable>
+											<HeaderPicture>
+												<xr:Ref>StdPicture.Credit</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<ContextMenu name="НастройкаАналитикиБУКартинкаДККонтекстноеМеню" id="186"/>
+											<ExtendedTooltip name="НастройкаАналитикиБУКартинкаДКРасширеннаяПодсказка" id="187"/>
+										</PictureField>
+										<ColumnGroup name="НастройкаАналитикиБУ1" id="188">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройка аналитики б у1</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>InCell</Group>
+											<ExtendedTooltip name="НастройкаАналитикиБУ1РасширеннаяПодсказка" id="189"/>
+											<ChildItems>
+												<CheckBoxField name="НастройкаАналитикиБУИспользование" id="182">
+													<DataPath>Объект.НастройкаАналитики.Использование</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="НастройкаАналитикиБУИспользованиеКонтекстноеМеню" id="183"/>
+													<ExtendedTooltip name="НастройкаАналитикиБУИспользованиеРасширеннаяПодсказка" id="184"/>
+												</CheckBoxField>
+												<InputField name="НастройкаАналитикиБУВидАналитики" id="170">
+													<DataPath>Объект.НастройкаАналитики.ВидАналитики</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Вид аналитики (индивидуальная)</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ChooseType>false</ChooseType>
+													<ContextMenu name="НастройкаАналитикиБУВидАналитикиКонтекстноеМеню" id="171"/>
+													<ExtendedTooltip name="НастройкаАналитикиБУВидАналитикиРасширеннаяПодсказка" id="172"/>
+													<Events>
+														<Event name="StartChoice">тпНастройкаАналитики_Колонка_НачалоВыбора</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="НастройкаАналитикиБУЗначение" id="173">
+											<DataPath>Объект.НастройкаАналитики.Значение</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<TextEdit>false</TextEdit>
+											<ContextMenu name="НастройкаАналитикиБУЗначениеКонтекстноеМеню" id="174"/>
+											<ExtendedTooltip name="НастройкаАналитикиБУЗначениеРасширеннаяПодсказка" id="175"/>
+											<Events>
+												<Event name="StartChoice">тпНастройкаАналитики_Колонка_НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<PictureField name="НастройкаАналитикиБУКартинкаФК" id="190">
+											<DataPath>Объект.НастройкаАналитики.КартинкаФК</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<FixingInTable>Right</FixingInTable>
+											<HeaderPicture>
+												<xr:Ref>StdPicture.CustomExpression</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<ValuesPicture>
+												<xr:Ref>StdPicture.CustomExpression</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</ValuesPicture>
+											<ContextMenu name="НастройкаАналитикиБУКартинкаФККонтекстноеМеню" id="191"/>
+											<ExtendedTooltip name="НастройкаАналитикиБУКартинкаФКРасширеннаяПодсказка" id="192"/>
+										</PictureField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПроводкиФУ" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Финансовый учет</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.AccountingRegister</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СтраницаПроводкиФУРасширеннаяПодсказка" id="16"/>
+					<ChildItems>
+						<Table name="ПроводкиФУ" id="193">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ПроводкиФУ</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПроводкиФУКонтекстноеМеню" id="194"/>
+							<AutoCommandBar name="ПроводкиФУКоманднаяПанель" id="195"/>
+							<ExtendedTooltip name="ПроводкиФУРасширеннаяПодсказка" id="196"/>
+							<SearchStringAddition name="ПроводкиФУСтрокаПоиска" id="197">
+								<AdditionSource>
+									<Item>ПроводкиФУ</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроводкиФУСтрокаПоискаКонтекстноеМеню" id="198"/>
+								<ExtendedTooltip name="ПроводкиФУСтрокаПоискаРасширеннаяПодсказка" id="199"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПроводкиФУСостояниеПросмотра" id="200">
+								<AdditionSource>
+									<Item>ПроводкиФУ</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроводкиФУСостояниеПросмотраКонтекстноеМеню" id="201"/>
+								<ExtendedTooltip name="ПроводкиФУСостояниеПросмотраРасширеннаяПодсказка" id="202"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПроводкиФУУправлениеПоиском" id="203">
+								<AdditionSource>
+									<Item>ПроводкиФУ</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроводкиФУУправлениеПоискомКонтекстноеМеню" id="204"/>
+								<ExtendedTooltip name="ПроводкиФУУправлениеПоискомРасширеннаяПодсказка" id="205"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="DragCheck">тпПроводки_ПроверкаПеретаскивания</Event>
+								<Event name="BeforeEditEnd">тпПроводки_ПередОкончаниемРедактирования</Event>
+								<Event name="OnActivateRow">тпПроводки_ПриАктивизацииСтроки</Event>
+								<Event name="BeforeRowChange">тпПроводки_ПередНачаломИзменения</Event>
+								<Event name="DragEnd">тпПроводки_ОкончаниеПеретаскивания</Event>
+								<Event name="AfterDeleteRow">тпПроводки_ПослеУдаления</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ПроводкиФУСчетДебет" id="209">
+									<DataPath>Объект.ПроводкиФУ.СчетДебет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПроводкиФУСчетДебетКонтекстноеМеню" id="210"/>
+									<ExtendedTooltip name="ПроводкиФУСчетДебетРасширеннаяПодсказка" id="211"/>
+								</InputField>
+								<InputField name="ПроводкиФУСчетКредит" id="212">
+									<DataPath>Объект.ПроводкиФУ.СчетКредит</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПроводкиФУСчетКредитКонтекстноеМеню" id="213"/>
+									<ExtendedTooltip name="ПроводкиФУСчетКредитРасширеннаяПодсказка" id="214"/>
+								</InputField>
+								<ColumnGroup name="ПроводкиФУ_Сумма" id="236">
+									<ExtendedTooltip name="ПроводкиФУ_СуммаРасширеннаяПодсказка" id="237"/>
+									<ChildItems>
+										<InputField name="ПроводкиФУСумма" id="215">
+											<DataPath>Объект.ПроводкиФУ.Сумма</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<EditMode>EnterOnInput</EditMode>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<CreateButton>false</CreateButton>
+											<ChooseType>false</ChooseType>
+											<AutoShowClearButtonMode>FilledOnly</AutoShowClearButtonMode>
+											<AutoShowOpenButtonMode>FilledOnly</AutoShowOpenButtonMode>
+											<ContextMenu name="ПроводкиФУСуммаКонтекстноеМеню" id="216"/>
+											<ExtendedTooltip name="ПроводкиФУСуммаРасширеннаяПодсказка" id="217"/>
+											<Events>
+												<Event name="StartChoice">тпПроводки_Колонка_НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="ПроводкиФУКоличество" id="221">
+											<DataPath>Объект.ПроводкиФУ.Количество</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<EditMode>EnterOnInput</EditMode>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<CreateButton>false</CreateButton>
+											<ChooseType>false</ChooseType>
+											<AutoShowClearButtonMode>FilledOnly</AutoShowClearButtonMode>
+											<AutoShowOpenButtonMode>FilledOnly</AutoShowOpenButtonMode>
+											<ContextMenu name="ПроводкиФУКоличествоКонтекстноеМеню" id="222"/>
+											<ExtendedTooltip name="ПроводкиФУКоличествоРасширеннаяПодсказка" id="223"/>
+											<Events>
+												<Event name="StartChoice">тпПроводки_Колонка_НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="ПроводкиФУСуммаВал" id="218">
+											<DataPath>Объект.ПроводкиФУ.СуммаВал</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<EditMode>EnterOnInput</EditMode>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<ClearButton>true</ClearButton>
+											<OpenButton>true</OpenButton>
+											<CreateButton>false</CreateButton>
+											<ChooseType>false</ChooseType>
+											<AutoShowClearButtonMode>FilledOnly</AutoShowClearButtonMode>
+											<AutoShowOpenButtonMode>FilledOnly</AutoShowOpenButtonMode>
+											<ContextMenu name="ПроводкиФУСуммаВалКонтекстноеМеню" id="219"/>
+											<ExtendedTooltip name="ПроводкиФУСуммаВалРасширеннаяПодсказка" id="220"/>
+											<Events>
+												<Event name="StartChoice">тпПроводки_Колонка_НачалоВыбора</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ПроводкиФУ_Доп" id="238">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проводки ф у доп</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проводки ф у доп</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ПроводкиФУ_ДопРасширеннаяПодсказка" id="239"/>
+									<ChildItems>
+										<InputField name="ПроводкиФУКоэфСуммы" id="224">
+											<DataPath>Объект.ПроводкиФУ.КоэфСуммы</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Коэф. суммы</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПроводкиФУКоэфСуммыКонтекстноеМеню" id="225"/>
+											<ExtendedTooltip name="ПроводкиФУКоэфСуммыРасширеннаяПодсказка" id="226"/>
+										</InputField>
+										<CheckBoxField name="ПроводкиФУЗначениеРесурсаПоМодулю" id="230">
+											<DataPath>Объект.ПроводкиФУ.ЗначениеРесурсаПоМодулю</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>По модулю</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПроводкиФУЗначениеРесурсаПоМодулюКонтекстноеМеню" id="231"/>
+											<ExtendedTooltip name="ПроводкиФУЗначениеРесурсаПоМодулюРасширеннаяПодсказка" id="232"/>
+										</CheckBoxField>
+										<CheckBoxField name="ПроводкиФУИнвертироватьЗначениеРесурсов" id="227">
+											<DataPath>Объект.ПроводкиФУ.ИнвертироватьЗначениеРесурсов</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Инвертировать</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПроводкиФУИнвертироватьЗначениеРесурсовКонтекстноеМеню" id="228"/>
+											<ExtendedTooltip name="ПроводкиФУИнвертироватьЗначениеРесурсовРасширеннаяПодсказка" id="229"/>
+										</CheckBoxField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="ГруппаНастройкаАналитикиФУ" id="381">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Аналитики текущей операции</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Height>10</Height>
+							<Behavior>Collapsible</Behavior>
+							<CollapsedRepresentationTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Показать индивидуальную аналитику текущей операции</v8:content>
+								</v8:item>
+							</CollapsedRepresentationTitle>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаНастройкаАналитикиФУРасширеннаяПодсказка" id="382"/>
+							<ChildItems>
+								<Table name="НастройкаАналитикиФУ" id="240">
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.НастройкаАналитики</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="НастройкаАналитикиФУКонтекстноеМеню" id="241"/>
+									<AutoCommandBar name="НастройкаАналитикиФУКоманднаяПанель" id="242">
+										<ChildItems>
+											<Button name="НастройкаАналитикиОбновитьФУ" id="377">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.НастройкаАналитикиОбновитьФУ</CommandName>
+												<ExtendedTooltip name="НастройкаАналитикиОбновитьФУРасширеннаяПодсказка" id="378"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="НастройкаАналитикиФУРасширеннаяПодсказка" id="243"/>
+									<SearchStringAddition name="НастройкаАналитикиФУСтрокаПоиска" id="244">
+										<AdditionSource>
+											<Item>НастройкаАналитикиФУ</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="НастройкаАналитикиФУСтрокаПоискаКонтекстноеМеню" id="245"/>
+										<ExtendedTooltip name="НастройкаАналитикиФУСтрокаПоискаРасширеннаяПодсказка" id="246"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="НастройкаАналитикиФУСостояниеПросмотра" id="247">
+										<AdditionSource>
+											<Item>НастройкаАналитикиФУ</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="НастройкаАналитикиФУСостояниеПросмотраКонтекстноеМеню" id="248"/>
+										<ExtendedTooltip name="НастройкаАналитикиФУСостояниеПросмотраРасширеннаяПодсказка" id="249"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="НастройкаАналитикиФУУправлениеПоиском" id="250">
+										<AdditionSource>
+											<Item>НастройкаАналитикиФУ</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="НастройкаАналитикиФУУправлениеПоискомКонтекстноеМеню" id="251"/>
+										<ExtendedTooltip name="НастройкаАналитикиФУУправлениеПоискомРасширеннаяПодсказка" id="252"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">тпНастройкаАналитики_Выбор</Event>
+										<Event name="BeforeAddRow">тпНастройкаАналитикиФУ_ПередНачаломДобавления</Event>
+										<Event name="BeforeEditEnd">тпНастройкаАналитикиФУ_ПередОкончаниемРедактирования</Event>
+									</Events>
+									<ChildItems>
+										<PictureField name="НастройкаАналитикиФУКартинкаДК" id="253">
+											<DataPath>Объект.НастройкаАналитики.КартинкаДК</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<FixingInTable>Left</FixingInTable>
+											<HeaderPicture>
+												<xr:Ref>StdPicture.DebitCredit</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<ContextMenu name="НастройкаАналитикиФУКартинкаДККонтекстноеМеню" id="254"/>
+											<ExtendedTooltip name="НастройкаАналитикиФУКартинкаДКРасширеннаяПодсказка" id="255"/>
+										</PictureField>
+										<ColumnGroup name="НастройкаАналитикиБУ3" id="256">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройка аналитики б у1</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>InCell</Group>
+											<ExtendedTooltip name="НастройкаАналитикиБУ3РасширеннаяПодсказка" id="257"/>
+											<ChildItems>
+												<CheckBoxField name="НастройкаАналитикиФУИспользование" id="258">
+													<DataPath>Объект.НастройкаАналитики.Использование</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="НастройкаАналитикиФУИспользованиеКонтекстноеМеню" id="259"/>
+													<ExtendedTooltip name="НастройкаАналитикиФУИспользованиеРасширеннаяПодсказка" id="260"/>
+												</CheckBoxField>
+												<InputField name="НастройкаАналитикиФУВидАналитики" id="261">
+													<DataPath>Объект.НастройкаАналитики.ВидАналитики</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Вид аналитики (индивидуальная)</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ChooseType>false</ChooseType>
+													<ContextMenu name="НастройкаАналитикиФУВидАналитикиКонтекстноеМеню" id="262"/>
+													<ExtendedTooltip name="НастройкаАналитикиФУВидАналитикиРасширеннаяПодсказка" id="263"/>
+													<Events>
+														<Event name="StartChoice">тпНастройкаАналитики_Колонка_НачалоВыбора</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="НастройкаАналитикиФУЗначение" id="264">
+											<DataPath>Объект.НастройкаАналитики.Значение</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<TextEdit>false</TextEdit>
+											<ContextMenu name="НастройкаАналитикиФУЗначениеКонтекстноеМеню" id="265"/>
+											<ExtendedTooltip name="НастройкаАналитикиФУЗначениеРасширеннаяПодсказка" id="266"/>
+											<Events>
+												<Event name="StartChoice">тпНастройкаАналитики_Колонка_НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<PictureField name="НастройкаАналитикиФУКартинкаФК" id="267">
+											<DataPath>Объект.НастройкаАналитики.КартинкаФК</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<FixingInTable>Right</FixingInTable>
+											<HeaderPicture>
+												<xr:Ref>StdPicture.CustomExpression</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<ValuesPicture>
+												<xr:Ref>StdPicture.CustomExpression</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</ValuesPicture>
+											<ContextMenu name="НастройкаАналитикиФУКартинкаФККонтекстноеМеню" id="268"/>
+											<ExtendedTooltip name="НастройкаАналитикиФУКартинкаФКРасширеннаяПодсказка" id="269"/>
+										</PictureField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПроводкиУУ" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оперативный учет</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.AccumulationRegister</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СтраницаПроводкиУУРасширеннаяПодсказка" id="14"/>
+					<ChildItems>
+						<Table name="ПроводкиУУ" id="270">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ПроводкиУУ</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПроводкиУУКонтекстноеМеню" id="271"/>
+							<AutoCommandBar name="ПроводкиУУКоманднаяПанель" id="272"/>
+							<ExtendedTooltip name="ПроводкиУУРасширеннаяПодсказка" id="273"/>
+							<SearchStringAddition name="ПроводкиУУСтрокаПоиска" id="274">
+								<AdditionSource>
+									<Item>ПроводкиУУ</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроводкиУУСтрокаПоискаКонтекстноеМеню" id="275"/>
+								<ExtendedTooltip name="ПроводкиУУСтрокаПоискаРасширеннаяПодсказка" id="276"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПроводкиУУСостояниеПросмотра" id="277">
+								<AdditionSource>
+									<Item>ПроводкиУУ</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроводкиУУСостояниеПросмотраКонтекстноеМеню" id="278"/>
+								<ExtendedTooltip name="ПроводкиУУСостояниеПросмотраРасширеннаяПодсказка" id="279"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПроводкиУУУправлениеПоиском" id="280">
+								<AdditionSource>
+									<Item>ПроводкиУУ</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроводкиУУУправлениеПоискомКонтекстноеМеню" id="281"/>
+								<ExtendedTooltip name="ПроводкиУУУправлениеПоискомРасширеннаяПодсказка" id="282"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnActivateRow">тпПроводкиУУ_ПриАктивизацииСтроки</Event>
+								<Event name="AfterDeleteRow">тпПроводки_ПослеУдаления</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="ПроводкиУУГруппа1" id="301">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ПроводкиУУГруппа1РасширеннаяПодсказка" id="302"/>
+									<ChildItems>
+										<CheckBoxField name="ПроводкиУУИспользование" id="286">
+											<DataPath>Объект.ПроводкиУУ.Использование</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПроводкиУУИспользованиеКонтекстноеМеню" id="287"/>
+											<ExtendedTooltip name="ПроводкиУУИспользованиеРасширеннаяПодсказка" id="288"/>
+										</CheckBoxField>
+										<InputField name="ПроводкиУУРегистр" id="289">
+											<DataPath>Объект.ПроводкиУУ.Регистр</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CreateButton>false</CreateButton>
+											<ChoiceParameters>
+												<app:item name="Отбор.Родитель">
+													<app:value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xr:DesignTimeRef">Catalog.ИдентификаторыОбъектовМетаданных.РегистрыНакопления</Value>
+													</app:value>
+												</app:item>
+											</ChoiceParameters>
+											<ContextMenu name="ПроводкиУУРегистрКонтекстноеМеню" id="290"/>
+											<ExtendedTooltip name="ПроводкиУУРегистрРасширеннаяПодсказка" id="291"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ПроводкиУУНаправление" id="292">
+									<DataPath>Объект.ПроводкиУУ.Направление</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПроводкиУУНаправлениеКонтекстноеМеню" id="293"/>
+									<ExtendedTooltip name="ПроводкиУУНаправлениеРасширеннаяПодсказка" id="294"/>
+								</InputField>
+								<CheckBoxField name="ПроводкиУУЗаменять" id="295">
+									<DataPath>Объект.ПроводкиУУ.Заменять</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПроводкиУУЗаменятьКонтекстноеМеню" id="296"/>
+									<ExtendedTooltip name="ПроводкиУУЗаменятьРасширеннаяПодсказка" id="297"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+						<Pages name="СтраницыУУ" id="303">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы УУ</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Height>15</Height>
+							<ExtendedTooltip name="СтраницыУУРасширеннаяПодсказка" id="304"/>
+							<ChildItems>
+								<Page name="СтраницаРесурсыУУ" id="305">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ресурсы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница ресурсы УУ</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="СтраницаРесурсыУУРасширеннаяПодсказка" id="306"/>
+									<ChildItems>
+										<Table name="РесурсыПроводкиУУ" id="309">
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>Объект.РесурсыПроводкиУУ</DataPath>
+											<CommandSet>
+												<ExcludedCommand>Add</ExcludedCommand>
+												<ExcludedCommand>Copy</ExcludedCommand>
+												<ExcludedCommand>EndEdit</ExcludedCommand>
+											</CommandSet>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="РесурсыПроводкиУУКонтекстноеМеню" id="310"/>
+											<AutoCommandBar name="РесурсыПроводкиУУКоманднаяПанель" id="311">
+												<ChildItems>
+													<Button name="РесурсыПроводкиУУНастройкаРесурсовОбновитьУУ" id="389">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.НастройкаРесурсовОбновитьУУ</CommandName>
+														<ExtendedTooltip name="РесурсыПроводкиУУНастройкаРесурсовОбновитьУУРасширеннаяПодсказка" id="390"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="РесурсыПроводкиУУРасширеннаяПодсказка" id="312"/>
+											<SearchStringAddition name="РесурсыПроводкиУУСтрокаПоиска" id="313">
+												<AdditionSource>
+													<Item>РесурсыПроводкиУУ</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="РесурсыПроводкиУУСтрокаПоискаКонтекстноеМеню" id="314"/>
+												<ExtendedTooltip name="РесурсыПроводкиУУСтрокаПоискаРасширеннаяПодсказка" id="315"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="РесурсыПроводкиУУСостояниеПросмотра" id="316">
+												<AdditionSource>
+													<Item>РесурсыПроводкиУУ</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="РесурсыПроводкиУУСостояниеПросмотраКонтекстноеМеню" id="317"/>
+												<ExtendedTooltip name="РесурсыПроводкиУУСостояниеПросмотраРасширеннаяПодсказка" id="318"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="РесурсыПроводкиУУУправлениеПоиском" id="319">
+												<AdditionSource>
+													<Item>РесурсыПроводкиУУ</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="РесурсыПроводкиУУУправлениеПоискомКонтекстноеМеню" id="320"/>
+												<ExtendedTooltip name="РесурсыПроводкиУУУправлениеПоискомРасширеннаяПодсказка" id="321"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="BeforeAddRow">тпНастройкаРесурсыПроводкиУУ_ПередНачаломДобавления</Event>
+												<Event name="BeforeEditEnd">тпНастройкаРесурсыПроводкиУУ_ПередОкончаниемРедактирования</Event>
+											</Events>
+											<ChildItems>
+												<ColumnGroup name="РесурсыПроводкиУУГруппа1" id="343">
+													<Group>InCell</Group>
+													<ExtendedTooltip name="РесурсыПроводкиУУГруппа1РасширеннаяПодсказка" id="344"/>
+													<ChildItems>
+														<CheckBoxField name="РесурсыПроводкиУУИспользование" id="331">
+															<DataPath>Объект.РесурсыПроводкиУУ.Использование</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="РесурсыПроводкиУУИспользованиеКонтекстноеМеню" id="332"/>
+															<ExtendedTooltip name="РесурсыПроводкиУУИспользованиеРасширеннаяПодсказка" id="333"/>
+														</CheckBoxField>
+														<InputField name="РесурсыПроводкиУУИмя" id="325">
+															<DataPath>Объект.РесурсыПроводкиУУ.Имя</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Ресурс</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<CreateButton>false</CreateButton>
+															<ContextMenu name="РесурсыПроводкиУУИмяКонтекстноеМеню" id="326"/>
+															<ExtendedTooltip name="РесурсыПроводкиУУИмяРасширеннаяПодсказка" id="327"/>
+														</InputField>
+													</ChildItems>
+												</ColumnGroup>
+												<InputField name="РесурсыПроводкиУУЗначение" id="328">
+													<DataPath>Объект.РесурсыПроводкиУУ.Значение</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<DropListButton>false</DropListButton>
+													<ChoiceButton>true</ChoiceButton>
+													<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+													<ClearButton>true</ClearButton>
+													<OpenButton>true</OpenButton>
+													<CreateButton>false</CreateButton>
+													<ChooseType>false</ChooseType>
+													<TextEdit>false</TextEdit>
+													<AutoShowClearButtonMode>FilledOnly</AutoShowClearButtonMode>
+													<AutoShowOpenButtonMode>FilledOnly</AutoShowOpenButtonMode>
+													<ContextMenu name="РесурсыПроводкиУУЗначениеКонтекстноеМеню" id="329"/>
+													<ExtendedTooltip name="РесурсыПроводкиУУЗначениеРасширеннаяПодсказка" id="330"/>
+													<Events>
+														<Event name="StartChoice">тпПроводки_Колонка_НачалоВыбора</Event>
+													</Events>
+												</InputField>
+												<CheckBoxField name="РесурсыПроводкиУУИнвертироватьЗначениеРесурсов" id="334">
+													<DataPath>Объект.РесурсыПроводкиУУ.ИнвертироватьЗначениеРесурсов</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Инверт.</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="РесурсыПроводкиУУИнвертироватьЗначениеРесурсовКонтекстноеМеню" id="335"/>
+													<ExtendedTooltip name="РесурсыПроводкиУУИнвертироватьЗначениеРесурсовРасширеннаяПодсказка" id="336"/>
+												</CheckBoxField>
+												<CheckBoxField name="РесурсыПроводкиУУЗначениеРесурсаПоМодулю" id="337">
+													<DataPath>Объект.РесурсыПроводкиУУ.ЗначениеРесурсаПоМодулю</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>По модулю</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="РесурсыПроводкиУУЗначениеРесурсаПоМодулюКонтекстноеМеню" id="338"/>
+													<ExtendedTooltip name="РесурсыПроводкиУУЗначениеРесурсаПоМодулюРасширеннаяПодсказка" id="339"/>
+												</CheckBoxField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаАналитикаУУ" id="307">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Аналитика</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница аналитика УУ</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="СтраницаАналитикаУУРасширеннаяПодсказка" id="308"/>
+									<ChildItems>
+										<Table name="НастройкаАналитикиУУ" id="345">
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>Объект.НастройкаАналитики</DataPath>
+											<CommandSet>
+												<ExcludedCommand>Add</ExcludedCommand>
+												<ExcludedCommand>Copy</ExcludedCommand>
+												<ExcludedCommand>EndEdit</ExcludedCommand>
+											</CommandSet>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="НастройкаАналитикиУУКонтекстноеМеню" id="346"/>
+											<AutoCommandBar name="НастройкаАналитикиУУКоманднаяПанель" id="347">
+												<ChildItems>
+													<Button name="НастройкаАналитикиОбновитьУУ" id="379">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.НастройкаАналитикиОбновитьУУ</CommandName>
+														<ExtendedTooltip name="НастройкаАналитикиОбновитьУУРасширеннаяПодсказка" id="380"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="НастройкаАналитикиУУРасширеннаяПодсказка" id="348"/>
+											<SearchStringAddition name="НастройкаАналитикиУУСтрокаПоиска" id="349">
+												<AdditionSource>
+													<Item>НастройкаАналитикиУУ</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="НастройкаАналитикиУУСтрокаПоискаКонтекстноеМеню" id="350"/>
+												<ExtendedTooltip name="НастройкаАналитикиУУСтрокаПоискаРасширеннаяПодсказка" id="351"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="НастройкаАналитикиУУСостояниеПросмотра" id="352">
+												<AdditionSource>
+													<Item>НастройкаАналитикиУУ</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="НастройкаАналитикиУУСостояниеПросмотраКонтекстноеМеню" id="353"/>
+												<ExtendedTooltip name="НастройкаАналитикиУУСостояниеПросмотраРасширеннаяПодсказка" id="354"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="НастройкаАналитикиУУУправлениеПоиском" id="355">
+												<AdditionSource>
+													<Item>НастройкаАналитикиУУ</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="НастройкаАналитикиУУУправлениеПоискомКонтекстноеМеню" id="356"/>
+												<ExtendedTooltip name="НастройкаАналитикиУУУправлениеПоискомРасширеннаяПодсказка" id="357"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="Selection">тпНастройкаАналитики_Выбор</Event>
+												<Event name="BeforeAddRow">тпНастройкаАналитикиУУ_ПередНачаломДобавления</Event>
+												<Event name="BeforeEditEnd">тпНастройкаАналитикиУУ_ПередОкончаниемРедактирования</Event>
+											</Events>
+											<ChildItems>
+												<ColumnGroup name="НастройкаАналитикиУУ1" id="361">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройка аналитики у у1</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройка аналитики б у1</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>InCell</Group>
+													<ExtendedTooltip name="НастройкаАналитикиУУ1РасширеннаяПодсказка" id="362"/>
+													<ChildItems>
+														<CheckBoxField name="НастройкаАналитикиУУИспользование" id="363">
+															<DataPath>Объект.НастройкаАналитики.Использование</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="НастройкаАналитикиУУИспользованиеКонтекстноеМеню" id="364"/>
+															<ExtendedTooltip name="НастройкаАналитикиУУИспользованиеРасширеннаяПодсказка" id="365"/>
+														</CheckBoxField>
+														<InputField name="НастройкаАналитикиУУВидАналитики" id="366">
+															<DataPath>Объект.НастройкаАналитики.ВидАналитики</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="НастройкаАналитикиУУВидАналитикиКонтекстноеМеню" id="367"/>
+															<ExtendedTooltip name="НастройкаАналитикиУУВидАналитикиРасширеннаяПодсказка" id="368"/>
+															<Events>
+																<Event name="StartChoice">тпНастройкаАналитики_Колонка_НачалоВыбора</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</ColumnGroup>
+												<InputField name="НастройкаАналитикиУУЗначение" id="369">
+													<DataPath>Объект.НастройкаАналитики.Значение</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="НастройкаАналитикиУУЗначениеКонтекстноеМеню" id="370"/>
+													<ExtendedTooltip name="НастройкаАналитикиУУЗначениеРасширеннаяПодсказка" id="371"/>
+													<Events>
+														<Event name="StartChoice">тпНастройкаАналитики_Колонка_НачалоВыбора</Event>
+													</Events>
+												</InputField>
+												<PictureField name="НастройкаАналитикиУУКартинкаФК" id="372">
+													<DataPath>Объект.НастройкаАналитики.КартинкаФК</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<FixingInTable>Right</FixingInTable>
+													<HeaderPicture>
+														<xr:Ref>StdPicture.CustomExpression</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</HeaderPicture>
+													<ValuesPicture>
+														<xr:Ref>StdPicture.CustomExpression</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</ValuesPicture>
+													<ContextMenu name="НастройкаАналитикиУУКартинкаФККонтекстноеМеню" id="373"/>
+													<ExtendedTooltip name="НастройкаАналитикиУУКартинкаФКРасширеннаяПодсказка" id="374"/>
+												</PictureField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаДопНастройка" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доп. настройка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница доп настройка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>StdPicture.ListSettings</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СтраницаДопНастройкаРасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<Table name="ЗначенияПоУмолчанию" id="115">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ЗначенияПоУмолчанию</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЗначенияПоУмолчаниюКонтекстноеМеню" id="116"/>
+							<AutoCommandBar name="ЗначенияПоУмолчаниюКоманднаяПанель" id="117"/>
+							<ExtendedTooltip name="ЗначенияПоУмолчаниюРасширеннаяПодсказка" id="118"/>
+							<SearchStringAddition name="ЗначенияПоУмолчаниюСтрокаПоиска" id="119">
+								<AdditionSource>
+									<Item>ЗначенияПоУмолчанию</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗначенияПоУмолчаниюСтрокаПоискаКонтекстноеМеню" id="120"/>
+								<ExtendedTooltip name="ЗначенияПоУмолчаниюСтрокаПоискаРасширеннаяПодсказка" id="121"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЗначенияПоУмолчаниюСостояниеПросмотра" id="122">
+								<AdditionSource>
+									<Item>ЗначенияПоУмолчанию</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗначенияПоУмолчаниюСостояниеПросмотраКонтекстноеМеню" id="123"/>
+								<ExtendedTooltip name="ЗначенияПоУмолчаниюСостояниеПросмотраРасширеннаяПодсказка" id="124"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЗначенияПоУмолчаниюУправлениеПоиском" id="125">
+								<AdditionSource>
+									<Item>ЗначенияПоУмолчанию</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗначенияПоУмолчаниюУправлениеПоискомКонтекстноеМеню" id="126"/>
+								<ExtendedTooltip name="ЗначенияПоУмолчаниюУправлениеПоискомРасширеннаяПодсказка" id="127"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ЗначенияПоУмолчаниюПредставление" id="137">
+									<DataPath>Объект.ЗначенияПоУмолчанию.Представление</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Реквизит</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceButton>true</ChoiceButton>
+									<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+									<ChooseType>false</ChooseType>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ЗначенияПоУмолчаниюПредставлениеКонтекстноеМеню" id="138"/>
+									<ExtendedTooltip name="ЗначенияПоУмолчаниюПредставлениеРасширеннаяПодсказка" id="139"/>
+									<Events>
+										<Event name="StartChoice">тпЗначенияПоУмолчанию_Колонка_НачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="ЗначенияПоУмолчаниюЗначение" id="134">
+									<DataPath>Объект.ЗначенияПоУмолчанию.Значение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗначенияПоУмолчаниюЗначениеКонтекстноеМеню" id="135"/>
+									<ExtendedTooltip name="ЗначенияПоУмолчаниюЗначениеРасширеннаяПодсказка" id="136"/>
+								</InputField>
+								<CheckBoxField name="ЗначенияПоУмолчаниюФиксировать" id="140">
+									<DataPath>Объект.ЗначенияПоУмолчанию.Фиксировать</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Right</FixingInTable>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЗначенияПоУмолчаниюФиксироватьКонтекстноеМеню" id="141"/>
+									<ExtendedTooltip name="ЗначенияПоУмолчаниюФиксироватьРасширеннаяПодсказка" id="142"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ТиповыеОперации</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.Predefined</Field>
+				<Field>Объект.PredefinedDataName</Field>
+			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Объект.НастройкаАналитики">
+					<Column name="КартинкаДК" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Картинка ДК</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>v8ui:Picture</v8:Type>
+						</Type>
+					</Column>
+					<Column name="КартинкаФК" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Картинка функция</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="СтруктураПредставленияРесурсов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура представления ресурсов</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="РеквизитПеретаскивания" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит перетаскивания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстМодуля" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст модуля</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:use>false</dcsset:use>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НастройкаАналитикиЗначение</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.НастройкаАналитики.ТекстМодуля</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#0000FF</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="true" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Алгоритм</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Отображать</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НастройкаАналитики</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НастройкаАналитикиКартинкаФК</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НастройкаАналитикиКартинкаДК</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.НастройкаАналитики.ID</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Видимость</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Отображать</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПроводкиБУСуммаНУ_Дт</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ПроводкиБУ.СуммаНУ_Дт</dcsset:left>
+						<dcsset:comparisonType>Contains</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">РАТ.УчетнаяСтоимостьДебета</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Учетная стоимость дебета</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="НастройкаАналитикиОбщаяОбновить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>тпНастройкаАналитикиОбщая_ВыполнитьДействие</Action>
+		</Command>
+		<Command name="НастройкаАналитикиОбновитьБУ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>тпНастройкаАналитикиОбщая_ВыполнитьДействие</Action>
+		</Command>
+		<Command name="НастройкаАналитикиОбновитьФУ" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>тпНастройкаАналитикиОбщая_ВыполнитьДействие</Action>
+		</Command>
+		<Command name="НастройкаАналитикиОбновитьУУ" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>тпНастройкаАналитикиОбщая_ВыполнитьДействие</Action>
+		</Command>
+		<Command name="НастройкаРесурсовОбновитьУУ" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка ресурсов обновить УУ</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>НастройкаРесурсовОбновитьУУ</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.ДополнительныеСвойства.StandardCommand.OpenByValue.Ссылка</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>3:942820c1-8dc3-4bc0-847d-e2caa15cd06e</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>1</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>4:942820c1-8dc3-4bc0-847d-e2caa15cd06e</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>2</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>3:09a79883-c5d5-498b-8008-12099097573d</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>3</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

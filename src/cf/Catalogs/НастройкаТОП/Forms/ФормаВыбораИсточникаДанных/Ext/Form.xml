@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выбор источника данных</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="27">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<CheckBoxField name="СтарыйМетаконфигуратор" id="24">
+					<DataPath>СтарыйМетаконфигуратор</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать старый метаконфигуратор</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Switcher</CheckBoxType>
+					<ContextMenu name="СтарыйМетаконфигураторКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="СтарыйМетаконфигураторРасширеннаяПодсказка" id="26"/>
+					<Events>
+						<Event name="OnChange">Атрибут_ПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<LabelDecoration name="Декорация1" id="29">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="31"/>
+				</LabelDecoration>
+				<Button name="Выбрать" id="22">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<CommandName>Form.Command.Выбрать</CommandName>
+					<ExtendedTooltip name="ВыбратьРасширеннаяПодсказка" id="23"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="дзИсточникДанных" id="1">
+			<Representation>Tree</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<ReadOnly>true</ReadOnly>
+			<Header>false</Header>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>дзИсточникДанных</DataPath>
+			<ContextMenu name="дзИсточникДанныхКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="дзИсточникДанныхКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="дзИсточникДанныхРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="дзИсточникДанныхСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>дзИсточникДанных</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="дзИсточникДанныхСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="дзИсточникДанныхСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="дзИсточникДанныхСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>дзИсточникДанных</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="дзИсточникДанныхСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="дзИсточникДанныхСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="дзИсточникДанныхУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>дзИсточникДанных</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="дзИсточникДанныхУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="дзИсточникДанныхУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">дзИсточникДанных_Выбор</Event>
+			</Events>
+			<ChildItems>
+				<ColumnGroup name="дзИсточникДанныхГруппа1" id="20">
+					<Group>InCell</Group>
+					<ExtendedTooltip name="дзИсточникДанныхГруппа1РасширеннаяПодсказка" id="21"/>
+					<ChildItems>
+						<PictureField name="дзИсточникДанныхКартинка" id="17">
+							<DataPath>дзИсточникДанных.Картинка</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="дзИсточникДанныхКартинкаКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="дзИсточникДанныхКартинкаРасширеннаяПодсказка" id="19"/>
+						</PictureField>
+						<InputField name="дзИсточникДанныхИсточник" id="14">
+							<DataPath>дзИсточникДанных.Источник</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="дзИсточникДанныхИсточникКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="дзИсточникДанныхИсточникРасширеннаяПодсказка" id="16"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="дзИсточникДанных" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дз источник данных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Источник" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Источник</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="Картинка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СтарыйМетаконфигуратор" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Старый метаконфигуратор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Выбрать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ChooseValue</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыполнитьДействие</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>
