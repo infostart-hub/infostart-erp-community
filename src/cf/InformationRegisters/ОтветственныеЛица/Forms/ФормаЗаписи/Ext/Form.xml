@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаСтруктурнаяЕдиница" id="34">
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСтруктурнаяЕдиницаРасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<InputField name="ТипСтруктурнойЕдиницы" id="36">
+					<DataPath>ТипСтруктурнойЕдиницы</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ТипСтруктурнойЕдиницыКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ТипСтруктурнойЕдиницыРасширеннаяПодсказка" id="38"/>
+					<Events>
+						<Event name="OnChange">Атрибут_ПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="СтруктурнаяЕдиница" id="39">
+					<DataPath>Запись.СтруктурнаяЕдиница</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="СтруктурнаяЕдиницаКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="СтруктурнаяЕдиницаРасширеннаяПодсказка" id="41"/>
+					<Events>
+						<Event name="OnChange">Атрибут_ПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ФизическоеЛицо" id="44">
+			<DataPath>Запись.ФизическоеЛицо</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ФизическоеЛицоКонтекстноеМеню" id="45"/>
+			<ExtendedTooltip name="ФизическоеЛицоРасширеннаяПодсказка" id="46"/>
+		</InputField>
+		<UsualGroup name="Группа2" id="50">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="51"/>
+			<ChildItems>
+				<InputField name="Период" id="47">
+					<DataPath>Запись.Period</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Действует с:</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<Button name="ОткрытьИсторию" id="52">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОткрытьИсторию</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>История</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ОткрытьИсториюРасширеннаяПодсказка" id="53"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ОтветственныеЛица</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТипСтруктурнойЕдиницы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип структурной единицы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипыСтруктурныхЕдиниц</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьИсторию" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть историю</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть историю</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьИсторию</Action>
+		</Command>
+	</Commands>
+</Form>

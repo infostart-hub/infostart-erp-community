@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроцентОтклоненияОтЦеныКомпании</dataPath>
+			<field>ПроцентОтклоненияОтЦеныКомпании</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процент отклонения от цены компании</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаНоменклатуры</dataPath>
+			<field>ХарактеристикаНоменклатуры</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РублеваяЦена</dataPath>
+			<field>РублеваяЦена</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рублевая цена</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипЦен</dataPath>
+			<field>ТипЦен</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодЦен</dataPath>
+			<field>ПериодЦен</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период цен</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цена</dataPath>
+			<field>Цена</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ЦеныНоменклатуры.Номенклатура КАК Номенклатура,
+	ЦеныНоменклатуры.ХарактеристикаНоменклатуры КАК ХарактеристикаНоменклатуры,
+	NULL КАК Контрагент,
+	ЦеныНоменклатуры.ТипЦен КАК ТипЦен,
+	КОНЕЦПЕРИОДА(ЦеныНоменклатуры.Период, ДЕНЬ) КАК ПериодЦен,
+	ВЫБОР
+		КОГДА ЦеныНоменклатуры.ЕдиницаИзмерения = &amp;ПустаяЕдиницаИзмерения
+			ТОГДА ЦеныНоменклатуры.Цена * КурсыВалютСрезПоследних.Курс / КурсыВалютСрезПоследних.Кратность / &amp;КурсВалютыОтчета
+		ИНАЧЕ ЦеныНоменклатуры.Цена * КурсыВалютСрезПоследних.Курс / КурсыВалютСрезПоследних.Кратность / ЦеныНоменклатуры.ЕдиницаИзмерения.Коэффициент / &amp;КурсВалютыОтчета
+	КОНЕЦ КАК Цена,
+	0 КАК ПроцентОтклоненияОтЦеныКомпании
+ИЗ
+	РегистрСведений.ЦеныНоменклатуры.СрезПоследних({&amp;КонецПериода}) КАК ЦеныНоменклатуры
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КурсыВалют.СрезПоследних({&amp;КонецПериода}) КАК КурсыВалютСрезПоследних
+		ПО ЦеныНоменклатуры.Валюта = КурсыВалютСрезПоследних.Валюта
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ЦеныНоменклатуры.Номенклатура,
+	ЦеныНоменклатуры.ХарактеристикаНоменклатуры,
+	ЦеныНоменклатуры.ТипЦен.Владелец,
+	ЦеныНоменклатуры.ТипЦен.ТипЦеныНоменклатуры,
+	КОНЕЦПЕРИОДА(ЦеныНоменклатуры.Период, ДЕНЬ),
+	ВЫБОР
+		КОГДА ЦеныНоменклатуры.ЕдиницаИзмерения = &amp;ПустаяЕдиницаИзмерения
+			ТОГДА ЦеныНоменклатуры.Цена * КурсыВалютСрезПоследних.Курс / КурсыВалютСрезПоследних.Кратность / &amp;КурсВалютыОтчета
+		ИНАЧЕ ЦеныНоменклатуры.Цена * КурсыВалютСрезПоследних.Курс / КурсыВалютСрезПоследних.Кратность / ЦеныНоменклатуры.ЕдиницаИзмерения.Коэффициент / &amp;КурсВалютыОтчета
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА РублевыеЦеныКомпании.РублеваяЦена ЕСТЬ НЕ NULL 
+				И РублевыеЦеныКомпании.РублеваяЦена &lt;&gt; 0
+			ТОГДА ВЫБОР
+					КОГДА ЦеныНоменклатуры.ЕдиницаИзмерения = &amp;ПустаяЕдиницаИзмерения
+						ТОГДА 100 * (-РублевыеЦеныКомпании.РублеваяЦена + ЦеныНоменклатуры.Цена * КурсыВалютСрезПоследних.Курс / КурсыВалютСрезПоследних.Кратность) / РублевыеЦеныКомпании.РублеваяЦена
+					ИНАЧЕ 100 * (-РублевыеЦеныКомпании.РублеваяЦена + ЦеныНоменклатуры.Цена * КурсыВалютСрезПоследних.Курс / КурсыВалютСрезПоследних.Кратность / ЦеныНоменклатуры.ЕдиницаИзмерения.Коэффициент) / РублевыеЦеныКомпании.РублеваяЦена
+				КОНЕЦ
+		ИНАЧЕ 0
+	КОНЕЦ
+ИЗ
+	РегистрСведений.ЦеныНоменклатурыКонтрагентов.СрезПоследних({&amp;КонецПериода}, ) КАК ЦеныНоменклатуры
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КурсыВалют.СрезПоследних({&amp;КонецПериода}, ) КАК КурсыВалютСрезПоследних
+		ПО ЦеныНоменклатуры.Валюта = КурсыВалютСрезПоследних.Валюта
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ВЫБОР
+				КОГДА ЦеныКомпании1.ЕдиницаИзмерения = &amp;ПустаяЕдиницаИзмерения
+					ТОГДА ЦеныКомпании1.Цена * КурсыВалютДляЦенКомпании.Курс / КурсыВалютДляЦенКомпании.Кратность
+				ИНАЧЕ ЦеныКомпании1.Цена / ЦеныКомпании1.ЕдиницаИзмерения.Коэффициент * КурсыВалютДляЦенКомпании.Курс / КурсыВалютДляЦенКомпании.Кратность
+			КОНЕЦ КАК РублеваяЦена,
+			ЦеныКомпании1.Номенклатура КАК Номенклатура,
+			ЦеныКомпании1.ХарактеристикаНоменклатуры КАК ХарактеристикаНоменклатуры,
+			ЦеныКомпании1.ТипЦен КАК ТипЦен
+		ИЗ
+			РегистрСведений.ЦеныНоменклатуры.СрезПоследних({&amp;КонецПериода}, ) КАК ЦеныКомпании1
+				ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КурсыВалют.СрезПоследних({&amp;КонецПериода}, ) КАК КурсыВалютДляЦенКомпании
+				ПО ЦеныКомпании1.Валюта = КурсыВалютДляЦенКомпании.Валюта) КАК РублевыеЦеныКомпании
+		ПО (РублевыеЦеныКомпании.Номенклатура = ЦеныНоменклатуры.Номенклатура)
+			И (РублевыеЦеныКомпании.ХарактеристикаНоменклатуры = ЦеныНоменклатуры.ХарактеристикаНоменклатуры)
+			И ЦеныНоменклатуры.ТипЦен.ТипЦеныНоменклатуры = РублевыеЦеныКомпании.ТипЦен</query>
+	</dataSet>
+	<parameter>
+		<name>КурсВалютыОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Курс валюты отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">1</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПустаяЕдиницаИзмерения</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Пустая единица измерения</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ЕдиницыИзмерения</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>bbd0f43b-f62e-4a1a-b5b7-eec7e417bb82</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>22d22bfb-ea4b-4e9b-9104-f736d70e4773</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>a221e6ab-f530-4f2e-a986-f82e60121cfa</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:ReportHeaderBackColor</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInGroup>DontUse</dcsset:useInGroup>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>233d3af8-1bd5-4783-9636-c243d8c48c04</dcsset:userSettingID>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">МакетОформленияОтчетовЗеленый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>2c238945-a4bb-42ac-a55d-9e005646346a</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

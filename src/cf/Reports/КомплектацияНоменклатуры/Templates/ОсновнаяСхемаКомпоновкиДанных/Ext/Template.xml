@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументОприходования</dataPath>
+			<field>ДокументОприходования</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Качество</dataPath>
+			<field>Качество</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерияНоменклатуры</dataPath>
+			<field>СерияНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусПартии</dataPath>
+			<field>СтатусПартии</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаНоменклатуры</dataPath>
+			<field>ХарактеристикаНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комплект</dataPath>
+			<field>Комплект</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ресурсы.КомплектКоличествоПриход</dataPath>
+			<field>КомплектКоличествоПриход</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=3</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ресурсы.КомплектКоличествоРасход</dataPath>
+			<field>КомплектКоличествоРасход</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=3</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комплектующая</dataPath>
+			<field>Комплектующая</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ресурсы.КомплектующаяКоличествоПриход</dataPath>
+			<field>КомплектующаяКоличествоПриход</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=3</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ресурсы.КомплектующаяКоличествоРасход</dataPath>
+			<field>КомплектующаяКоличествоРасход</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=3</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<role>
+				<dcscom:periodNumber>2</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаКомплекта</dataPath>
+			<field>ХарактеристикаКомплекта</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаКомплектующей</dataPath>
+			<field>ХарактеристикаКомплектующей</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldFolder">
+			<dataPath>Ресурсы</dataPath>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ресурсы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидСтрокиДвижения</dataPath>
+			<field>ВидСтрокиДвижения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид строки движения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПриход</dataPath>
+			<field>КоличествоПриход</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоРасход</dataPath>
+			<field>КоличествоРасход</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ОборотыКомплектов.Номенклатура КАК Комплект,
+	ОборотыКомплектов.ХарактеристикаНоменклатуры КАК ХарактеристикаКомплекта,
+	ВЫБОР
+		КОГДА ОборотыКомплектующих.ВидСтрокиДвижения = "ДвижениеКомплекта"
+			ТОГДА ОборотыКомплектов.КоличествоПриход
+		ИНАЧЕ 0
+	КОНЕЦ КАК КомплектКоличествоПриход,
+	ВЫБОР
+		КОГДА ОборотыКомплектующих.ВидСтрокиДвижения = "ДвижениеКомплекта"
+			ТОГДА ОборотыКомплектов.КоличествоРасход
+		ИНАЧЕ 0
+	КОНЕЦ КАК КомплектКоличествоРасход,
+	ОборотыКомплектующих.Номенклатура КАК Комплектующая,
+	ОборотыКомплектующих.ХарактеристикаНоменклатуры КАК ХарактеристикаКомплектующей,
+	ОборотыКомплектующих.КоличествоПриход КАК КомплектующаяКоличествоПриход,
+	ОборотыКомплектующих.КоличествоРасход КАК КомплектующаяКоличествоРасход,
+	ОборотыКомплектов.Период,
+	ОборотыКомплектов.Склад,
+	ОборотыКомплектов.Регистратор
+ИЗ
+	(ВЫБРАТЬ
+		ПартииТоваровНаСкладахОбороты.Номенклатура КАК Номенклатура,
+		ПартииТоваровНаСкладахОбороты.ХарактеристикаНоменклатуры КАК ХарактеристикаНоменклатуры,
+		ПартииТоваровНаСкладахОбороты.КоличествоПриход КАК КоличествоПриход,
+		ПартииТоваровНаСкладахОбороты.КоличествоРасход КАК КоличествоРасход,
+		ПартииТоваровНаСкладахОбороты.Период КАК Период,
+		ПартииТоваровНаСкладахОбороты.Регистратор КАК Регистратор,
+		ПартииТоваровНаСкладахОбороты.Склад КАК Склад
+	ИЗ
+		РегистрНакопления.ПартииТоваровНаСкладах.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Запись, ) КАК ПартииТоваровНаСкладахОбороты
+	ГДЕ
+		ПартииТоваровНаСкладахОбороты.Регистратор ССЫЛКА Документ.КомплектацияНоменклатуры
+		И (ПартииТоваровНаСкладахОбороты.Регистратор.ВидОперации = &amp;ВидОперацииКомплектации
+					И ПартииТоваровНаСкладахОбороты.КоличествоПриход &lt;&gt; 0
+				ИЛИ ПартииТоваровНаСкладахОбороты.Регистратор.ВидОперации &lt;&gt; &amp;ВидОперацииКомплектации
+					И ПартииТоваровНаСкладахОбороты.КоличествоРасход &lt;&gt; 0)
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗНАЧЕНИЕ(Справочник.Номенклатура.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка),
+		0,
+		0,
+		NULL,
+		ТоварыНаСкладах.Регистратор,
+		ЗНАЧЕНИЕ(Справочник.Склады.ПустаяСсылка)
+	ИЗ
+		(ВЫБРАТЬ
+			ПартииТоваровНаСкладахОбороты.Регистратор КАК Регистратор
+		ИЗ
+			РегистрНакопления.ПартииТоваровНаСкладах.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Регистратор, ) КАК ПартииТоваровНаСкладахОбороты
+		ГДЕ
+			ПартииТоваровНаСкладахОбороты.Регистратор ССЫЛКА Документ.КомплектацияНоменклатуры) КАК ТоварыНаСкладах
+			ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+				ПартииТоваровНаСкладахОбороты.Регистратор КАК Регистратор
+			ИЗ
+				РегистрНакопления.ПартииТоваровНаСкладах.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Регистратор, ) КАК ПартииТоваровНаСкладахОбороты
+			ГДЕ
+				ПартииТоваровНаСкладахОбороты.Регистратор ССЫЛКА Документ.КомплектацияНоменклатуры
+				И (ПартииТоваровНаСкладахОбороты.Регистратор.ВидОперации = &amp;ВидОперацииКомплектации
+							И ПартииТоваровНаСкладахОбороты.КоличествоПриход &lt;&gt; 0
+						ИЛИ ПартииТоваровНаСкладахОбороты.Регистратор.ВидОперации &lt;&gt; &amp;ВидОперацииКомплектации
+							И ПартииТоваровНаСкладахОбороты.КоличествоРасход &lt;&gt; 0)) КАК ПромежуточнаяОборотыКомплектов
+			ПО ТоварыНаСкладах.Регистратор = ПромежуточнаяОборотыКомплектов.Регистратор
+	ГДЕ
+		ПромежуточнаяОборотыКомплектов.Регистратор ЕСТЬ NULL ) КАК ОборотыКомплектов
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ВЫБОР
+				КОГДА ПартииТоваровНаСкладахОбороты.Регистратор.ВидОперации = &amp;ВидОперацииКомплектации
+							И ПартииТоваровНаСкладахОбороты.КоличествоРасход &lt;&gt; 0
+						ИЛИ ПартииТоваровНаСкладахОбороты.Регистратор.ВидОперации &lt;&gt; &amp;ВидОперацииКомплектации
+							И ПартииТоваровНаСкладахОбороты.КоличествоПриход &lt;&gt; 0
+					ТОГДА ПартииТоваровНаСкладахОбороты.Номенклатура
+				ИНАЧЕ NULL
+			КОНЕЦ КАК Номенклатура,
+			ВЫБОР
+				КОГДА ПартииТоваровНаСкладахОбороты.Регистратор.ВидОперации = &amp;ВидОперацииКомплектации
+							И ПартииТоваровНаСкладахОбороты.КоличествоРасход &lt;&gt; 0
+						ИЛИ ПартииТоваровНаСкладахОбороты.Регистратор.ВидОперации &lt;&gt; &amp;ВидОперацииКомплектации
+							И ПартииТоваровНаСкладахОбороты.КоличествоПриход &lt;&gt; 0
+					ТОГДА ПартииТоваровНаСкладахОбороты.ХарактеристикаНоменклатуры
+				ИНАЧЕ NULL
+			КОНЕЦ КАК ХарактеристикаНоменклатуры,
+			ВЫБОР
+				КОГДА ПартииТоваровНаСкладахОбороты.Регистратор.ВидОперации = &amp;ВидОперацииКомплектации
+							И ПартииТоваровНаСкладахОбороты.КоличествоРасход &lt;&gt; 0
+						ИЛИ ПартииТоваровНаСкладахОбороты.Регистратор.ВидОперации &lt;&gt; &amp;ВидОперацииКомплектации
+							И ПартииТоваровНаСкладахОбороты.КоличествоПриход &lt;&gt; 0
+					ТОГДА ПартииТоваровНаСкладахОбороты.КоличествоПриход
+				ИНАЧЕ NULL
+			КОНЕЦ КАК КоличествоПриход,
+			ВЫБОР
+				КОГДА ПартииТоваровНаСкладахОбороты.Регистратор.ВидОперации = &amp;ВидОперацииКомплектации
+							И ПартииТоваровНаСкладахОбороты.КоличествоРасход &lt;&gt; 0
+						ИЛИ ПартииТоваровНаСкладахОбороты.Регистратор.ВидОперации &lt;&gt; &amp;ВидОперацииКомплектации
+							И ПартииТоваровНаСкладахОбороты.КоличествоПриход &lt;&gt; 0
+					ТОГДА ПартииТоваровНаСкладахОбороты.КоличествоРасход
+				ИНАЧЕ NULL
+			КОНЕЦ КАК КоличествоРасход,
+			ВЫБОР
+				КОГДА ПартииТоваровНаСкладахОбороты.Регистратор.ВидОперации = &amp;ВидОперацииКомплектации
+							И ПартииТоваровНаСкладахОбороты.КоличествоРасход &lt;&gt; 0
+						ИЛИ ПартииТоваровНаСкладахОбороты.Регистратор.ВидОперации &lt;&gt; &amp;ВидОперацииКомплектации
+							И ПартииТоваровНаСкладахОбороты.КоличествоПриход &lt;&gt; 0
+					ТОГДА "ДвижениеКомплектующей"
+				ИНАЧЕ "ДвижениеКомплекта"
+			КОНЕЦ КАК ВидСтрокиДвижения,
+			ПартииТоваровНаСкладахОбороты.Регистратор КАК Регистратор
+		ИЗ
+			РегистрНакопления.ПартииТоваровНаСкладах.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Запись, ) КАК ПартииТоваровНаСкладахОбороты
+		ГДЕ
+			ПартииТоваровНаСкладахОбороты.Регистратор ССЫЛКА Документ.КомплектацияНоменклатуры) КАК ОборотыКомплектующих
+		ПО ОборотыКомплектов.Регистратор = ОборотыКомплектующих.Регистратор</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Ресурсы.КомплектКоличествоПриход</dataPath>
+		<expression>Сумма(Ресурсы.КомплектКоличествоПриход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Ресурсы.КомплектКоличествоРасход</dataPath>
+		<expression>Сумма(Ресурсы.КомплектКоличествоРасход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Ресурсы.КомплектующаяКоличествоПриход</dataPath>
+		<expression>Сумма(Ресурсы.КомплектующаяКоличествоПриход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Ресурсы.КомплектующаяКоличествоРасход</dataPath>
+		<expression>Сумма(Ресурсы.КомплектующаяКоличествоРасход)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<parameter>
+		<name>ВидОперацииКомплектации</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид операции комплектации</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ВидыОперацийКомплектацияНоменклатуры</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыОперацийКомплектацияНоменклатуры.Комплектация</value>
+		<useRestriction>true</useRestriction>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыОперацийКомплектацияНоменклатуры.Комплектация</value>
+		</availableValue>
+		<availableAsField>false</availableAsField>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ресурсы</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Ресурсы.КомплектКоличествоПриход</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Комплект количество приход</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Ресурсы.КомплектКоличествоРасход</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Комплект количество расход</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Ресурсы.КомплектующаяКоличествоПриход</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Комплектующая количество приход</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Ресурсы.КомплектующаяКоличествоРасход</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Комплектующая количество расход</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>2c4045a5-b7f5-4255-a571-1e0bc45e7459</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>9507ffae-f583-4a35-8802-6efeb82124af</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>544538fd-062c-4bf5-8c80-0f91d233b8d3</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:ReportHeaderBackColor</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInGroup>DontUse</dcsset:useInGroup>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>3659aabb-83b6-41e2-b91c-a5d13f59080b</dcsset:userSettingID>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">МакетОформленияОтчетовЗеленый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Комплект</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Комплектующая</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Регистратор</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>6c73e04a-79f6-4137-bf74-c2828b5812cb</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>Вариант1</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вариант1</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Регистратор</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Регистратор</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:presentation xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ИсключитьПустойРегистратор</v8:content>
+							</v8:item>
+						</dcsset:presentation>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:conditionalAppearance>
+					<dcsset:item>
+						<dcsset:selection>
+							<dcsset:item>
+								<dcsset:field>ПараметрыДанных.ВидОперацииКомплектации</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+						<dcsset:filter/>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>Текст</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string"/>
+							</dcscor:item>
+						</dcsset:appearance>
+						<dcsset:presentation xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ИсключитьИтогиРегистратора</v8:content>
+							</v8:item>
+						</dcsset:presentation>
+					</dcsset:item>
+				</dcsset:conditionalAppearance>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

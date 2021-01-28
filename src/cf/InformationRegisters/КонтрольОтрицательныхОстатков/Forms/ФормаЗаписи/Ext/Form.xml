@@ -1,0 +1,662 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="47">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="52"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛево" id="49">
+					<Width>45</Width>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛевоExtendedTooltip" id="53"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПользователь" id="28">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пользователь</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Width>25</Width>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаПользовательExtendedTooltip" id="54"/>
+							<ChildItems>
+								<InputField name="Пользователь" id="1">
+									<DataPath>Запись.Пользователь</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="ПользовательКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="ПользовательExtendedTooltip" id="55"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРежимПроведения" id="27">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Регим проведения</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа режим проведения</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>25</Width>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаРежимПроведенияExtendedTooltip" id="56"/>
+							<ChildItems>
+								<InputField name="РежимПроведения" id="3">
+									<DataPath>Запись.РежимПроведения</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<DropListButton>true</DropListButton>
+									<TextEdit>false</TextEdit>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xs:string"/>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Оперативный</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Оперативный</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Не оперативный</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">НеОперативный</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ChoiceListButton>true</ChoiceListButton>
+									<ContextMenu name="РежимПроведенияКонтекстноеМеню" id="4"/>
+									<ExtendedTooltip name="РежимПроведенияExtendedTooltip" id="57"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаВидТипКотроля" id="24">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вид контроля</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа вид тип котроля</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>45</Width>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="ГруппаВидТипКотроляExtendedTooltip" id="58"/>
+							<ChildItems>
+								<InputField name="ВидКонтроля" id="25">
+									<DataPath>ВидКонтроля</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>22</Width>
+									<DropListButton>true</DropListButton>
+									<ChoiceButton>false</ChoiceButton>
+									<ClearButton>false</ClearButton>
+									<SpinButton>false</SpinButton>
+									<OpenButton>false</OpenButton>
+									<ChooseType>false</ChooseType>
+									<TextEdit>false</TextEdit>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>На дату документа</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">На дату документа</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>На рабочую дату</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">На рабочую дату</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ChoiceListButton>true</ChoiceListButton>
+									<ContextMenu name="ВидКонтроляКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="ВидКонтроляExtendedTooltip" id="59"/>
+								</InputField>
+								<InputField name="ТипКонтроля" id="20">
+									<DataPath>ТипКонтроля</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>20</Width>
+									<DropListButton>true</DropListButton>
+									<ChoiceButton>false</ChoiceButton>
+									<ChooseType>false</ChooseType>
+									<TextEdit>false</TextEdit>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Запретить проведение</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Запретить проведение</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Выводить сообщение</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Выводить сообщение</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ChoiceListButton>true</ChoiceListButton>
+									<ContextMenu name="ТипКонтроляКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ТипКонтроляExtendedTooltip" id="60"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРегистр" id="29">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вид регистра</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа регистр</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаРегистрExtendedTooltip" id="61"/>
+							<ChildItems>
+								<InputField name="ВидРегистра" id="5">
+									<DataPath>Запись.ВидРегистра</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<DropListButton>true</DropListButton>
+									<ClearButton>false</ClearButton>
+									<TextEdit>false</TextEdit>
+									<ChoiceListButton>true</ChoiceListButton>
+									<ContextMenu name="ВидРегистраКонтекстноеМеню" id="6"/>
+									<ExtendedTooltip name="ВидРегистраExtendedTooltip" id="62"/>
+									<Events>
+										<Event name="OnChange">Атрибут_ПриИзменении</Event>
+									</Events>
+								</InputField>
+								<Table name="дзНастройкаКонтроляРегистра" id="30">
+									<Representation>Tree</Representation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<Header>false</Header>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>дзНастройкаКонтроляРегистра</DataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<ContextMenu name="дзНастройкаКонтроляРегистраКонтекстноеМеню" id="31"/>
+									<AutoCommandBar name="дзНастройкаКонтроляРегистраКоманднаяПанель" id="32">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="дзНастройкаКонтроляРегистраExtendedTooltip" id="63"/>
+									<SearchStringAddition name="дзНастройкаКонтроляРегистраSearchString" id="64">
+										<AdditionSource>
+											<Item>дзНастройкаКонтроляРегистра</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="дзНастройкаКонтроляРегистраSearchStringContextMenu" id="65"/>
+										<ExtendedTooltip name="дзНастройкаКонтроляРегистраSearchStringExtendedTooltip" id="66"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="дзНастройкаКонтроляРегистраViewStatus" id="67">
+										<AdditionSource>
+											<Item>дзНастройкаКонтроляРегистра</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="дзНастройкаКонтроляРегистраViewStatusContextMenu" id="68"/>
+										<ExtendedTooltip name="дзНастройкаКонтроляРегистраViewStatusExtendedTooltip" id="69"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="дзНастройкаКонтроляРегистраSearchControl" id="70">
+										<AdditionSource>
+											<Item>дзНастройкаКонтроляРегистра</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="дзНастройкаКонтроляРегистраSearchControlContextMenu" id="71"/>
+										<ExtendedTooltip name="дзНастройкаКонтроляРегистраSearchControlExtendedTooltip" id="72"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<ColumnGroup name="дзНастройкаКонтроляРегистраГруппа1" id="90">
+											<Group>InCell</Group>
+											<ExtendedTooltip name="дзНастройкаКонтроляРегистраГруппа1РасширеннаяПодсказка" id="91"/>
+											<ChildItems>
+												<CheckBoxField name="дзНастройкаКонтроляРегистра_Пометка" id="50">
+													<DataPath>дзНастройкаКонтроляРегистра.Пометка</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ShowInHeader>false</ShowInHeader>
+													<ThreeState>true</ThreeState>
+													<ContextMenu name="дзНастройкаКонтроляРегистра_ПометкаКонтекстноеМеню" id="51"/>
+													<ExtendedTooltip name="дзНастройкаКонтроляРегистра_ПометкаExtendedTooltip" id="73"/>
+													<Events>
+														<Event name="OnChange">дзНастройкаКонтроляРегистра_Пометка_ПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="дзНастройкаКонтроляРегистра_Представление" id="33">
+													<DataPath>дзНастройкаКонтроляРегистра.Представление</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="дзНастройкаКонтроляРегистра_ПредставлениеКонтекстноеМеню" id="34"/>
+													<ExtendedTooltip name="дзНастройкаКонтроляРегистра_ПредставлениеExtendedTooltip" id="75"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПраво" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документы для контроля</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа право</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>45</Width>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаПравоExtendedTooltip" id="76"/>
+					<ChildItems>
+						<Table name="тзВидыДокументов" id="36">
+							<Representation>Tree</Representation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<Header>false</Header>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>тзВидыДокументов</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="тзВидыДокументовКонтекстноеМеню" id="37"/>
+							<AutoCommandBar name="тзВидыДокументовКоманднаяПанель" id="38">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="тзВидыДокументовExtendedTooltip" id="77"/>
+							<SearchStringAddition name="тзВидыДокументовSearchString" id="78">
+								<AdditionSource>
+									<Item>тзВидыДокументов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="тзВидыДокументовSearchStringContextMenu" id="79"/>
+								<ExtendedTooltip name="тзВидыДокументовSearchStringExtendedTooltip" id="80"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="тзВидыДокументовViewStatus" id="81">
+								<AdditionSource>
+									<Item>тзВидыДокументов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="тзВидыДокументовViewStatusContextMenu" id="82"/>
+								<ExtendedTooltip name="тзВидыДокументовViewStatusExtendedTooltip" id="83"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="тзВидыДокументовSearchControl" id="84">
+								<AdditionSource>
+									<Item>тзВидыДокументов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="тзВидыДокументовSearchControlContextMenu" id="85"/>
+								<ExtendedTooltip name="тзВидыДокументовSearchControlExtendedTooltip" id="86"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<ColumnGroup name="тзВидыДокументовГруппа1" id="92">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="тзВидыДокументовГруппа1РасширеннаяПодсказка" id="93"/>
+									<ChildItems>
+										<CheckBoxField name="тзВидыДокументов_Пометка" id="39">
+											<DataPath>тзВидыДокументов.Пометка</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<ShowInFooter>false</ShowInFooter>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="тзВидыДокументов_ПометкаКонтекстноеМеню" id="40"/>
+											<ExtendedTooltip name="тзВидыДокументов_ПометкаExtendedTooltip" id="87"/>
+										</CheckBoxField>
+										<InputField name="тзВидыДокументов_Представление" id="43">
+											<DataPath>тзВидыДокументов.Представление</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<TextEdit>false</TextEdit>
+											<ContextMenu name="тзВидыДокументов_ПредставлениеКонтекстноеМеню" id="44"/>
+											<ExtendedTooltip name="тзВидыДокументов_ПредставлениеExtendedTooltip" id="89"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.КонтрольОтрицательныхОстатков</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="дзНастройкаКонтроляРегистра" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка контроля регистра</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Представление" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Идентификатор" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Пометка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="тзВидыДокументов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Пометка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Идентификатор" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Представление" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВидКонтроля" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид контроля</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипКонтроля" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип контроля</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>дзНастройкаКонтроляРегистра_Представление</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">дзНастройкаКонтроляРегистра.Идентификатор</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Измерения</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">дзНастройкаКонтроляРегистра.Идентификатор</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Ресурсы</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>дзДопНастройкаКонтроляРегистраПредставление</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">дзДопНастройкаКонтроляРегистра.Идентификатор</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Измерения</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">дзДопНастройкаКонтроляРегистра.Идентификатор</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Ресурсы</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="СложнаяНастройка_Добавить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить регистр</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>дзДопНастройкаКонтроляРегистра_ВыполнитьКоманду</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СложнаяНастройка_Удалить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить регистр</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>дзДопНастройкаКонтроляРегистра_ВыполнитьКоманду</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

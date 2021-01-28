@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Контрагент" id="1">
+			<DataPath>Запись.Контрагент</DataPath>
+			<ContextMenu name="КонтрагентКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Номенклатура" id="4">
+			<DataPath>Запись.Номенклатура</DataPath>
+			<ContextMenu name="НоменклатураКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НоменклатураРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ХарактеристикаНоменклатуры" id="7">
+			<DataPath>Запись.ХарактеристикаНоменклатуры</DataPath>
+			<ContextMenu name="ХарактеристикаНоменклатурыКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ХарактеристикаНоменклатурыРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ЕдиницаИзмерения" id="25">
+			<DataPath>Запись.ЕдиницаИзмерения</DataPath>
+			<ContextMenu name="ЕдиницаИзмеренияКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ЕдиницаИзмеренияРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="КодНоменклатурыКонтрагента" id="10">
+			<DataPath>Запись.КодНоменклатурыКонтрагента</DataPath>
+			<ContextMenu name="КодНоменклатурыКонтрагентаКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="КодНоменклатурыКонтрагентаРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="АртикулНоменклатурыКонтрагента" id="13">
+			<DataPath>Запись.АртикулНоменклатурыКонтрагента</DataPath>
+			<ContextMenu name="АртикулНоменклатурыКонтрагентаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="АртикулНоменклатурыКонтрагентаРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="НаименованиеНоменклатурыКонтрагента" id="16">
+			<DataPath>Запись.НаименованиеНоменклатурыКонтрагента</DataPath>
+			<ContextMenu name="НаименованиеНоменклатурыКонтрагентаКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="НаименованиеНоменклатурыКонтрагентаРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ШтрихКодНоменклатурыКонтрагента" id="19">
+			<DataPath>Запись.ШтрихКодНоменклатурыКонтрагента</DataPath>
+			<ContextMenu name="ШтрихКодНоменклатурыКонтрагентаКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ШтрихКодНоменклатурыКонтрагентаРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="ЕдиницаНоменклатурыКонтрагента" id="22">
+			<DataPath>Запись.ЕдиницаНоменклатурыКонтрагента</DataPath>
+			<ContextMenu name="ЕдиницаНоменклатурыКонтрагентаКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ЕдиницаНоменклатурыКонтрагентаРасширеннаяПодсказка" id="24"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.НоменклатураКонтрагентов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>
