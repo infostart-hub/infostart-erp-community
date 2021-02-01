@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="СформироватьЗапросПоУмолчанию" id="7">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.СформироватьЗапросПоУмолчанию</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.QueryWizard</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сформировать запрос по умолчанию</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="СформироватьЗапросПоУмолчаниюРасширеннаяПодсказка" id="8"/>
+			</Button>
+			<Button name="ФормаРедактироватьНастройку" id="9">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.РедактироватьНастройку</CommandName>
+				<ExtendedTooltip name="ФормаРедактироватьНастройкуРасширеннаяПодсказка" id="10"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Документ" id="1">
+			<DataPath>Запись.Документ</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ДокументКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ДокументРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<Pages name="Страницы" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="12"/>
+			<ChildItems>
+				<Page name="СтраницаЗапрос" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запрос (дети)</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница запрос</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаЗапросРасширеннаяПодсказка" id="14"/>
+					<ChildItems>
+						<TextDocumentField name="Запрос" id="4">
+							<DataPath>Запись.Запрос</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ЗапросКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ЗапросРасширеннаяПодсказка" id="6"/>
+						</TextDocumentField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаЗапросРодители" id="57">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запрос (родители)</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница запрос родители</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаЗапросРодителиРасширеннаяПодсказка" id="58"/>
+					<ChildItems>
+						<InputField name="ЗапросРодители" id="59">
+							<DataPath>Запись.ЗапросРодители</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MultiLine>true</MultiLine>
+							<ExtendedEdit>true</ExtendedEdit>
+							<ContextMenu name="ЗапросРодителиКонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="ЗапросРодителиРасширеннаяПодсказка" id="61"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОформление" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оформление</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница оформление</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаОформлениеРасширеннаяПодсказка" id="16"/>
+					<ChildItems>
+						<Table name="тзОформление" id="17">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>тзОформление</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="тзОформлениеКонтекстноеМеню" id="18"/>
+							<AutoCommandBar name="тзОформлениеКоманднаяПанель" id="19"/>
+							<ExtendedTooltip name="тзОформлениеРасширеннаяПодсказка" id="20"/>
+							<SearchStringAddition name="тзОформлениеСтрокаПоиска" id="21">
+								<AdditionSource>
+									<Item>тзОформление</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="тзОформлениеСтрокаПоискаКонтекстноеМеню" id="22"/>
+								<ExtendedTooltip name="тзОформлениеСтрокаПоискаРасширеннаяПодсказка" id="23"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="тзОформлениеСостояниеПросмотра" id="24">
+								<AdditionSource>
+									<Item>тзОформление</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="тзОформлениеСостояниеПросмотраКонтекстноеМеню" id="25"/>
+								<ExtendedTooltip name="тзОформлениеСостояниеПросмотраРасширеннаяПодсказка" id="26"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="тзОформлениеУправлениеПоиском" id="27">
+								<AdditionSource>
+									<Item>тзОформление</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="тзОформлениеУправлениеПоискомКонтекстноеМеню" id="28"/>
+								<ExtendedTooltip name="тзОформлениеУправлениеПоискомРасширеннаяПодсказка" id="29"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="тзОформлениеПользователь" id="30">
+									<DataPath>тзОформление.Пользователь</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тзОформлениеПользовательКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="тзОформлениеПользовательРасширеннаяПодсказка" id="32"/>
+								</InputField>
+								<ColumnGroup name="тзОформлениеГруппа1" id="42">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="тзОформлениеГруппа1РасширеннаяПодсказка" id="43"/>
+									<ChildItems>
+										<CheckBoxField name="тзОформлениеИспользоватьЦветТекста" id="54">
+											<DataPath>тзОформление.ИспользоватьЦветТекста</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="тзОформлениеИспользоватьЦветТекстаКонтекстноеМеню" id="55"/>
+											<ExtendedTooltip name="тзОформлениеИспользоватьЦветТекстаРасширеннаяПодсказка" id="56"/>
+										</CheckBoxField>
+										<InputField name="тзОформлениеЦветТекста" id="33">
+											<DataPath>тзОформление.ЦветТекста</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="тзОформлениеЦветТекстаКонтекстноеМеню" id="34"/>
+											<ExtendedTooltip name="тзОформлениеЦветТекстаРасширеннаяПодсказка" id="35"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="тзОформлениеГруппа2" id="44">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="тзОформлениеГруппа2РасширеннаяПодсказка" id="45"/>
+									<ChildItems>
+										<CheckBoxField name="тзОформлениеИспользоватьЦветФона" id="51">
+											<DataPath>тзОформление.ИспользоватьЦветФона</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="тзОформлениеИспользоватьЦветФонаКонтекстноеМеню" id="52"/>
+											<ExtendedTooltip name="тзОформлениеИспользоватьЦветФонаРасширеннаяПодсказка" id="53"/>
+										</CheckBoxField>
+										<InputField name="тзОформлениеЦветФона" id="39">
+											<DataPath>тзОформление.ЦветФона</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="тзОформлениеЦветФонаКонтекстноеМеню" id="40"/>
+											<ExtendedTooltip name="тзОформлениеЦветФонаРасширеннаяПодсказка" id="41"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="тзОформлениеГруппа3" id="46">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="тзОформлениеГруппа3РасширеннаяПодсказка" id="47"/>
+									<ChildItems>
+										<CheckBoxField name="тзОформлениеИспользоватьШрифт" id="48">
+											<DataPath>тзОформление.ИспользоватьШрифт</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="тзОформлениеИспользоватьШрифтКонтекстноеМеню" id="49"/>
+											<ExtendedTooltip name="тзОформлениеИспользоватьШрифтРасширеннаяПодсказка" id="50"/>
+										</CheckBoxField>
+										<InputField name="тзОформлениеШрифт" id="36">
+											<DataPath>тзОформление.Шрифт</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="тзОформлениеШрифтКонтекстноеМеню" id="37"/>
+											<ExtendedTooltip name="тзОформлениеШрифтРасширеннаяПодсказка" id="38"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.СтруктураПодчиненности</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="тзОформление" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оформление</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Пользователь" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЦветТекста" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цвет текста</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8ui:Color</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Шрифт" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шрифт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8ui:Font</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЦветФона" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цвет фона</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8ui:Color</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИспользоватьЦветТекста" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать цвет текста</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИспользоватьЦветФона" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать цвет фона</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИспользоватьШрифт" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать Шрифт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>тзОформление</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">тзОформление.Пользователь</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Для всех пользователей</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="СформироватьЗапросПоУмолчанию" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать запрос по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать запрос по умолчанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьДействие</Action>
+		</Command>
+		<Command name="РедактироватьНастройку" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать настройку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать настройку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыполнитьДействие</Action>
+		</Command>
+	</Commands>
+</Form>

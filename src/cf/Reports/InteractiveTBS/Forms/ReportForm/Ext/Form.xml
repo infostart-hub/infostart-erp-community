@@ -1,0 +1,2667 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>ChangeSettingsStructure</ExcludedCommand>
+		<ExcludedCommand>ChangeVariant</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>LoadReportSettings</ExcludedCommand>
+		<ExcludedCommand>LoadVariant</ExcludedCommand>
+		<ExcludedCommand>SaveReportSettings</ExcludedCommand>
+		<ExcludedCommand>SaveVariant</ExcludedCommand>
+		<ExcludedCommand>StandardSettings</ExcludedCommand>
+	</CommandSet>
+	<ReportResult>TabDocument</ReportResult>
+	<ReportFormType>Main</ReportFormType>
+	<AutoShowState>DontShow</AutoShowState>
+	<ReportResultViewMode>Auto</ReportResultViewMode>
+	<AutoCommandBar name="FormCommandBar" id="-1"/>
+	<Events>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="BeforeClose">BeforeClose</Event>
+		<Event name="OnLoadUserSettingsAtServer">OnLoadUserSettingsAtServer</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="PanelCommandPanel" id="110">
+			<EnableContentChange>true</EnableContentChange>
+			<ToolTipRepresentation>None</ToolTipRepresentation>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельExtendedTooltip" id="682"/>
+			<ChildItems>
+				<Button name="GenerateReport" id="6">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<DefaultButton>true</DefaultButton>
+					<SkipOnInput>false</SkipOnInput>
+					<Width>17</Width>
+					<CommandName>Form.Command.GenerateReport</CommandName>
+					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<Picture>
+						<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<ExtendedTooltip name="СформироватьОтчетExtendedTooltip" id="684"/>
+				</Button>
+				<CommandBar name="GroupButtonsPanel" id="366">
+					<EnableContentChange>true</EnableContentChange>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ExtendedTooltip name="ГруппаПанельКнопокExtendedTooltip" id="683"/>
+					<ChildItems>
+						<Popup name="SubmenuPrint" id="367">
+							<EnableContentChange>true</EnableContentChange>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<VerticalStretch>false</VerticalStretch>
+							<Picture>
+								<xr:Ref>StdPicture.Print</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Representation>Picture</Representation>
+							<ExtendedTooltip name="ПодменюПечатьExtendedTooltip" id="685"/>
+							<ChildItems>
+								<Button name="Print" id="368">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.TabDocument.StandardCommand.Print</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Печать</v8:content>
+										</v8:item>
+									</Title>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ПечатьExtendedTooltip" id="686"/>
+								</Button>
+								<Button name="PromotorPrint" id="369">
+									<Type>CommandBarButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Item.TabDocument.StandardCommand.Preview</CommandName>
+									<Picture>
+										<xr:Abs>Picture.png</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Просмотор</v8:content>
+										</v8:item>
+									</Title>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="PromotorPrintEnhancedTooltip" id="687"/>
+								</Button>
+								<Button name="SaveAs" id="370">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.TabDocument.StandardCommand.SaveAs</CommandName>
+									<Picture>
+										<xr:Abs>Picture.png</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="СохранитьКакExtendedTooltip" id="688"/>
+								</Button>
+							</ChildItems>
+						</Popup>
+					</ChildItems>
+				</CommandBar>
+				<InputField name="fFirstSection" id="34">
+					<DataPath>FirstSection</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Width>8</Width>
+					<Wrap>false</Wrap>
+					<ExtendedEdit>false</ExtendedEdit>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<AutoChoiceIncomplete>false</AutoChoiceIncomplete>
+					<ChooseType>false</ChooseType>
+					<TextEdit>false</TextEdit>
+					<ChoiceListButton>false</ChoiceListButton>
+					<Font faceName="MS Shell Dlg" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+					<ContextMenu name="фПервыйРазрезКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="фПервыйРазрезРасширеннаяПодсказка" id="690"/>
+					<Events>
+						<Event name="StartChoice">FirstSectionStartChoice</Event>
+						<Event name="Clearing">FirstSectionClearing</Event>
+					</Events>
+				</InputField>
+				<CommandBar name="PeriodGroup" id="374">
+					<EnableContentChange>true</EnableContentChange>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<ExtendedTooltip name="ГруппаПериодExtendedTooltip" id="691"/>
+					<ChildItems>
+						<Button name="PeriodAgo" id="375">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.PeriodAgo</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<ExtendedTooltip name="ПериодНазадExtendedTooltip" id="692"/>
+						</Button>
+						<Button name="DescriptionPeriod" id="376">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.DescriptionPeriod</CommandName>
+							<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<ExtendedTooltip name="ОписаниеПериодаExtendedTooltip" id="693"/>
+						</Button>
+						<Button name="PeriodAhead" id="377">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.PeriodAhead</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.MoveRight</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<ExtendedTooltip name="ПериодВпередExtendedTooltip" id="694"/>
+						</Button>
+						<Popup name="AccountingRegister" id="744">
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<Picture>
+								<xr:Ref>StdPicture.AccountingRegister</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Representation>PictureAndText</Representation>
+							<ExtendedTooltip name="РегистБухгалтерииРасширеннаяПодсказка" id="745"/>
+						</Popup>
+					</ChildItems>
+				</CommandBar>
+				<PictureDecoration name="DecorationAutoSum" id="951">
+					<Enabled>false</Enabled>
+					<Width>2</Width>
+					<Height>1</Height>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ДекорацияАвтоСуммаКонтекстноеМеню" id="952"/>
+					<ExtendedTooltip name="ДекорацияАвтоСуммаExtendedTooltip" id="953"/>
+				</PictureDecoration>
+				<InputField name="AmountField" id="954">
+					<DataPath>AmountField</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<TitleLocation>None</TitleLocation>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Width>12</Width>
+					<ChoiceButton>true</ChoiceButton>
+					<ContextMenu name="ПолеСуммаКонтекстноеМеню" id="955"/>
+					<ExtendedTooltip name="ПолеСуммаExtendedTooltip" id="956"/>
+				</InputField>
+				<CommandBar name="GroupSecondaryCommandPanel" id="109">
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="ГруппаДополнительнаяКоманднаяПанельExtendedTooltip" id="696"/>
+					<ChildItems>
+						<Button name="Settings" id="1065">
+							<Type>CommandBarButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Form.Command.AccessSettings</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.QueryWizard</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<ExtendedTooltip name="SettingsEnhancedTooltip" id="1066"/>
+						</Button>
+						<Button name="PanelSettings" id="215">
+							<Type>CommandBarButton</Type>
+							<Representation>Picture</Representation>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.Command.PanelSettings</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.ShowInList</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+							<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="ПанельНастроекExtendedTooltip" id="697"/>
+						</Button>
+						<ButtonGroup name="SaveGroupDownload" id="306">
+							<Visible>false</Visible>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<ExtendedTooltip name="ГруппаСохранитьЗагрузитьExtendedTooltip" id="698"/>
+							<ChildItems>
+								<Button name="LoadReportSettings" id="307">
+									<Type>CommandBarButton</Type>
+									<SkipOnInput>false</SkipOnInput>
+									<CommandName>0:b0c9afb6-320c-4e36-be21-8f6d48116415</CommandName>
+									<ExtendedTooltip name="ЗагрузитьНастройкиОтчетаExtendedTooltip" id="699"/>
+								</Button>
+								<Button name="SaveReportSettings" id="308">
+									<Type>CommandBarButton</Type>
+									<SkipOnInput>false</SkipOnInput>
+									<CommandName>0:7910bb04-ddcc-4e5d-89f0-104c6ad0f187</CommandName>
+									<ExtendedTooltip name="СохранитьНастройкиОтчетаExtendedTooltip" id="700"/>
+								</Button>
+							</ChildItems>
+						</ButtonGroup>
+						<ButtonGroup name="GroupChangeFormHelp" id="309">
+							<EnableContentChange>true</EnableContentChange>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<ExtendedTooltip name="ГруппаИзменитьФормуСправкаExtendedTooltip" id="701"/>
+							<ChildItems>
+								<Button name="CustomizeForm" id="310">
+									<Type>CommandBarButton</Type>
+									<Visible>false</Visible>
+									<Representation>Picture</Representation>
+									<SkipOnInput>false</SkipOnInput>
+									<CommandName>0:198ea630-fda2-4cda-8a23-f999f4c67ee6</CommandName>
+									<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ИзменитьФормуExtendedTooltip" id="702"/>
+								</Button>
+								<Button name="Help" id="311">
+									<Type>CommandBarButton</Type>
+									<SkipOnInput>false</SkipOnInput>
+									<CommandName>Form.StandardCommand.Help</CommandName>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="СправкаExtendedTooltip" id="703"/>
+								</Button>
+							</ChildItems>
+						</ButtonGroup>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="GroupResultSettingsPanel" id="30">
+			<ToolTipRepresentation>None</ToolTipRepresentation>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРезультатПанельНастроекExtendedTooltip" id="704"/>
+			<ChildItems>
+				<SpreadSheetDocumentField name="TabDocument" id="20">
+					<DataPath>TabDocument</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Width>80</Width>
+					<Height>16</Height>
+					<VerticalScrollBar>true</VerticalScrollBar>
+					<HorizontalScrollBar>true</HorizontalScrollBar>
+					<ShowGroups>false</ShowGroups>
+					<ContextMenu name="ТабДокументКонтекстноеМеню" id="21">
+						<Autofill>false</Autofill>
+					</ContextMenu>
+					<ExtendedTooltip name="ТабДокументРасширеннаяПодсказка" id="707"/>
+					<Events>
+						<Event name="OnActivate">TabDocumentWhenYouActivateArea</Event>
+						<Event name="DetailProcessing">TabDocumentDecryptionProcessing</Event>
+					</Events>
+				</SpreadSheetDocumentField>
+				<UsualGroup name="GroupPanelSettings" id="405">
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Width>40</Width>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПанельНастроекExtendedTooltip" id="708"/>
+					<ChildItems>
+						<Pages name="PageSettingsPanel" id="407">
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<Width>40</Width>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<ExtendedTooltip name="СтраницыПанельНастроекExtendedTooltip" id="709"/>
+							<ChildItems>
+								<Page name="GroupBasicSettings" id="409">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Основные настройки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Основные настройки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="ГруппаОсновныеНастройкиExtendedTooltip" id="710"/>
+									<ChildItems>
+										<UsualGroup name="GroupIndicators" id="411">
+											<EnableContentChange>true</EnableContentChange>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Показатели</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>Vertical</Group>
+											<ExtendedTooltip name="ГруппаПоказателиExtendedTooltip" id="711"/>
+											<ChildItems>
+												<Table name="fIndicators" id="674">
+													<Representation>List</Representation>
+													<CommandBarLocation>None</CommandBarLocation>
+													<DefaultItem>true</DefaultItem>
+													<ChangeRowSet>false</ChangeRowSet>
+													<ChangeRowOrder>false</ChangeRowOrder>
+													<Height>8</Height>
+													<SelectionMode>SingleRow</SelectionMode>
+													<RowSelectionMode>Row</RowSelectionMode>
+													<Header>false</Header>
+													<HorizontalScrollBar>DontUse</HorizontalScrollBar>
+													<VerticalScrollBar>DontUse</VerticalScrollBar>
+													<HorizontalLines>false</HorizontalLines>
+													<VerticalLines>false</VerticalLines>
+													<VerticalStretch>false</VerticalStretch>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>TVResources</DataPath>
+													<CommandSet>
+														<ExcludedCommand>Add</ExcludedCommand>
+														<ExcludedCommand>CancelSearch</ExcludedCommand>
+														<ExcludedCommand>Change</ExcludedCommand>
+														<ExcludedCommand>Copy</ExcludedCommand>
+														<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+														<ExcludedCommand>Delete</ExcludedCommand>
+														<ExcludedCommand>EndEdit</ExcludedCommand>
+														<ExcludedCommand>Find</ExcludedCommand>
+														<ExcludedCommand>MoveDown</ExcludedCommand>
+														<ExcludedCommand>MoveUp</ExcludedCommand>
+														<ExcludedCommand>OutputList</ExcludedCommand>
+														<ExcludedCommand>SortListAsc</ExcludedCommand>
+														<ExcludedCommand>SortListDesc</ExcludedCommand>
+													</CommandSet>
+													<SearchStringLocation>None</SearchStringLocation>
+													<ViewStatusLocation>None</ViewStatusLocation>
+													<SearchControlLocation>None</SearchControlLocation>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="фПоказателиКонтекстноеМеню" id="675"/>
+													<AutoCommandBar name="fCommandPanelIndicators" id="676">
+														<Autofill>false</Autofill>
+													</AutoCommandBar>
+													<ExtendedTooltip name="фПоказателиРасширеннаяПодсказка" id="712"/>
+													<SearchStringAddition name="fIndicatorsSearchString" id="924">
+														<AdditionSource>
+															<Item>fIndicators</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="фПоказателиСтрокаПоискаКонтекстноеМеню" id="925"/>
+														<ExtendedTooltip name="фПоказателиСтрокаПоискаРасширеннаяПодсказка" id="926"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="fIndicatorsreviewStatus" id="927">
+														<AdditionSource>
+															<Item>fIndicators</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="фПоказателиСостояниеПросмотраКонтекстноеМеню" id="928"/>
+														<ExtendedTooltip name="фПоказателиСостояниеПросмотраРасширеннаяПодсказка" id="929"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="fIndicatorsManagementSearch" id="930">
+														<AdditionSource>
+															<Item>fIndicators</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="фПоказателиУправлениеПоискомКонтекстноеМеню" id="931"/>
+														<ExtendedTooltip name="фПоказателиУправлениеПоискомРасширеннаяПодсказка" id="932"/>
+													</SearchControlAddition>
+													<Events>
+														<Event name="OnChange">IndicatorsWhenChanging</Event>
+													</Events>
+													<ChildItems>
+														<CheckBoxField name="IndicatorsToUse" id="680">
+															<DataPath>TVResources.Use</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<FixingInTable>Left</FixingInTable>
+															<ShowInHeader>false</ShowInHeader>
+															<ShowInFooter>false</ShowInFooter>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ПоказателиИспользоватьКонтекстноеМеню" id="681"/>
+															<ExtendedTooltip name="ПоказателиИспользоватьExtendedTooltip" id="713"/>
+														</CheckBoxField>
+														<LabelField name="IndicatorsName" id="678">
+															<DataPath>TVResources.Synonym</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ShowInHeader>false</ShowInHeader>
+															<ShowInFooter>false</ShowInFooter>
+															<ContextMenu name="ПоказателиНаименованиеКонтекстноеМеню" id="679"/>
+															<ExtendedTooltip name="ПоказателиНаименованиеExtendedTooltip" id="714"/>
+														</LabelField>
+													</ChildItems>
+												</Table>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="GroupSelections" id="519">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбoры</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<Width>44</Width>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>Vertical</Group>
+											<ExtendedTooltip name="ГруппаОтборыExtendedTooltip" id="728"/>
+											<ChildItems>
+												<Table name="Selections" id="521">
+													<Representation>List</Representation>
+													<CommandBarLocation>Top</CommandBarLocation>
+													<SkipOnInput>false</SkipOnInput>
+													<Height>6</Height>
+													<SelectionMode>SingleRow</SelectionMode>
+													<InitialTreeView>ExpandAllLevels</InitialTreeView>
+													<VerticalStretch>false</VerticalStretch>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>InteractiveTBS.SettingsComposer.Settings.Filter</DataPath>
+													<CommandSet>
+														<ExcludedCommand>AddFilterItemGroup</ExcludedCommand>
+														<ExcludedCommand>Change</ExcludedCommand>
+														<ExcludedCommand>Detailed</ExcludedCommand>
+														<ExcludedCommand>EndEdit</ExcludedCommand>
+														<ExcludedCommand>GroupFilterItems</ExcludedCommand>
+														<ExcludedCommand>HierarchicalList</ExcludedCommand>
+														<ExcludedCommand>List</ExcludedCommand>
+														<ExcludedCommand>SetPresentation</ExcludedCommand>
+														<ExcludedCommand>Tree</ExcludedCommand>
+														<ExcludedCommand>Ungroup</ExcludedCommand>
+														<ExcludedCommand>UseFieldAsValue</ExcludedCommand>
+														<ExcludedCommand>UserSettingItemProperties</ExcludedCommand>
+													</CommandSet>
+													<ToolTipRepresentation>None</ToolTipRepresentation>
+													<SearchStringLocation>None</SearchStringLocation>
+													<ViewStatusLocation>None</ViewStatusLocation>
+													<SearchControlLocation>None</SearchControlLocation>
+													<ViewMode>QuickAccess</ViewMode>
+													<SettingsNamedItemDetailedRepresentation>false</SettingsNamedItemDetailedRepresentation>
+													<ContextMenu name="ОтборыКонтекстноеМеню" id="522"/>
+													<AutoCommandBar name="SelectionsCommandPanel" id="523">
+														<Autofill>false</Autofill>
+														<ChildItems>
+															<ButtonGroup name="PanelCommandPanelSelectionsAddRemove" id="550">
+																<ToolTip>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Add/delete</v8:content>
+																	</v8:item>
+																</ToolTip>
+																<ToolTipRepresentation>None</ToolTipRepresentation>
+																<ExtendedTooltip name="ГруппаКоманднаяПанельОтборыДобавитьУдалитьExtendedTooltip" id="729"/>
+																<ChildItems>
+																	<Button name="SelectionsToAddItemSelection" id="552">
+																		<Type>CommandBarButton</Type>
+																		<Representation>Picture</Representation>
+																		<SkipOnInput>false</SkipOnInput>
+																		<CommandName>Form.Item.Selections.StandardCommand.AddFilterItem</CommandName>
+																		<ToolTipRepresentation>None</ToolTipRepresentation>
+																		<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																		<ExtendedTooltip name="ОтборыДобавитьЭлементОтбораExtendedTooltip" id="730"/>
+																	</Button>
+																	<Button name="SelectionsDelete" id="554">
+																		<Type>CommandBarButton</Type>
+																		<Representation>Picture</Representation>
+																		<SkipOnInput>false</SkipOnInput>
+																		<CommandName>Form.Item.Selections.StandardCommand.Delete</CommandName>
+																		<ToolTipRepresentation>None</ToolTipRepresentation>
+																		<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																		<ExtendedTooltip name="ОтборыУдалитьExtendedTooltip" id="731"/>
+																	</Button>
+																</ChildItems>
+															</ButtonGroup>
+														</ChildItems>
+													</AutoCommandBar>
+													<ExtendedTooltip name="ОтборыExtendedTooltip" id="735"/>
+													<SearchStringAddition name="SelectionOfSearchString" id="942">
+														<AdditionSource>
+															<Item>Selections</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ОтборыСтрокаПоискаКонтекстноеМеню" id="943"/>
+														<ExtendedTooltip name="ОтборыСтрокаПоискаРасширеннаяПодсказка" id="944"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="SelectionsReviewStatus" id="945">
+														<AdditionSource>
+															<Item>Selections</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ОтборыСостояниеПросмотраКонтекстноеМеню" id="946"/>
+														<ExtendedTooltip name="ОтборыСостояниеПросмотраРасширеннаяПодсказка" id="947"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="SelectionsManageSearch" id="948">
+														<AdditionSource>
+															<Item>Selections</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ОтборыУправлениеПоискомКонтекстноеМеню" id="949"/>
+														<ExtendedTooltip name="ОтборыУправлениеПоискомРасширеннаяПодсказка" id="950"/>
+													</SearchControlAddition>
+													<Events>
+														<Event name="OnEditEnd">FilterWhenYouAreFinishedEditing</Event>
+														<Event name="BeforeAddRow">BeforeAddRow</Event>
+														<Event name="BeforeDeleteRow">FilterBeforeDeleting</Event>
+														<Event name="BeforeRowChange">BeforeRowChange</Event>
+													</Events>
+													<ChildItems>
+														<CheckBoxField name="SelectionsUsing" id="1067">
+															<DataPath>InteractiveTBS.SettingsComposer.Settings.Filter.Use</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<ToolTipRepresentation>None</ToolTipRepresentation>
+															<EditMode>Directly</EditMode>
+															<FixingInTable>Left</FixingInTable>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="SelectionsUsingContextMenu" id="1068"/>
+															<ExtendedTooltip name="SelectionsUsingAnEnhancedTooltip" id="1069"/>
+														</CheckBoxField>
+														<ColumnGroup name="SelectionGroupSelectionOfColumns" id="1070">
+															<ToolTipRepresentation>None</ToolTipRepresentation>
+															<ExtendedTooltip name="SelectionsGroupColumnSelectionEnhancedTooltip" id="1071"/>
+															<ChildItems>
+																<ColumnGroup name="SelectionOfGroupOfColumnsBasicElementsOfSelection" id="1077">
+																	<ToolTipRepresentation>None</ToolTipRepresentation>
+																	<Group>Horizontal</Group>
+																	<ExtendedTooltip name="SelectionOfGroupOfColumnsMainElementsOfEnhancedTooltipSelection" id="1078"/>
+																	<ChildItems>
+																		<ColumnGroup name="SelectionOfGroupOfColumnsToLeftValue" id="1082">
+																			<ToolTipRepresentation>None</ToolTipRepresentation>
+																			<Group>InCell</Group>
+																			<ExtendedTooltip name="SelectionOfGroupOfColumnsLeftmostValueEnhancedTooltip" id="1083"/>
+																			<ChildItems>
+																				<PictureField name="SelectionsPictureLeftValues" id="1084">
+																					<DataPath>InteractiveTBS.SettingsComposer.Settings.Filter.LeftValuePicture</DataPath>
+																					<ToolTipRepresentation>None</ToolTipRepresentation>
+																					<ShowInHeader>false</ShowInHeader>
+																					<ShowInFooter>false</ShowInFooter>
+																					<FileDragMode>AsFile</FileDragMode>
+																					<ContextMenu name="SelectionsPictureLeftValuesContextMenu" id="1085"/>
+																					<ExtendedTooltip name="SelectionsPictureOfLeftValueEnhancedTooltip" id="1086"/>
+																				</PictureField>
+																				<InputField name="LeftmostValueFilter" id="1087">
+																					<DataPath>InteractiveTBS.SettingsComposer.Settings.Filter.LeftValue</DataPath>
+																					<ToolTipRepresentation>None</ToolTipRepresentation>
+																					<EditMode>EnterOnInput</EditMode>
+																					<Width>10</Width>
+																					<HorizontalStretch>true</HorizontalStretch>
+																					<ChooseType>false</ChooseType>
+																					<ContextMenu name="LeftmostValueFilterContextMenu" id="1088"/>
+																					<ExtendedTooltip name="LeftmostValueFilterEnhancedTooltip" id="1089"/>
+																				</InputField>
+																			</ChildItems>
+																		</ColumnGroup>
+																		<InputField name="SelectionsComparisonView" id="1090">
+																			<DataPath>InteractiveTBS.SettingsComposer.Settings.Filter.ComparisonType</DataPath>
+																			<ToolTipRepresentation>None</ToolTipRepresentation>
+																			<EditMode>EnterOnInput</EditMode>
+																			<Width>5</Width>
+																			<HorizontalStretch>true</HorizontalStretch>
+																			<ContextMenu name="SelectionsComparisonViewContextMenu" id="1091"/>
+																			<ExtendedTooltip name="Selections-AdvancedTooltip" id="1092"/>
+																		</InputField>
+																		<ColumnGroup name="SelectionOfGroupOfColumnsToRightValue" id="1093">
+																			<ToolTipRepresentation>None</ToolTipRepresentation>
+																			<Group>InCell</Group>
+																			<ExtendedTooltip name="SelectionOfGroupOfColumnsToRightValueEnhancedTooltip" id="1094"/>
+																			<ChildItems>
+																				<PictureField name="SelectionsPictureRightValues" id="1095">
+																					<DataPath>InteractiveTBS.SettingsComposer.Settings.Filter.RightValuePicture</DataPath>
+																					<ToolTipRepresentation>None</ToolTipRepresentation>
+																					<ShowInHeader>false</ShowInHeader>
+																					<ShowInFooter>false</ShowInFooter>
+																					<FileDragMode>AsFile</FileDragMode>
+																					<ContextMenu name="SelectionsPictureRightValuesContextMenu" id="1096"/>
+																					<ExtendedTooltip name="SelectionsPictureRightValuesEnhancedTooltip" id="1097"/>
+																				</PictureField>
+																				<InputField name="FilterOfRightValue" id="1098">
+																					<DataPath>InteractiveTBS.SettingsComposer.Settings.Filter.RightValue</DataPath>
+																					<ToolTipRepresentation>None</ToolTipRepresentation>
+																					<EditMode>EnterOnInput</EditMode>
+																					<Width>10</Width>
+																					<HorizontalStretch>true</HorizontalStretch>
+																					<ChoiceFoldersAndItems>FoldersAndItems</ChoiceFoldersAndItems>
+																					<ContextMenu name="FilterOfRightValueContextMenu" id="1099"/>
+																					<ExtendedTooltip name="FilterOfRightValueEnhancedTooltip" id="1100"/>
+																				</InputField>
+																			</ChildItems>
+																		</ColumnGroup>
+																		<InputField name="SelectionsDate" id="1101">
+																			<DataPath>InteractiveTBS.SettingsComposer.Settings.Filter.Date</DataPath>
+																			<ToolTipRepresentation>None</ToolTipRepresentation>
+																			<EditMode>EnterOnInput</EditMode>
+																			<Width>10</Width>
+																			<HorizontalStretch>true</HorizontalStretch>
+																			<ContextMenu name="SelectionsDateFromContextMenu" id="1102"/>
+																			<ExtendedTooltip name="DateSelectionsEnhancedTooltip" id="1103"/>
+																		</InputField>
+																	</ChildItems>
+																</ColumnGroup>
+																<InputField name="SelectionOfTypeOfGroup" id="1079">
+																	<DataPath>InteractiveTBS.SettingsComposer.Settings.Filter.GroupType</DataPath>
+																	<ToolTipRepresentation>None</ToolTipRepresentation>
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="SelectionOfTypeOfGroupContextMenu" id="1080"/>
+																	<ExtendedTooltip name="SelectionOfTypeOfGroupEnhancedTooltip" id="1081"/>
+																</InputField>
+															</ChildItems>
+														</ColumnGroup>
+														<ColumnGroup name="SelectionOfGroupOfColumnsToUse" id="1072">
+															<ToolTipRepresentation>None</ToolTipRepresentation>
+															<ExtendedTooltip name="SelectionOfGroupOfColumnsUseOfEnhancedTooltip" id="1073"/>
+															<ChildItems>
+																<InputField name="AuditionsApplication" id="1104">
+																	<DataPath>InteractiveTBS.SettingsComposer.Settings.Filter.Application</DataPath>
+																	<ToolTipRepresentation>None</ToolTipRepresentation>
+																	<EditMode>EnterOnInput</EditMode>
+																	<Width>5</Width>
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<ContextMenu name="SelectionsUseContextMenu" id="1105"/>
+																	<ExtendedTooltip name="SelectionsUseOfEnhancedTooltip" id="1106"/>
+																</InputField>
+																<InputField name="SelectionDisplayMode" id="1107">
+																	<DataPath>InteractiveTBS.SettingsComposer.Settings.Filter.ViewMode</DataPath>
+																	<ToolTipRepresentation>None</ToolTipRepresentation>
+																	<EditMode>EnterOnInput</EditMode>
+																	<Width>5</Width>
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<ContextMenu name="SelectionOfDisplayModeContextMenu" id="1108"/>
+																	<ExtendedTooltip name="SelectionOfDisplayModeEnhancedTooltip" id="1109"/>
+																</InputField>
+															</ChildItems>
+														</ColumnGroup>
+														<InputField name="SelectionsPerformance" id="1074">
+															<DataPath>InteractiveTBS.SettingsComposer.Settings.Filter.Presentation</DataPath>
+															<ToolTipRepresentation>None</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="SelectionsViewContextMenu" id="1075"/>
+															<ExtendedTooltip name="SelectionsPerformanceEnhancedTooltip" id="1076"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="GroupAdditionalData" id="494">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дополнительные данные</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дополнительные данные</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>Vertical</Group>
+											<ExtendedTooltip name="ГруппаДополнительныеДанныеExtendedTooltip" id="715"/>
+											<ChildItems>
+												<CheckBoxField name="OnSubAccounts" id="433">
+													<DataPath>DataOnSubAccounts</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Данные по субсчетам</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПоСубсчетамКонтекстноеМеню" id="434"/>
+													<ExtendedTooltip name="ПоСубсчетамExtendedTooltip" id="717"/>
+												</CheckBoxField>
+												<CheckBoxField name="OutputOffBalanceAccount" id="496">
+													<DataPath>OffBalanceAccount</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Забалансовые счета</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ВыводитьЗабалансовыеСчетаКонтекстноеМеню" id="497"/>
+													<ExtendedTooltip name="ВыводитьЗабалансовыеСчетаExtendedTooltip" id="716"/>
+													<Events>
+														<Event name="OnChange">WithdrawBalanceSheetWhenChanging</Event>
+													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="ApplyDetailedBalance" id="916">
+													<DataPath>ApplyDetailedBalance</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Применить развернутое сальдо</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>CheckBox</CheckBoxType>
+													<ContextMenu name="ПрименитьРазвернутоеСальдоКонтекстноеМеню" id="917"/>
+													<ExtendedTooltip name="ПрименитьРазвернутоеСальдоРасширеннаяПодсказка" id="918"/>
+												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+								<Page name="GroupAdvancedSettings" id="492">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительныe настройки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительные настройки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="ГруппаДополнительныеНастройкиExtendedTooltip" id="727"/>
+									<ChildItems>
+										<UsualGroup name="GroupExpandedBalance" id="822">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Развернутое сальдо</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<Group>Vertical</Group>
+											<ExtendedTooltip name="ГруппаРазвернутоеСальдоExtendedTooltip" id="823"/>
+											<ChildItems>
+												<Table name="SplittedBalance" id="824">
+													<Representation>List</Representation>
+													<SkipOnInput>false</SkipOnInput>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>SplittedBalance</DataPath>
+													<CommandSet>
+														<ExcludedCommand>CancelSearch</ExcludedCommand>
+														<ExcludedCommand>Change</ExcludedCommand>
+														<ExcludedCommand>Copy</ExcludedCommand>
+														<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+														<ExcludedCommand>EndEdit</ExcludedCommand>
+														<ExcludedCommand>Find</ExcludedCommand>
+														<ExcludedCommand>OutputList</ExcludedCommand>
+														<ExcludedCommand>SelectAll</ExcludedCommand>
+														<ExcludedCommand>SortListAsc</ExcludedCommand>
+														<ExcludedCommand>SortListDesc</ExcludedCommand>
+													</CommandSet>
+													<ToolTipRepresentation>None</ToolTipRepresentation>
+													<SearchStringLocation>None</SearchStringLocation>
+													<ViewStatusLocation>None</ViewStatusLocation>
+													<SearchControlLocation>None</SearchControlLocation>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="РазвернутоеСальдоКонтекстноеМеню" id="825">
+														<ChildItems>
+															<Button name="DetailedBalanceContextMenuGroupYouSelect" id="858">
+																<Type>CommandBarButton</Type>
+																<SkipOnInput>false</SkipOnInput>
+																<CommandName>Form.Command.DetailedBalanceCheck</CommandName>
+																<ToolTipRepresentation>None</ToolTipRepresentation>
+																<ExtendedTooltip name="РазвернутоеСальдоКонтекстноеМенюГруппировкаУстановитьФлажкиExtendedTooltip" id="859"/>
+															</Button>
+															<Button name="DetailedBalanceContextMenuGroupingToRemoveBoxes" id="860">
+																<Type>CommandBarButton</Type>
+																<SkipOnInput>false</SkipOnInput>
+																<CommandName>Form.Command.DetailedBalanceToRemoveBoxes</CommandName>
+																<ToolTipRepresentation>None</ToolTipRepresentation>
+																<ExtendedTooltip name="РазвернутоеСальдоКонтекстноеМенюГруппировкаСнятьФлажкиExtendedTooltip" id="861"/>
+															</Button>
+														</ChildItems>
+													</ContextMenu>
+													<AutoCommandBar name="DetailedBalanceOfCommandPanel" id="826">
+														<Autofill>false</Autofill>
+														<ChildItems>
+															<Button name="DetailedBalanceAdd" id="862">
+																<Type>CommandBarButton</Type>
+																<Representation>Picture</Representation>
+																<CommandName>Form.Item.SplittedBalance.StandardCommand.Add</CommandName>
+																<ToolTipRepresentation>None</ToolTipRepresentation>
+																<ExtendedTooltip name="РазвернутоеСальдоДобавитьРасширеннаяПодсказка" id="863"/>
+															</Button>
+															<Button name="DetailedBalanceToRemove" id="864">
+																<Type>CommandBarButton</Type>
+																<Representation>Picture</Representation>
+																<SkipOnInput>false</SkipOnInput>
+																<CommandName>Form.Item.SplittedBalance.StandardCommand.Delete</CommandName>
+																<ToolTipRepresentation>None</ToolTipRepresentation>
+																<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																<ExtendedTooltip name="РазвернутоеСальдоУдалитьРасширеннаяПодсказка" id="865"/>
+															</Button>
+															<ButtonGroup name="DetailedBalanceActionGroup" id="866">
+																<ToolTipRepresentation>None</ToolTipRepresentation>
+																<ExtendedTooltip name="РазвернутоеСальдоГруппаДействияРасширеннаяПодсказка" id="867"/>
+																<ChildItems>
+																	<Button name="DetailedBalanceOfGroupYouSelect" id="868">
+																		<Type>CommandBarButton</Type>
+																		<SkipOnInput>false</SkipOnInput>
+																		<CommandName>Form.Command.DetailedBalanceCheck</CommandName>
+																		<ToolTipRepresentation>None</ToolTipRepresentation>
+																		<ExtendedTooltip name="РазвернутоеСальдоГруппировкаУстановитьФлажкиExtendedTooltip" id="869"/>
+																	</Button>
+																	<Button name="DetailedBalanceOfGroupToRemoveCheckBoxes" id="870">
+																		<Type>CommandBarButton</Type>
+																		<SkipOnInput>false</SkipOnInput>
+																		<CommandName>Form.Command.DetailedBalanceToRemoveBoxes</CommandName>
+																		<ToolTipRepresentation>None</ToolTipRepresentation>
+																		<ExtendedTooltip name="РазвернутоеСальдоГруппировкаСнятьФлажкиExtendedTooltip" id="871"/>
+																	</Button>
+																</ChildItems>
+															</ButtonGroup>
+															<ButtonGroup name="DetailedBalanceGroupCommandButtonPanel" id="872">
+																<ToolTipRepresentation>None</ToolTipRepresentation>
+																<CommandSource>Item.SplittedBalance</CommandSource>
+																<ExtendedTooltip name="РазвернутоеСальдоГруппаКнопкиКоманднойПанелиРасширеннаяПодсказка" id="873"/>
+															</ButtonGroup>
+															<Button name="DefaultSettingOf1C" id="1061">
+																<Type>CommandBarButton</Type>
+																<Representation>Picture</Representation>
+																<CommandName>Form.Command.DefaultSettingOf1C</CommandName>
+																<Picture>
+																	<xr:Abs>Picture.png</xr:Abs>
+																	<xr:LoadTransparent>false</xr:LoadTransparent>
+																</Picture>
+																<ExtendedTooltip name="DefaultSettingOf1CEnhancedTooltip" id="1062"/>
+															</Button>
+															<Button name="DefaultSettingFromRayCon" id="1063">
+																<Type>CommandBarButton</Type>
+																<Representation>Picture</Representation>
+																<CommandName>Form.Command.DefaultSettingFromRayCon</CommandName>
+																<Picture>
+																	<xr:Abs>Picture.png</xr:Abs>
+																	<xr:LoadTransparent>false</xr:LoadTransparent>
+																</Picture>
+																<ExtendedTooltip name="DefaultSettingFromRayConEnhancedTooltip" id="1064"/>
+															</Button>
+														</ChildItems>
+													</AutoCommandBar>
+													<ExtendedTooltip name="РазвернутоеСальдоРасширеннаяПодсказка" id="827"/>
+													<SearchStringAddition name="DetailedBalanceOfSearchString" id="933">
+														<AdditionSource>
+															<Item>SplittedBalance</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="РазвернутоеСальдоСтрокаПоискаКонтекстноеМеню" id="934"/>
+														<ExtendedTooltip name="РазвернутоеСальдоСтрокаПоискаРасширеннаяПодсказка" id="935"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="DetailedBalanceConditionView" id="936">
+														<AdditionSource>
+															<Item>SplittedBalance</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="РазвернутоеСальдоСостояниеПросмотраКонтекстноеМеню" id="937"/>
+														<ExtendedTooltip name="РазвернутоеСальдоСостояниеПросмотраРасширеннаяПодсказка" id="938"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="DetailedBalanceManagementSearch" id="939">
+														<AdditionSource>
+															<Item>SplittedBalance</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="РазвернутоеСальдоУправлениеПоискомКонтекстноеМеню" id="940"/>
+														<ExtendedTooltip name="РазвернутоеСальдоУправлениеПоискомРасширеннаяПодсказка" id="941"/>
+													</SearchControlAddition>
+													<Events>
+														<Event name="OnChange">DetailedBalanceWhenChanging</Event>
+													</Events>
+													<ChildItems>
+														<CheckBoxField name="DetailedBalancesUse" id="1046">
+															<DataPath>SplittedBalance.Use</DataPath>
+															<ToolTipRepresentation>None</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<FixingInTable>Left</FixingInTable>
+															<ShowInHeader>false</ShowInHeader>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="РазвернутоеСальдоИспользованиеКонтекстноеМеню" id="1047"/>
+															<ExtendedTooltip name="DetailedBalanceUsingAnEnhancedTooltip" id="1048"/>
+														</CheckBoxField>
+														<InputField name="DetailedAccountBalances" id="1049">
+															<DataPath>SplittedBalance.Account</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Счeт</v8:content>
+																</v8:item>
+															</Title>
+															<TitleHeight>1</TitleHeight>
+															<ToolTipRepresentation>None</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="РазвернутоеСальдоСчетКонтекстноеМеню" id="1050"/>
+															<ExtendedTooltip name="ADetailedAccountBalanceEnhancedTooltip" id="1051"/>
+															<Events>
+																<Event name="OnChange">DetailedBalanceOfAccountIfYouChange</Event>
+															</Events>
+														</InputField>
+														<CheckBoxField name="DetailedBalancesOnSubAccounts" id="1052">
+															<DataPath>SplittedBalance.OnSubAccounts</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Пo cубсчетaм</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTipRepresentation>None</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="РазвернутоеСальдоПоСубсчетамКонтекстноеМеню" id="1053"/>
+															<ExtendedTooltip name="DetailedBalancesOnSubAccountsEnhancedTooltip" id="1054"/>
+														</CheckBoxField>
+														<InputField name="DetailedBalanceView" id="1055">
+															<DataPath>SplittedBalance.Presentation</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Пo субконтo</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTipRepresentation>None</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<ChoiceButton>true</ChoiceButton>
+															<ClearButton>true</ClearButton>
+															<ContextMenu name="РазвернутоеСальдоПредставлениеКонтекстноеМеню" id="1056"/>
+															<ExtendedTooltip name="DetailedBalancePerformanceEnhancedTooltip" id="1057"/>
+															<Events>
+																<Event name="StartChoice">DetailedBalanceRepresentationOfBeginningOfSelection</Event>
+																<Event name="Clearing">DetailedBalanceOfCleaningPerformance</Event>
+																<Event name="ChoiceProcessing">DetailedBalanceOfPresentationIsTreatmentOfChoice</Event>
+															</Events>
+														</InputField>
+														<InputField name="DetailedBalanceOfExtDimension" id="1058">
+															<DataPath>SplittedBalance.ToExtDimension</DataPath>
+															<Visible>false</Visible>
+															<ToolTipRepresentation>None</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="РазвернутоеСальдоПоСубконтоКонтекстноеМеню" id="1059"/>
+															<ExtendedTooltip name="ADetailedBalanceToExtDimensionEnhancedTooltip" id="1060"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="GroupRegistration" id="562">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Оформлениe</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>Vertical</Group>
+											<ExtendedTooltip name="ГруппаОформлениеExtendedTooltip" id="738"/>
+											<ChildItems>
+												<InputField name="AppearanceTemplate" id="564">
+													<DataPath>NumberLayoutDesign</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Вариaнт оформления</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTipRepresentation>None</ToolTipRepresentation>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Пo-умолчанию</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">0</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Зеленый</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">1</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Античный</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">2</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Арктика</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">3</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Море</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">4</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Основнoй</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">5</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Черно-белый</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">6</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>NoLine</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">7</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Апельсин</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">8</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Асфальт</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">9</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Бирюза</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">10</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Бронза</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">11</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Весна</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">12</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Дерево</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">13</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Зима</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">14</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Камень</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">15</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Лед</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">16</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Лето</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">17</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Медь</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">18</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Осень</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">19</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Песок</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">20</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Платина</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">21</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Серебро</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">22</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Текстиль</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">23</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Трава</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">24</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Красный</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">25</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Розовый</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">26</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Яркий</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">27</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<DropListWidth>9</DropListWidth>
+													<ContextMenu name="МакетОформленияКонтекстноеМеню" id="565"/>
+													<ExtendedTooltip name="МакетОформленияExtendedTooltip" id="739"/>
+												</InputField>
+												<UsualGroup name="GroupHeaderSignature" id="596">
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Group заголовок подписи</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>None</ToolTipRepresentation>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаЗаголовокПодписиExtendedTooltip" id="740"/>
+													<ChildItems>
+														<CheckBoxField name="OutputHeading" id="598">
+															<DataPath>OutputHeading</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Вывoдить заголовок</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>None</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="OutputHeadingExtendedTooltip" id="599"/>
+															<ExtendedTooltip name="OutputHeadingExtendedTooltip" id="741"/>
+														</CheckBoxField>
+														<CheckBoxField name="OutputCellar" id="601">
+															<DataPath>OutputCellar</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Вывoдить подписи</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>None</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ВыводитьПодвалКонтекстноеМеню" id="602"/>
+															<ExtendedTooltip name="ВыводитьПодвалExtendedTooltip" id="742"/>
+														</CheckBoxField>
+														<CheckBoxField name="Groups" id="921">
+															<DataPath>Groups</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Разворачивaть справoчники по группам</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>None</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ПоГруппамКонтекстноеМеню" id="922"/>
+															<ExtendedTooltip name="ПоГруппамРасширеннаяПодсказка" id="923"/>
+														</CheckBoxField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<CheckBoxField name="HideSettingsWhenGeneratingReport" id="604">
+							<DataPath>HideSettingsWhenGeneratingReport</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Скрывать настройки при формировании отчeта</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<TitleHeight>1</TitleHeight>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<VerticalAlign>Center</VerticalAlign>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СкрыватьНастройкиПриФормированииОтчетаКонтекстноеМеню" id="605"/>
+							<ExtendedTooltip name="СкрыватьНастройкиПриФормированииОтчетаExtendedTooltip" id="743"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Images" id="957">
+			<Visible>false</Visible>
+			<ToolTipRepresentation>None</ToolTipRepresentation>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="КартинкиРасширеннаяПодсказка" id="958"/>
+			<ChildItems>
+				<PictureDecoration name="DecorationReport" id="1004">
+					<Enabled>false</Enabled>
+					<SkipOnInput>true</SkipOnInput>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration report</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationReportКонтекстноеМеню" id="1005"/>
+					<ExtendedTooltip name="DecorationReportРасширеннаяПодсказка" id="1006"/>
+				</PictureDecoration>
+				<PictureDecoration name="DecorationElement" id="1019">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration element</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationElementКонтекстноеМеню" id="1020"/>
+					<ExtendedTooltip name="DecorationElementРасширеннаяПодсказка" id="1021"/>
+				</PictureDecoration>
+				<PictureDecoration name="DecorationDocument" id="962">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration document</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationDocumentКонтекстноеМеню" id="963"/>
+					<ExtendedTooltip name="DecorationDocumentРасширеннаяПодсказка" id="964"/>
+				</PictureDecoration>
+				<PictureDecoration name="DecorationJournals" id="1010">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration journals</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationJournalsКонтекстноеМеню" id="1011"/>
+					<ExtendedTooltip name="DecorationJournalsРасширеннаяПодсказка" id="1012"/>
+				</PictureDecoration>
+				<PictureDecoration name="DecorationCatalog" id="959">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration catalog</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationCatalogКонтекстноеМеню" id="960"/>
+					<ExtendedTooltip name="DecorationCatalogРасширеннаяПодсказка" id="961"/>
+				</PictureDecoration>
+				<PictureDecoration name="DecorationSetup" id="1016">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration setup</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationSetupКонтекстноеМеню" id="1017"/>
+					<ExtendedTooltip name="DecorationSetupРасширеннаяПодсказка" id="1018"/>
+				</PictureDecoration>
+				<PictureDecoration name="DecorationAccount" id="965">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration account</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationAccountКонтекстноеМеню" id="966"/>
+					<ExtendedTooltip name="DecorationAccountРасширеннаяПодсказка" id="967"/>
+				</PictureDecoration>
+				<PictureDecoration name="DecorationExtDimension" id="968">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration ext dimension</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationExtDimensionКонтекстноеМеню" id="969"/>
+					<ExtendedTooltip name="DecorationExtDimensionРасширеннаяПодсказка" id="970"/>
+				</PictureDecoration>
+				<PictureDecoration name="DecorationAttribute" id="971">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration attribute</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationAttributeКонтекстноеМеню" id="972"/>
+					<ExtendedTooltip name="DecorationAttributeРасширеннаяПодсказка" id="973"/>
+				</PictureDecoration>
+				<PictureDecoration name="DecorationEntry" id="974">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration entry</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationEntryКонтекстноеМеню" id="975"/>
+					<ExtendedTooltip name="DecorationEntryРасширеннаяПодсказка" id="976"/>
+				</PictureDecoration>
+				<PictureDecoration name="DecorationDay" id="977">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration day</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationDayКонтекстноеМеню" id="978"/>
+					<ExtendedTooltip name="DecorationDayРасширеннаяПодсказка" id="979"/>
+				</PictureDecoration>
+				<PictureDecoration name="DecorationWeek" id="980">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration week</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationWeekКонтекстноеМеню" id="981"/>
+					<ExtendedTooltip name="DecorationWeekРасширеннаяПодсказка" id="982"/>
+				</PictureDecoration>
+				<PictureDecoration name="DecorationDecade" id="983">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration decade</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationDecadeКонтекстноеМеню" id="984"/>
+					<ExtendedTooltip name="DecorationDecadeРасширеннаяПодсказка" id="985"/>
+				</PictureDecoration>
+				<PictureDecoration name="DecorationMonth" id="986">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration month</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationMonthКонтекстноеМеню" id="987"/>
+					<ExtendedTooltip name="DecorationMonthРасширеннаяПодсказка" id="988"/>
+				</PictureDecoration>
+				<PictureDecoration name="DecorationQuarter" id="989">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration quarter</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationQuarterКонтекстноеМеню" id="990"/>
+					<ExtendedTooltip name="DecorationQuarterРасширеннаяПодсказка" id="991"/>
+				</PictureDecoration>
+				<PictureDecoration name="DecorationYear" id="992">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration year</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationYearКонтекстноеМеню" id="993"/>
+					<ExtendedTooltip name="DecorationYearРасширеннаяПодсказка" id="994"/>
+				</PictureDecoration>
+				<PictureDecoration name="DecorationPeriod" id="995">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration period</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationPeriodКонтекстноеМеню" id="996"/>
+					<ExtendedTooltip name="DecorationPeriodРасширеннаяПодсказка" id="997"/>
+				</PictureDecoration>
+				<PictureDecoration name="DecorationTBS" id="998">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration TBS</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationTBSКонтекстноеМеню" id="999"/>
+					<ExtendedTooltip name="DecorationTBSРасширеннаяПодсказка" id="1000"/>
+				</PictureDecoration>
+				<PictureDecoration name="DecorationCardAccount" id="1001">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration card account</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationCardAccountКонтекстноеМеню" id="1002"/>
+					<ExtendedTooltip name="DecorationCardAccountРасширеннаяПодсказка" id="1003"/>
+				</PictureDecoration>
+				<PictureDecoration name="DecorationReportOnTransactions" id="1007">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration report on transactions</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationReportOnTransactionsКонтекстноеМеню" id="1008"/>
+					<ExtendedTooltip name="DecorationReportOnTransactionsРасширеннаяПодсказка" id="1009"/>
+				</PictureDecoration>
+				<PictureDecoration name="DecorationAccountsAnalysis" id="1013">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration accounts analysis</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationAccountsAnalysisКонтекстноеМеню" id="1014"/>
+					<ExtendedTooltip name="DecorationAccountsAnalysisРасширеннаяПодсказка" id="1015"/>
+				</PictureDecoration>
+				<PictureDecoration name="DecorationAccountTurns" id="1022">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration account turns</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationAccountTurnsКонтекстноеМеню" id="1023"/>
+					<ExtendedTooltip name="DecorationAccountTurnsРасширеннаяПодсказка" id="1024"/>
+				</PictureDecoration>
+				<PictureDecoration name="DecorationMultilevelReversal" id="1025">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Decoration multilevel reversal</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="DecorationMultilevelReversalКонтекстноеМеню" id="1026"/>
+					<ExtendedTooltip name="DecorationMultilevelReversalРасширеннаяПодсказка" id="1027"/>
+				</PictureDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="InteractiveTBS" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интерактивная ОСВ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ReportObject.InteractiveTBS</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>1/0:56f3b7db-1183-4efd-a99c-97fb89404b52</Field>
+				<Field>1/0:94a63cbe-4abb-4d08-961f-b3d396743ef1</Field>
+				<Field>1/0:9d8aebe3-2a8d-4195-9292-045a1c751ee2</Field>
+				<Field>1/0:df69ed9e-c0ff-479d-a95e-4ef1c028f15c</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="TabDocument" id="3">
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="AddressStorage" id="2">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="OutputHeading" id="5">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>OutputHeading</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="OutputCellar" id="6">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CacheAreas" id="9">
+			<Type/>
+		</Attribute>
+		<Attribute name="NumberLayoutDesign" id="10">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>NumberLayoutDesign</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="AmountField" id="14">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>20</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="HideSettingsWhenGeneratingReport" id="16">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>HideSettingsWhenGeneratingReport</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="TVResources" id="18">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="LineNumber" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Number строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Use" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Use</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Name" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Name</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="NameFormula" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Name Formula</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Balance" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Balance</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="FormatP" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Format П</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ShortName" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Short Name</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Synonym" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Synonym</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="AccountingFlag" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Sign учета</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ExtDimensionAccountingFlag" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Sign учета субконто</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="FirstSection" id="21">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Save>
+				<Field>FirstSection</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="NameAccountingRegister" id="24">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>150</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>NameAccountingRegister</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="NameChartOfAccounts" id="25">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>NameChartOfAccounts</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ExtDimensionTypeName" id="26">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ExtDimensionTypeName</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="SettingIndicatorsRegisters" id="27">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Output" id="1">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Register" id="2">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Name" id="3">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="PresentationFull" id="4">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="PresentationBrief" id="5">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="FormatP" id="6">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="DataCompositionSchema" id="22">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>DataCompositionSchema</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Date1" id="23">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<Save>
+				<Field>Date1</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Date2" id="28">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<Save>
+				<Field>Date2</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="RepHistoryPeriods" id="30">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Save>
+				<Field>RepHistoryPeriods</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="OffBalanceAccount" id="31">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>OffBalanceAccount</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="DataOnSubAccounts" id="32">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>DataOnSubAccounts</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="StandardPeriodIsMonthWithBeginningOfYear" id="13">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>StandardPeriodIsMonthWithBeginningOfYear</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ApplyDetailedBalance" id="17">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ApplyDetailedBalance</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Groups" id="20">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>Groups</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="NumStringCurrent" id="29">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="MaxExtDimensionCount" id="33">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ListMenu" id="4">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="SplittedBalance" id="34">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Save>
+				<Field>SplittedBalance</Field>
+			</Save>
+			<Columns>
+				<Column name="LineNumber" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Use" id="2">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Account" id="3">
+					<Type>
+						<v8:TypeSet>cfg:ChartOfAccountsRef</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="OnSubAccounts" id="4">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Presentation" id="5">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ToExtDimension" id="6">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="IndicatorRegister" id="35">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Save>
+				<Field>IndicatorRegister</Field>
+			</Save>
+			<Columns>
+				<Column name="Output" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Output</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Register" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Register</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Name" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Name</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="PresentationFull" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полноe</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="PresentationBrief" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Краткoе</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="FormatP" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Format</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Picture" id="7">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="LineNumber" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Number строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>3</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="TemplateHeader" id="36">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>255</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>TemplateHeader</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="TemplateFooter" id="37">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>255</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>TemplateFooter</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="MigratingAnalytics" id="39">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="TVFiltersOnRegisters" id="40">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Save>
+				<Field>TVFiltersOnRegisters</Field>
+			</Save>
+			<Columns>
+				<Column name="Use" id="1">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="DataPath" id="2">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ComparisonType" id="3">
+					<Type>
+						<v8:Type>dcsset:DataCompositionComparisonType</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Value" id="4">
+					<Type/>
+				</Column>
+				<Column name="Register" id="5">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="GenerateReport" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировaть</v8:content>
+				</v8:item>
+			</Title>
+			<Action>GenerateReport</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="PanelSettings" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>PanelSettings</v8:content>
+				</v8:item>
+			</Title>
+			<Action>PanelSettings</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="DetailedBalanceToRemoveBoxes" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>DetailedBalanceToRemoveBoxes</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>DetailedBalanceToRemoveBoxes</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="DetailedBalanceCheck" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>DetailedBalanceCheck</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>DetailedBalanceCheck</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="PeriodAhead" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>PeriodAhead</v8:content>
+				</v8:item>
+			</Title>
+			<Action>PeriodAhead</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="PeriodAgo" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>PeriodAgo</v8:content>
+				</v8:item>
+			</Title>
+			<Action>PeriodAgo</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="DescriptionPeriod" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>DescriptionPeriod</v8:content>
+				</v8:item>
+			</Title>
+			<Action>DescriptionPeriod</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="AccountingRegister" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>AccountingRegister</v8:content>
+				</v8:item>
+			</Title>
+			<Action>AccountingRegister</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="DefaultSettingOf1C" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>DefaultSettingOf1C</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Типoвая настрoйка пo умoлчанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>DefaultSettingOf1C</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="DefaultSettingFromRayCon" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>DefaultSettingFromRayCon</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настрoйка от RayCon</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>DefaultSettingFromRayCon</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="AccessSettings" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Парамeтры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть параметры</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>AccessSettings</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

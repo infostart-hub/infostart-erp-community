@@ -1,0 +1,706 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Адрес</v8:content>
+		</v8:item>
+	</Title>
+	<VerticalSpacing>Half</VerticalSpacing>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="105">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="106"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="107">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="108"/>
+			</Button>
+			<Button name="ФормаИзменитьФорму" id="109">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+				<ExtendedTooltip name="ФормаИзменитьФормуРасширеннаяПодсказка" id="110"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа10" id="103">
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="104"/>
+			<ChildItems>
+				<InputField name="Объект" id="3">
+					<DataPath>Запись.Объект</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ОбъектКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ОбъектРасширеннаяПодсказка" id="5"/>
+				</InputField>
+				<InputField name="Вид" id="6">
+					<DataPath>Запись.Вид</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид адреса</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Тип</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Запись.Тип</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
+					<ContextMenu name="ВидКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ВидРасширеннаяПодсказка" id="8"/>
+					<Events>
+						<Event name="OnChange">Атрибут_ПриИзменении</Event>
+						<Event name="StartChoice">Атрибут_НачалоВыбора</Event>
+						<Event name="Clearing">Атрибут_Очистка</Event>
+					</Events>
+				</InputField>
+				<UsualGroup name="Группа2" id="116">
+					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+					<Group>AlwaysHorizontal</Group>
+					<HorizontalAlign>Left</HorizontalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="117"/>
+					<ChildItems>
+						<InputField name="ВидСервиса" id="113">
+							<DataPath>ВидСервиса</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вид сервиса</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ВидСервисаКонтекстноеМеню" id="114"/>
+							<ExtendedTooltip name="ВидСервисаРасширеннаяПодсказка" id="115"/>
+						</InputField>
+						<RadioButtonField name="Переключатель" id="15">
+							<DataPath>Переключатель</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+							<RadioButtonType>Tumbler</RadioButtonType>
+							<ColumnsCount>2</ColumnsCount>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Раздельно по полям адреса</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Одной произвольной строкой</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ПереключательКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="ПереключательРасширеннаяПодсказка" id="17"/>
+							<Events>
+								<Event name="OnChange">Атрибут_ПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДанныеАдреса" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаДанныеАдресаРасширеннаяПодсказка" id="19"/>
+			<ChildItems>
+				<UsualGroup name="Группа11" id="111">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа11РасширеннаяПодсказка" id="112"/>
+					<ChildItems>
+						<InputField name="Страна" id="28">
+							<DataPath>Запись.Страна</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="СтранаКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="СтранаРасширеннаяПодсказка" id="30"/>
+							<Events>
+								<Event name="OnChange">Атрибут_ПриИзменении</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="Группа3" id="139">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="140"/>
+							<ChildItems>
+								<InputField name="Поле1" id="22">
+									<DataPath>Запись.Поле1</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Индекс</v8:content>
+										</v8:item>
+									</Title>
+									<Width>12</Width>
+									<ContextMenu name="Поле1КонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="Поле1РасширеннаяПодсказка" id="24"/>
+								</InputField>
+								<InputField name="КодКладр" id="25">
+									<DataPath>Запись.КодКладр</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кладр</v8:content>
+										</v8:item>
+									</Title>
+									<Width>13</Width>
+									<ContextMenu name="КодКладрКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="КодКладрРасширеннаяПодсказка" id="27"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа4" id="31">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="32"/>
+					<ChildItems>
+						<InputField name="Поле2" id="33">
+							<DataPath>Запись.Поле2</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Регион</v8:content>
+								</v8:item>
+							</Title>
+							<Width>10</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="Поле2КонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="Поле2РасширеннаяПодсказка" id="35"/>
+							<Events>
+								<Event name="OnChange">Атрибут_ПриИзменении</Event>
+								<Event name="AutoComplete">Атрибут_АвтоПодбор</Event>
+								<Event name="StartChoice">Атрибут_НачалоВыбора</Event>
+								<Event name="Clearing">Атрибут_Очистка</Event>
+								<Event name="ChoiceProcessing">Атрибут_ОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="РегионСокращение" id="36">
+							<DataPath>Запись.РегионСокращение</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сокр</v8:content>
+								</v8:item>
+							</Title>
+							<Width>2</Width>
+							<ContextMenu name="РегионСокращениеКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="РегионСокращениеРасширеннаяПодсказка" id="38"/>
+							<Events>
+								<Event name="OnChange">Атрибут_ПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа5" id="39">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="40"/>
+					<ChildItems>
+						<InputField name="Поле3" id="49">
+							<DataPath>Запись.Поле3</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Район</v8:content>
+								</v8:item>
+							</Title>
+							<Width>10</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="Поле3КонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="Поле3РасширеннаяПодсказка" id="51"/>
+							<Events>
+								<Event name="OnChange">Атрибут_ПриИзменении</Event>
+								<Event name="AutoComplete">Атрибут_АвтоПодбор</Event>
+								<Event name="StartChoice">Атрибут_НачалоВыбора</Event>
+								<Event name="Clearing">Атрибут_Очистка</Event>
+								<Event name="ChoiceProcessing">Атрибут_ОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="РайонСокращение" id="55">
+							<DataPath>Запись.РайонСокращение</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сокр</v8:content>
+								</v8:item>
+							</Title>
+							<Width>2</Width>
+							<ContextMenu name="РайонСокращениеКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="РайонСокращениеРасширеннаяПодсказка" id="57"/>
+							<Events>
+								<Event name="OnChange">Атрибут_ПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа6" id="41">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="42"/>
+					<ChildItems>
+						<InputField name="Поле4" id="52">
+							<DataPath>Запись.Поле4</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Город</v8:content>
+								</v8:item>
+							</Title>
+							<Width>10</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="Поле4КонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="Поле4РасширеннаяПодсказка" id="54"/>
+							<Events>
+								<Event name="OnChange">Атрибут_ПриИзменении</Event>
+								<Event name="AutoComplete">Атрибут_АвтоПодбор</Event>
+								<Event name="StartChoice">Атрибут_НачалоВыбора</Event>
+								<Event name="Clearing">Атрибут_Очистка</Event>
+								<Event name="ChoiceProcessing">Атрибут_ОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ГородСокращение" id="58">
+							<DataPath>Запись.ГородСокращение</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сокр</v8:content>
+								</v8:item>
+							</Title>
+							<Width>2</Width>
+							<ContextMenu name="ГородСокращениеКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="ГородСокращениеРасширеннаяПодсказка" id="60"/>
+							<Events>
+								<Event name="OnChange">Атрибут_ПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа7" id="43">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="44"/>
+					<ChildItems>
+						<InputField name="Поле5" id="61">
+							<DataPath>Запись.Поле5</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Нас. пункт</v8:content>
+								</v8:item>
+							</Title>
+							<Width>10</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="Поле5КонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="Поле5РасширеннаяПодсказка" id="63"/>
+							<Events>
+								<Event name="OnChange">Атрибут_ПриИзменении</Event>
+								<Event name="AutoComplete">Атрибут_АвтоПодбор</Event>
+								<Event name="StartChoice">Атрибут_НачалоВыбора</Event>
+								<Event name="Clearing">Атрибут_Очистка</Event>
+								<Event name="ChoiceProcessing">Атрибут_ОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="НаселенныйПунктСокращение" id="67">
+							<DataPath>Запись.НаселенныйПунктСокращение</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сокр</v8:content>
+								</v8:item>
+							</Title>
+							<Width>2</Width>
+							<ContextMenu name="НаселенныйПунктСокращениеКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="НаселенныйПунктСокращениеРасширеннаяПодсказка" id="69"/>
+							<Events>
+								<Event name="OnChange">Атрибут_ПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа8" id="45">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="46"/>
+					<ChildItems>
+						<InputField name="Поле6" id="64">
+							<DataPath>Запись.Поле6</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Улица</v8:content>
+								</v8:item>
+							</Title>
+							<Width>10</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="Поле6КонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="Поле6РасширеннаяПодсказка" id="66"/>
+							<Events>
+								<Event name="OnChange">Атрибут_ПриИзменении</Event>
+								<Event name="AutoComplete">Атрибут_АвтоПодбор</Event>
+								<Event name="StartChoice">Атрибут_НачалоВыбора</Event>
+								<Event name="Clearing">Атрибут_Очистка</Event>
+								<Event name="ChoiceProcessing">Атрибут_ОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="УлицаСокращение" id="70">
+							<DataPath>Запись.УлицаСокращение</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сокр</v8:content>
+								</v8:item>
+							</Title>
+							<Width>2</Width>
+							<ContextMenu name="УлицаСокращениеКонтекстноеМеню" id="71"/>
+							<ExtendedTooltip name="УлицаСокращениеРасширеннаяПодсказка" id="72"/>
+							<Events>
+								<Event name="OnChange">Атрибут_ПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа9" id="47">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="48"/>
+					<ChildItems>
+						<InputField name="ТипДома" id="73">
+							<DataPath>Запись.ТипДома</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>3</Width>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тип дома</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ТипДомаКонтекстноеМеню" id="74"/>
+							<ExtendedTooltip name="ТипДомаРасширеннаяПодсказка" id="75"/>
+							<Events>
+								<Event name="OnChange">Атрибут_ПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Поле7" id="76">
+							<DataPath>Запись.Поле7</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>3</Width>
+							<ContextMenu name="Поле7КонтекстноеМеню" id="77"/>
+							<ExtendedTooltip name="Поле7РасширеннаяПодсказка" id="78"/>
+							<Events>
+								<Event name="OnChange">Атрибут_ПриИзменении</Event>
+								<Event name="Clearing">Атрибут_Очистка</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТипКорпуса" id="79">
+							<DataPath>Запись.ТипКорпуса</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>3</Width>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тип корпуса</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ТипКорпусаКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="ТипКорпусаРасширеннаяПодсказка" id="81"/>
+						</InputField>
+						<InputField name="Поле8" id="82">
+							<DataPath>Запись.Поле8</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>3</Width>
+							<ContextMenu name="Поле8КонтекстноеМеню" id="83"/>
+							<ExtendedTooltip name="Поле8РасширеннаяПодсказка" id="84"/>
+							<Events>
+								<Event name="OnChange">Атрибут_ПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТипКвартиры" id="85">
+							<DataPath>Запись.ТипКвартиры</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>3</Width>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тип квартиры</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ТипКвартирыКонтекстноеМеню" id="86"/>
+							<ExtendedTooltip name="ТипКвартирыРасширеннаяПодсказка" id="87"/>
+							<Events>
+								<Event name="OnChange">Атрибут_ПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Поле9" id="88">
+							<DataPath>Запись.Поле9</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>3</Width>
+							<ContextMenu name="Поле9КонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="Поле9РасширеннаяПодсказка" id="90"/>
+							<Events>
+								<Event name="OnChange">Атрибут_ПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Группа1" id="118">
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="119"/>
+			<ChildItems>
+				<Page name="ГруппаПредставление" id="120">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа представление</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПредставлениеРасширеннаяПодсказка" id="121"/>
+					<ChildItems>
+						<InputField name="Представление" id="91">
+							<DataPath>Запись.Представление</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ПредставлениеКонтекстноеМеню" id="92"/>
+							<ExtendedTooltip name="ПредставлениеРасширеннаяПодсказка" id="93"/>
+							<Events>
+								<Event name="OnChange">Атрибут_ПриИзменении</Event>
+								<Event name="AutoComplete">Атрибут_АвтоПодбор</Event>
+								<Event name="TextEditEnd">Атрибут_ОкончаниеВводаТекста</Event>
+								<Event name="ChoiceProcessing">Атрибут_ОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="Комментарий" id="100">
+							<DataPath>Запись.Комментарий</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="101"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="102"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаФиас" id="122">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ФИАС</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа фиас</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаФиасРасширеннаяПодсказка" id="123"/>
+					<ChildItems>
+						<InputField name="ИдентификаторФИАС" id="94">
+							<DataPath>Запись.ИдентификаторФИАС</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ID</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ИдентификаторФИАСКонтекстноеМеню" id="95"/>
+							<ExtendedTooltip name="ИдентификаторФИАСРасширеннаяПодсказка" id="96"/>
+						</InputField>
+						<InputField name="ФИАСРегиона" id="127">
+							<DataPath>Запись.ФИАСРегиона</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Регион</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ФИАСРегионаКонтекстноеМеню" id="128"/>
+							<ExtendedTooltip name="ФИАСРегионаРасширеннаяПодсказка" id="129"/>
+						</InputField>
+						<InputField name="ФИАСРайона" id="133">
+							<DataPath>Запись.ФИАСРайона</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Район</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ФИАСРайонаКонтекстноеМеню" id="134"/>
+							<ExtendedTooltip name="ФИАСРайонаРасширеннаяПодсказка" id="135"/>
+						</InputField>
+						<InputField name="ФИАСГорода" id="124">
+							<DataPath>Запись.ФИАСГорода</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Город</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ФИАСГородаКонтекстноеМеню" id="125"/>
+							<ExtendedTooltip name="ФИАСГородаРасширеннаяПодсказка" id="126"/>
+						</InputField>
+						<InputField name="ФИАСНаселенныйПункт" id="136">
+							<DataPath>Запись.ФИАСНаселенныйПункт</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Нас.пункт</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ФИАСНаселенныйПунктКонтекстноеМеню" id="137"/>
+							<ExtendedTooltip name="ФИАСНаселенныйПунктРасширеннаяПодсказка" id="138"/>
+						</InputField>
+						<InputField name="ФИАСУлицы" id="130">
+							<DataPath>Запись.ФИАСУлицы</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Улица</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ФИАСУлицыКонтекстноеМеню" id="131"/>
+							<ExtendedTooltip name="ФИАСУлицыРасширеннаяПодсказка" id="132"/>
+						</InputField>
+						<InputField name="ФИАСДома" id="97">
+							<DataPath>Запись.ФИАСДома</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дом</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ФИАСДомаКонтекстноеМеню" id="98"/>
+							<ExtendedTooltip name="ФИАСДомаРасширеннаяПодсказка" id="99"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запись</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.КонтактнаяИнформация</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Переключатель" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переключатель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидСервиса" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид сервиса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ИнтернетСервисы</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

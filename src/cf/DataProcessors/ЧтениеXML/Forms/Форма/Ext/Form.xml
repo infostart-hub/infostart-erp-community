@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа2" id="94">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="95"/>
+		</UsualGroup>
+		<Pages name="Страницы" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="29"/>
+			<Events>
+				<Event name="OnCurrentPageChange">Страницы_ПриСменеСтраницы</Event>
+			</Events>
+			<ChildItems>
+				<Page name="СтраницаXML" id="208">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>XML</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница XML</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаXMLРасширеннаяПодсказка" id="209"/>
+					<ChildItems>
+						<InputField name="ПредставлениеXML" id="210">
+							<DataPath>Объект.ДокументXML</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>50</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<MultiLine>true</MultiLine>
+							<ChooseType>false</ChooseType>
+							<ContextMenu name="ПредставлениеXMLКонтекстноеМеню" id="211"/>
+							<ExtendedTooltip name="ПредставлениеXMLРасширеннаяПодсказка" id="212"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаДерево" id="96">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дерево</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница дерево</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаДеревоРасширеннаяПодсказка" id="97"/>
+					<ChildItems>
+						<UsualGroup name="Группа4" id="213">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="214"/>
+							<ChildItems>
+								<Table name="Дерево" id="144">
+									<Representation>Tree</Representation>
+									<CommandBarLocation>None</CommandBarLocation>
+									<ReadOnly>true</ReadOnly>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.Дерево</DataPath>
+									<ContextMenu name="ДеревоКонтекстноеМеню" id="145"/>
+									<AutoCommandBar name="ДеревоКоманднаяПанель" id="146"/>
+									<ExtendedTooltip name="ДеревоРасширеннаяПодсказка" id="147"/>
+									<SearchStringAddition name="ДеревоСтрокаПоиска" id="148">
+										<AdditionSource>
+											<Item>Дерево</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоСтрокаПоискаКонтекстноеМеню" id="149"/>
+										<ExtendedTooltip name="ДеревоСтрокаПоискаРасширеннаяПодсказка" id="150"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ДеревоСостояниеПросмотра" id="151">
+										<AdditionSource>
+											<Item>Дерево</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоСостояниеПросмотраКонтекстноеМеню" id="152"/>
+										<ExtendedTooltip name="ДеревоСостояниеПросмотраРасширеннаяПодсказка" id="153"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ДеревоУправлениеПоиском" id="154">
+										<AdditionSource>
+											<Item>Дерево</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоУправлениеПоискомКонтекстноеМеню" id="155"/>
+										<ExtendedTooltip name="ДеревоУправлениеПоискомРасширеннаяПодсказка" id="156"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnActivateRow">ДеревоПриАктивизацииСтроки</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="ДеревоЭлемент" id="157">
+											<DataPath>Объект.Дерево.Элемент</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоЭлементКонтекстноеМеню" id="158"/>
+											<ExtendedTooltip name="ДеревоЭлементРасширеннаяПодсказка" id="159"/>
+										</InputField>
+										<InputField name="ДеревоТекст" id="160">
+											<DataPath>Объект.Дерево.Текст</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоТекстКонтекстноеМеню" id="161"/>
+											<ExtendedTooltip name="ДеревоТекстРасширеннаяПодсказка" id="162"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<Table name="Атрибуты" id="120">
+									<CommandBarLocation>None</CommandBarLocation>
+									<ReadOnly>true</ReadOnly>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.Атрибуты</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="АтрибутыКонтекстноеМеню" id="121"/>
+									<AutoCommandBar name="АтрибутыКоманднаяПанель" id="122"/>
+									<ExtendedTooltip name="АтрибутыРасширеннаяПодсказка" id="123"/>
+									<SearchStringAddition name="АтрибутыСтрокаПоиска" id="124">
+										<AdditionSource>
+											<Item>Атрибуты</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="АтрибутыСтрокаПоискаКонтекстноеМеню" id="125"/>
+										<ExtendedTooltip name="АтрибутыСтрокаПоискаРасширеннаяПодсказка" id="126"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="АтрибутыСостояниеПросмотра" id="127">
+										<AdditionSource>
+											<Item>Атрибуты</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="АтрибутыСостояниеПросмотраКонтекстноеМеню" id="128"/>
+										<ExtendedTooltip name="АтрибутыСостояниеПросмотраРасширеннаяПодсказка" id="129"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="АтрибутыУправлениеПоиском" id="130">
+										<AdditionSource>
+											<Item>Атрибуты</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="АтрибутыУправлениеПоискомКонтекстноеМеню" id="131"/>
+										<ExtendedTooltip name="АтрибутыУправлениеПоискомРасширеннаяПодсказка" id="132"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="АтрибутыАтрибут" id="136">
+											<DataPath>Объект.Атрибуты.Атрибут</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="АтрибутыАтрибутКонтекстноеМеню" id="137"/>
+											<ExtendedTooltip name="АтрибутыАтрибутРасширеннаяПодсказка" id="138"/>
+										</InputField>
+										<InputField name="АтрибутыЗначениеАтрибута" id="139">
+											<DataPath>Объект.Атрибуты.ЗначениеАтрибута</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="АтрибутыЗначениеАтрибутаКонтекстноеМеню" id="140"/>
+											<ExtendedTooltip name="АтрибутыЗначениеАтрибутаРасширеннаяПодсказка" id="141"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЧтениеXML</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Columns>
+				<AdditionalColumns table="Объект.Дерево">
+					<Column name="Элемент" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Элемент</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>100</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="Текст" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Текст</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>100</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="Атрибуты" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Атрибуты</v8:content>
+							</v8:item>
+						</Title>
+						<Type/>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПредставлениеXML" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление XML</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

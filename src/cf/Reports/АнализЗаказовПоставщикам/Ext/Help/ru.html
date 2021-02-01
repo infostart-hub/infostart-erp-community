@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link href="v8help://service_book/service_style" type="text/css" rel="stylesheet"></link><meta content="MSHTML 6.00.3790.3959" name="GENERATOR"></meta></head><body>
+<h1 class=""><font color="#0563f6" size="3"><font color="#536ac2">Отчет «Анализ заказов поставщикам»</font> 
+<hr></hr></font></h1><font size="1">
+<p align="justify"><font size="2">Отчет предназначен для анализа состояния открытых заказов поставщикам на определенный момент времени.</font></p><b><i>
+</i></b><p align="justify"><font size="2">Параметры формирования отчета</font></p>
+<ul></ul><p align="justify"><font size="2"></font></p>
+<li>
+<div align="justify"><font size="2">Период</font><font size="2"> - период вхождения данных в отчет.</font></div>
+<p align="justify"><font size="2"></font></p>
+<p align="justify"><font size="2">Если необходимо сформировать простую форму отчета, в которой будут показаны только заказы, по которым на дату оформления отчета не поступил товар, следует выполнить следующую настройку отчета:</font></p>
+<ol><li>
+<div align="justify"><font size="2">Снять отметки с "лишних" показателей - оставить только количество в единицах хранения остатков (показатель "<i><font face="Tahoma" color="#000080">Осталось закупить</font></i></font><font size="2">") и сумму, на которую осталось получить товаров в валюте управленческого учета (показатель "<i><font face="Tahoma" color="#000080">Осталось закупить (в валюте упр. учета)</font></i></font><font size="2">").</font></div>
+</li><li>
+<div align="justify"><font size="2">Убрать "лишние" группировки (например "<i><font face="Tahoma" color="#000080">Договор</font></i></font><font size="2">").</font></div>
+</li><li>
+<div align="justify"><font size="2">Если необходимо вывести информацию о дате предполагаемого поступления товаров,указанной в заказе поставщику, то добавить группировку "<i><font face="Tahoma" color="#000080">Заказ поставщику.Дата поступления</font></i></font><font size="2">" и дополнительное поле "<i><font face="Tahoma" color="#000080">Заказ поставщику.Дата поступления</font></i></font><font size="2">" (на закладке "<b><i>Дополнительные поля</i></b></font><font size="2">" при установленном флаге <i><font face="Tahoma" color="#000080">"Расширенная настройка"</font></i></font><font size="2">). Если дополнительно установить отбор по дате поступления, то в отчете будет выведен список тех товаров, которые должны поступить в определенный день.</font></div></li></ol><p align="justify"><font size="2">Данную настройку можно сохранить и использовать ее в дальнейшем для формирования простого отчета.</font></p>
+<p align="center"><b><font size="2"><img src="_files/analzakaz1.png"></img></font></b></p>
+<p align="justify"><font size="2">По кнопке "<i>Настройка</i>" вызывается форма настройки параметров отчета.</font></p><b><i>
+</i></b><p align="justify"><font size="2">Показатели</font></p>
+<p align="justify"><font size="2">Для анализа заказов в отчете выводятся две группы показателей: в части оплаты и поступления по заказу. </font><font size="2">Суммы оплаты и поступления по заказу выводятся с учетом тех корректировок, которые были введены по заказу.</font></p>
+<p align="justify"><font size="2">В части оплаты товаров по заказу выводятся следующие показатели. </font></p>
+<ul><font face="Tahoma" color="#000080">
+<p align="justify"><font size="2"></font></p>
+<li>
+<div align="justify"><font size="2"><em>Сумма заказа</em></font><font face="Verdana" size="2"><em> –</em> <font color="#000000">сумма, которая указана в заказе поставщику с учетом введенных корректировок по заказу. </font></font></div>
+</li><li>
+<div align="justify"><font face="Tahoma" color="#000080"><font size="2"><em>Сумма запланировано оплатить</em></font></font><font face="Verdana" size="2"><em> –</em> <font color="#000000">сумма, которая планируется к оплате поставщику и зафиксирована в документах "Заявка на расходования средств" по данному заказу в статусе "Утвержден". </font></font></div>
+</li><li>
+<div align="justify"><font face="Tahoma" color="#000080"><font size="2"><em>Осталось оплатить</em></font></font><font face="Verdana" size="2"><em> –</em> <font color="#000000">та сумма, которую необходимо погасить, чтобы полностью оплатить заказ. </font></font><font face="Tahoma"><font size="2"></font></font></div>
+</li><li>
+<div align="justify"><font face="Tahoma" color="#000080"><font size="2"><em>Оплачено</em></font></font><font face="Verdana" size="2"><em> –</em> <font color="#000000">сумма оплаченная по данному заказу (в случае если используется ведение взаиморасчетов по заказам). </font></font></div>
+<p align="justify"><font face="Verdana" size="2"></font></p></li></font></ul></li>
+<p align="justify"><font size="2">В части поступления по заказу выводится количество товара в базовых единицах измерения, в единицах хранения остатков или в единицах для отчетов: </font></p>
+<ul><font face="Tahoma" color="#000080">
+<p align="justify"><font size="2"></font></p>
+<li>
+<div align="justify"><font size="2"><em>Запланировано</em></font><font face="Verdana" size="2"><em> –</em> <font color="#000000">количество товаров, которое указано в заказе поставщику с учетом корректировок, оформленных по заказу. </font></font></div>
+</li><li>
+<div align="justify"><em><font face="Tahoma" color="#000080"><font size="2">Осталось</font></font><font size="2"><font face="Verdana"> </font><font face="Tahoma" color="#000080">закупить</font></font></em><font face="Verdana" size="2"><em> –</em> <font color="#000000">общее количество товаров, которое осталось получить по заказу. </font></font></div>
+</li><li>
+<div align="justify"><font face="Tahoma" color="#000080"><font size="2"><em>Размещено в заказе</em></font></font><font face="Verdana" size="2"><em> –</em> <font color="#000000">количество товаров по заказам покупателей, которое размещено в данном заказе поставщику.</font></font></div>
+<p align="justify"><font face="Verdana" size="2"></font></p></li></font></ul><p align="justify"><font size="2">Кроме этого, в отчет может быть выведена информация о сумме, на которую осталось получить товаров по заказу, в валюте управленческого учета и в валюте взаиморасчетов. </font></p><b><i>
+</i></b><p align="justify"><font size="2">Группировки строк и колонок</font></p>
+<p align="justify"><font size="2">Данные в отчете могут быть сгруппированы по контрагентам, договорам с поставщиками, по заказам и по товарным позициям. </font></p><b><i>
+</i></b><p align="justify"><font size="2">Отборы</font></p>
+<p align="justify"><font size="2">Данные отчета могут быть отфильтрованы по условиям, заданным в блоке "<i><font face="Tahoma" color="#000080">Отборы</font></i></font></p></font><font size="2">". </font>
+<p align="justify"><font size="2">Чтобы добавить вид отбора, щелкните кнопку "<i><font face="Tahoma" color="#000080">Добавить</font></i></font><font size="2">" и выберите поле, по которому будет производиться отбор. Затем задайте <i><font face="Tahoma" color="#000080">Тип сравнения</font></i></font><font size="2">, который определит область поиска заданного значения. <i>Значение</i> отбора выбирается из соответствующего справочника. Значением отбора может быть как отдельный элемент, так и группа и список выбранных элементов. </font></p>
+<p align="justify"><font size="2">Вид отбора активен, только если в строке вида отбора установлен флаг.</font></p>
+<p align="justify"><font size="2">При необходимости отследить отгрузку и оплату заказов конкретного менеджера, можно произвести по нему отбор данных. В качестве менеджера в этом случае используется тот пользователь, который указан в качестве ответственного в заказе поставщика. Чтобы произвести отбор по менеджеру, необходимо установить в качестве реквизита отбора "<i><font face="Tahoma" color="#000080">Заказ. Ответственный</font></i></font><font size="2">".</font></p>
+<p align="justify"><font size="2">В отчете также можно установить отбор и группировку по состоянию взаиморасчетов и поступления по заказу - получен ли товар, полностью ли выплачена сумма заказа и т.д. </font></p></body></html>

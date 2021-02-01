@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Enum uuid="511a1044-b7be-4e8f-8863-5434f40ff4e9">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.НДСВидНачисления" category="Ref">
+				<xr:TypeId>f0fca7f5-5cec-4aa6-971f-c8f79d42a583</xr:TypeId>
+				<xr:ValueId>cb0eb1f8-1f22-4741-88b2-611e5dd4fa4b</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.НДСВидНачисления" category="Manager">
+				<xr:TypeId>0f6bdf90-babc-40e9-a97a-444cafb53ba2</xr:TypeId>
+				<xr:ValueId>bd40f3f0-52f3-4311-994d-c2cb33475476</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.НДСВидНачисления" category="List">
+				<xr:TypeId>ed4fce72-8b02-4a25-ae19-3f4c5395e15a</xr:TypeId>
+				<xr:ValueId>72777dcd-06c4-4740-a940-0d65139ea24c</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>НДСВидНачисления</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДС вид начисления</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Вид начисления НДС (реализация, налоговый агент, НДС с авансов)</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="3a2ffdcf-ab9b-4ef7-b6a7-9d33357b2fc2">
+				<Properties>
+					<Name>РеализацияСНДС</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реализация с НДС</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="71d03e82-dcdb-4315-a233-d291b6f34460">
+				<Properties>
+					<Name>РеализацияЕНВД</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реализация ЕНВД</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="1fabbb44-4e4b-44e2-afe2-df4d890e3488">
+				<Properties>
+					<Name>РеализацияБезНДС</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реализация без НДС</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Реализация без НДС (не ЕНВД)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="5b87c7d4-1d8e-4fce-bcae-f1748db249a7">
+				<Properties>
+					<Name>Реализация0</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реализация со ставкой 0%</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="587eef14-f4a9-4f2a-b57b-0ee61acc54b0">
+				<Properties>
+					<Name>НДСсАвансов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>НДС с авансов</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d75124fe-0c65-4d09-aaf3-62117c370f75">
+				<Properties>
+					<Name>НДСНачисленКУплате</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>НДС начислен к уплате</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>НДС начислен к уплате (налоговый агент, внутренняя реализация)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="92710146-1ff5-45d4-8e9f-f61eea6e93ee">
+				<Properties>
+					<Name>НДСВосстановлен</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>НДС восстановлен</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

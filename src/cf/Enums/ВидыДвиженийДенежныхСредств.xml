@@ -1,0 +1,703 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Enum uuid="c2f0411c-89e7-4d2d-8322-9fa78c9a9ea5">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ВидыДвиженийДенежныхСредств" category="Ref">
+				<xr:TypeId>96526d9d-8aa6-483a-9ac6-d65df621c067</xr:TypeId>
+				<xr:ValueId>3848eb0b-e396-4b0b-94c4-5ca5040f0a36</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ВидыДвиженийДенежныхСредств" category="Manager">
+				<xr:TypeId>891647de-f10a-4e2d-8ef8-edb03e93db33</xr:TypeId>
+				<xr:ValueId>f7c330f3-0ebf-442c-9110-b49dcd6762a8</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ВидыДвиженийДенежныхСредств" category="List">
+				<xr:TypeId>f4199aca-94a0-43f1-9aa6-a5efa00a0275</xr:TypeId>
+				<xr:ValueId>8b9b2486-a8b3-4672-bc02-e41f8a2c6dbb</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ВидыДвиженийДенежныхСредств</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды движений денежных средств</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="b5a8b97f-11e4-4005-b020-3925e1d2e3a1">
+				<Properties>
+					<Name>СредстваПолученныеОтПокупателейИЗаказчиков</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поступление от продажи продукции и товаров, выполнения работ, оказания услуг</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b9703c31-ae76-456f-b52c-40bd40d85f00">
+				<Properties>
+					<Name>ПрочиеПоступленияПоТекущейДеятельности</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочие поступления по текущим операциям</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="ebbc4988-a6b0-45ae-a95e-0061e81e717d">
+				<Properties>
+					<Name>ОплатаОборотныхАктивов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплата товаров, работ, услуг, сырья и иных оборотных активов</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="0c739504-6a3d-4a6a-b4b9-7b43346dcae8">
+				<Properties>
+					<Name>ОплатаТруда</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплата труда</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="48c72d7d-8cee-4997-9907-f9f474ebb0ab">
+				<Properties>
+					<Name>ВыплатаДивидендовПроцентов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выплата дивидендов, процентов (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="59c9db4d-27d1-4a72-9b64-8561eab9f2e1">
+				<Properties>
+					<Name>РасчетыПоНалогамИСборам</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расчеты по налогам и сборам (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="2d0f0f0d-f114-4dca-abcc-babc98d49219">
+				<Properties>
+					<Name>ПрочиеРасходыПоТекущейДеятельности</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочие платежи по текущим операциям</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c8b66003-caee-41ed-b8c1-5f035e3f9bb3">
+				<Properties>
+					<Name>ВыручкаОтПродажиОбъектовОсновныхСредств</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выручка от продажи основных средств и иных внеоборотных активов (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="cc084aca-971e-4f31-89fc-16cafb7d4a2c">
+				<Properties>
+					<Name>ВыручкаОтПродажиЦенныхБумагИИныхФинансовыхВложений</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выручка от продажи ценных бумаг и иных финансовых вложений (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="4d95cabd-1d39-4ace-b5d1-d31fa6547072">
+				<Properties>
+					<Name>ПолученныеДивиденды</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полученные дивиденды (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="90f7d02c-4abd-4be2-a299-7b9e8918948e">
+				<Properties>
+					<Name>ПолученныеПроценты</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полученные проценты (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="3d521045-46d8-4c96-bf7e-61c903f46a76">
+				<Properties>
+					<Name>ПоступленияОтПогашенияЗаймовПредоставленныхДругимОрганизациям</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поступления от погашения займов, предоставленных другим организациям (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="afe7240a-e597-4401-a275-2264e025c735">
+				<Properties>
+					<Name>ПрочиеПоступленияПоИнвестиционнойДеятельности</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочие поступления по инвестиционным операциям</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="4da818f0-b57f-4c3d-8671-d44fc5b0268c">
+				<Properties>
+					<Name>ПриобретениеДочернихОрганизаций</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приобретение дочерних организаций (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="0999a912-78e2-4a3b-83cc-94f05ab96445">
+				<Properties>
+					<Name>ПриобретениеОбъектовОсновныхСредств</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приобретение объектов основных средств (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b17731df-96cf-410c-8430-86080f571f2f">
+				<Properties>
+					<Name>ПриобретениеЦенныхБумагИИныхФинансовыхВложений</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приобретение ценных бумаг и иных финансовых вложений (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="1abac6d8-cbb7-4814-b6ad-539a9bd22439">
+				<Properties>
+					<Name>ЗаймыПредоставленныеДругимОрганизациям</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Займы, предоставленные другим организациям (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="1ed146b9-26d0-47a0-bb4c-084d542b50da">
+				<Properties>
+					<Name>ПрочиеРасходыПоИнвестиционнойДеятельности</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочие платежи по инвестиционным операциям</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="e1c9ab09-4433-490b-8ce6-c4bbfa311055">
+				<Properties>
+					<Name>ПоступленияОтЭмиссииАкций</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поступления от выпуска акций, увеличение долей участия</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="835d73fc-35d6-4381-a820-159672cd9c1d">
+				<Properties>
+					<Name>ПоступленияОтЗаймовИКредитовПредоставленныхДругимиОрганизациями</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получение кредитов и займов</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="3260e37d-517f-4392-b37f-5bc7a2f6e9d2">
+				<Properties>
+					<Name>ПрочиеПоступленияПоФинансовойДеятельности</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочие поступления от финансовых операций</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="8747b1b1-455e-414c-a75a-efd58c422907">
+				<Properties>
+					<Name>ПогашениеЗаймовИКредитов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Погашений займов и кредитов (без процентов) (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b7ecdc7b-72b2-4a90-b249-d740051210a2">
+				<Properties>
+					<Name>ПогашениеОбязательствПоФинансовойАренде</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Погашений обязательств по финансовой аренде (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="092d7e34-51ed-4fcf-a34a-3e6bad5320b0">
+				<Properties>
+					<Name>ПрочиеРасходыПоФинансовойДеятельности</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочие платежи по финансовым операциям</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a2b9b0e5-7e02-4269-b9b3-9c3eb9fe429f">
+				<Properties>
+					<Name>ОплатаНИОКР</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплата НИОКР (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d674faf5-0094-46fd-a5aa-cfc6deefc510">
+				<Properties>
+					<Name>РеализацияПрочихАктивовИнвестиционная</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реализация прочих активов (инвестиц.деятельность) (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b9fd2139-23e6-4b93-91b7-80f077a6e395">
+				<Properties>
+					<Name>ВыплатаПроцентовВСвязиСоСтроительством</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выплата процентов по долговым обязательствам, включаемым в стоимость инвестиционного актива</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="704c48e8-b86b-4b0c-815b-639eed130ff9">
+				<Properties>
+					<Name>ПриобретениеПрочихАктивовИнвестиционное</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приобретение прочих активов (инвестиц.деятельность) (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="18326004-2636-40c8-be88-560f719fd31e">
+				<Properties>
+					<Name>ПоступлениеПлатежейПоФинансовойАренде</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поступление платежей по финансовой аренде (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c1d941c9-5523-4f06-94e4-c65ce9336042">
+				<Properties>
+					<Name>ВыпускКомплексныхФинансовыхИнструментов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выпуск комплексных финансовых инструментов (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a3b952d0-9dcd-4218-ad2a-ffbd33b0db4d">
+				<Properties>
+					<Name>ВыкупСобственныхАкций</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выкуп собственных акций (долей) (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="7cf44929-1baa-471c-9d68-6f74da0c14d5">
+				<Properties>
+					<Name>ВыкупСобственныхДолевыхИнструментов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выкуп собственных долевых инструментов (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a1e77d4d-b899-4553-86db-bead58cadc15">
+				<Properties>
+					<Name>ВыплатаПроцентовФинансовая</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выплата процентов (фин.деятельность) (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d6175c95-671f-4624-a444-4207ed548217">
+				<Properties>
+					<Name>ВыплатаДивидендов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выплата дивидендов и других платежей в пользу собственников</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d62e7636-711e-4da8-9694-93d679bd5e53">
+				<Properties>
+					<Name>ВыплатаДолиМеньшинства</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выплата доли меньшинства (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="f9567b01-049a-479b-8220-278910cb5a59">
+				<Properties>
+					<Name>ПриобретениеДоходныхВложенийВМатериальныеЦенности</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приобретение доходных вложений в материальные ценности (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="62713652-a267-46d2-a8e4-ff2baf95f6b2">
+				<Properties>
+					<Name>ПриобретениеНематериальныхАктивов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приобретение нематериальных активов (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d5dd1fcd-29e1-4daf-a060-86148c6aec7f">
+				<Properties>
+					<Name>ВыручкаОтПродажиНематериальныхАктивов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выручка от продажи нематериальных активов (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d155a317-e175-4ae3-af34-3488d270c1ed">
+				<Properties>
+					<Name>ВыручкаОтПродажиДоходныхВложений</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выручка от продажи доходных вложений в мат.ценности (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d2e14369-9c7a-4356-8f98-2617feb1ad0e">
+				<Properties>
+					<Name>ОплатаПоПенсионнымПланам</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплата по пенсионным планам (до 2011г.)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b5dc3677-de2d-46b9-900f-f2074c1479b3">
+				<Properties>
+					<Name>ВыпускДолговыхИнструментов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выпуск облигаций, векселей и других долговых ценных бумаг и др.</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b1814e21-9a65-4783-9c59-411081b5e1ff">
+				<Properties>
+					<Name>АрендныеПлатежиРоялтиЛицензионныеПлатежиГонорарыКомиссионные</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Арендные платежи, роялти, лицензионные платежи, гонорары, комиссионные и иные аналогичные платежи</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="6a47ddd6-ecea-4fbb-8069-36edab7a1e52">
+				<Properties>
+					<Name>ПоступленияОтПерепродажиФинансовыхВложений</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поступления от перепродажи финансовых вложений</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="ac6f54f5-b35c-4fb1-99b0-03df9310dabf">
+				<Properties>
+					<Name>ВыплатаПроцентовПоДолговымОбязательствам</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выплата процентов по долговым обязательствам</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="8d5c4e47-4599-4b05-a276-6bee0e7b8692">
+				<Properties>
+					<Name>НалогНаПрибыль</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Налог на прибыль</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="2d13c7b5-d70d-4d54-959f-a30f4bdccd1b">
+				<Properties>
+					<Name>ВыручкаОтПродажиВнеоборотныхАктивовКромеФинансовых</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выручка от продажи внеоборотных активов (кроме финансовых вложений)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="3d340988-9e76-4120-8ec4-e4d38433c2c5">
+				<Properties>
+					<Name>ПоступленияОтПродажиАкцийДругихОрганизаций</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поступления от продажи акций (долей участия) в других организациях</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="862829ce-ebe1-43da-9ac4-81fcce1f7d34">
+				<Properties>
+					<Name>ПоступленияОтПогашенияЗаймовПродажиДолговыхЦенныхБумаг</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поступления от погашения займов, от продажи долговых ценных бумаг</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="fbbf0e9d-1933-4d09-a549-7a572f3a02f0">
+				<Properties>
+					<Name>ПоступлениеОтДивидендовПроцентовПоДолговымФинансовымВложениям</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поступления от дивидендов, процентов по долговым финансовым вложениям</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="5e8bf42c-e319-4825-a55f-04162d121c42">
+				<Properties>
+					<Name>ПриобретениеСозданиеМодернизацияРеконструкцияВнеоборотныхАктивов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приобретение, создание, модернизация и реконструкция внеоборотных активов</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="92ad4f0e-971a-45c5-a83f-c23a9ad6c842">
+				<Properties>
+					<Name>ПриобретениеАкцийДругихОрганизаций</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приобретение акций (долей) в других организациях</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b50e756d-688a-4958-ba28-5801baebfdf8">
+				<Properties>
+					<Name>ПриобретениеДолговыхЦенныхБумагПредоставлениеЗаймов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приобретение долговых ценных бумаг, предоставление займов другим лицам</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="da23cf01-3792-40ea-bbbe-b098ea4dbbf0">
+				<Properties>
+					<Name>ПлатежиСобственникамВСвязиСВыкупомАкцийИлиПриВыходеИзСоставаУчастников</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Платежи собственникам в связи с выкупом у них акций (долей) или их выходом из состава участников</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="9e3bba50-0a60-4fa9-8e0c-1452d4a28ba5">
+				<Properties>
+					<Name>ПогашениеДолговыйЦенныхБумагВозвратКредитовИЗаймов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Погашение (выкуп) векселей и других долговых ценных бумаг, возврат кредитов и займов</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="4ecdb8eb-8be6-4433-bcdd-5df7e2a00bd3">
+				<Properties>
+					<Name>ПоступлениеДенежныхВкладовСобственников</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поступления денежных вкладов собственников (участников)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

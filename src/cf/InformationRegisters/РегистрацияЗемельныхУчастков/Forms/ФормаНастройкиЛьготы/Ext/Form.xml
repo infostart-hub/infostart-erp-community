@@ -1,0 +1,855 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаОК" id="52">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ОК</CommandName>
+				<ExtendedTooltip name="ФормаОКExtendedTooltip" id="66"/>
+			</Button>
+			<Button name="ФормаОтмена" id="53">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Отмена</CommandName>
+				<ExtendedTooltip name="ФормаОтменаExtendedTooltip" id="67"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЛьготаПоНалоговойБазе" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Льгота по налоговой базе</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<Group>Vertical</Group>
+			<VerticalSpacing>Half</VerticalSpacing>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаЛьготаПоНалоговойБазеExtendedTooltip" id="68"/>
+			<ChildItems>
+				<RadioButtonField name="НалоговаяЛьготаПоНалоговойБазеНеПрименяется" id="26">
+					<DataPath>НалоговаяЛьготаПоНалоговойБазе</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Не применяется</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ВидНалоговойЛьготыПоНалоговойБазеПоЗемельномуНалогу.EnumValue.НеПрименяется</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="НалоговаяЛьготаПоНалоговойБазеНеПрименяетсяКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="НалоговаяЛьготаПоНалоговойБазеНеПрименяетсяExtendedTooltip" id="69"/>
+					<Events>
+						<Event name="OnChange">НалоговаяЛьготаПоНалоговойБазеПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<RadioButtonField name="НалоговаяЛьготаПоНалоговойБазеОсвобождениеОтНалогообложенияМестное" id="28">
+					<DataPath>НалоговаяЛьготаПоНалоговойБазе</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Освобождение от налогообложения в соответствии с местным нормативным актом</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ВидНалоговойЛьготыПоНалоговойБазеПоЗемельномуНалогу.EnumValue.ОсвобождениеОтНалогообложенияМестное</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="НалоговаяЛьготаПоНалоговойБазеОсвобождениеОтНалогообложенияМестноеКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="НалоговаяЛьготаПоНалоговойБазеОсвобождениеОтНалогообложенияМестноеExtendedTooltip" id="70"/>
+					<Events>
+						<Event name="OnChange">НалоговаяЛьготаПоНалоговойБазеПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<UsualGroup name="ГруппаНалоговаяЛьготаПоНалоговойБазеОсвобождениеОтНалогообложенияПоСтатье395" id="63">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Налоговая льгота по налоговой базе освобождение от налогообложения по ст. 395</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНалоговаяЛьготаПоНалоговойБазеОсвобождениеОтНалогообложенияПоСтатье395ExtendedTooltip" id="71"/>
+					<ChildItems>
+						<RadioButtonField name="НалоговаяЛьготаПоНалоговойБазеОсвобождениеОтНалогообложенияПоСтатье395" id="30">
+							<DataPath>НалоговаяЛьготаПоНалоговойБазе</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Освобождение от налогообложения по ст. 395 НК РФ, код льготы:</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ВидНалоговойЛьготыПоНалоговойБазеПоЗемельномуНалогу.EnumValue.ОсвобождениеОтНалогообложенияПоСтатье395</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="НалоговаяЛьготаПоНалоговойБазеОсвобождениеОтНалогообложенияПоСтатье395КонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="НалоговаяЛьготаПоНалоговойБазеОсвобождениеОтНалогообложенияПоСтатье395ExtendedTooltip" id="72"/>
+							<Events>
+								<Event name="OnChange">НалоговаяЛьготаПоНалоговойБазеПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<InputField name="КодНалоговойЛьготыОсвобождениеОтНалогообложенияПоСтатье395" id="64">
+							<DataPath>КодНалоговойЛьготыОсвобождениеОтНалогообложенияПоСтатье395</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="КодНалоговойЛьготыОсвобождениеОтНалогообложенияПоСтатье395КонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="КодНалоговойЛьготыОсвобождениеОтНалогообложенияПоСтатье395ExtendedTooltip" id="73"/>
+							<Events>
+								<Event name="StartChoice">КодНалоговойЛьготыОсвобождениеОтНалогообложенияПоСтатье395НачалоВыбора</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНалоговаяЛьготаПоНалоговойБазеНеОблагаемаяНалогомПлощадь" id="56">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Налоговая льгота по налоговой базе не облагаемая налогом площадь</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНалоговаяЛьготаПоНалоговойБазеНеОблагаемаяНалогомПлощадьExtendedTooltip" id="74"/>
+					<ChildItems>
+						<RadioButtonField name="НалоговаяЛьготаПоНалоговойБазеНеОблагаемаяНалогомПлощадь" id="32">
+							<DataPath>НалоговаяЛьготаПоНалоговойБазе</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Доля не облагаемой налогом площади:</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ВидНалоговойЛьготыПоНалоговойБазеПоЗемельномуНалогу.EnumValue.НеОблагаемаяНалогомПлощадь</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="НалоговаяЛьготаПоНалоговойБазеНеОблагаемаяНалогомПлощадьКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="НалоговаяЛьготаПоНалоговойБазеНеОблагаемаяНалогомПлощадьExtendedTooltip" id="75"/>
+							<Events>
+								<Event name="OnChange">НалоговаяЛьготаПоНалоговойБазеПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<InputField name="ДоляНеОблагаемойНалогомПлощадиЧислитель" id="57">
+							<DataPath>ДоляНеОблагаемойНалогомПлощадиЧислитель</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ДоляНеОблагаемойНалогомПлощадиЧислительКонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="ДоляНеОблагаемойНалогомПлощадиЧислительExtendedTooltip" id="76"/>
+						</InputField>
+						<LabelDecoration name="Декорация7" id="59">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>/</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация7КонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="Декорация7ExtendedTooltip" id="77"/>
+						</LabelDecoration>
+						<InputField name="ДоляНеОблагаемойНалогомПлощадиЗнаменатель" id="61">
+							<DataPath>ДоляНеОблагаемойНалогомПлощадиЗнаменатель</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>/</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ДоляНеОблагаемойНалогомПлощадиЗнаменательКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="ДоляНеОблагаемойНалогомПлощадиЗнаменательExtendedTooltip" id="78"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаУменьшениеНалоговойБазы" id="119">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа уменьшение налоговой базы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа уменьшение налоговой базы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<VerticalSpacing>Half</VerticalSpacing>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаУменьшениеНалоговойБазыРасширеннаяПодсказка" id="120"/>
+					<ChildItems>
+						<RadioButtonField name="НалоговаяЛьготаПоНалоговойБазеУменьшениеНалоговойБазы" id="34">
+							<DataPath>НалоговаяЛьготаПоНалоговойБазе</DataPath>
+							<Visible>false</Visible>
+							<TitleLocation>None</TitleLocation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Уменьшение налоговой базы:</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ВидНалоговойЛьготыПоНалоговойБазеПоЗемельномуНалогу.EnumValue.УменьшениеНалоговойБазы</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="НалоговаяЛьготаПоНалоговойБазеУменьшениеНалоговойБазыКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="НалоговаяЛьготаПоНалоговойБазеУменьшениеНалоговойБазыExtendedTooltip" id="79"/>
+							<Events>
+								<Event name="OnChange">НалоговаяЛьготаПоНалоговойБазеПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<UsualGroup name="ГруппаУменьшениеНалоговойБазыПоСтатье391" id="40">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Уменьшение налоговой базы по статье 391</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУменьшениеНалоговойБазыПоСтатье391ExtendedTooltip" id="80"/>
+							<ChildItems>
+								<CheckBoxField name="УменьшениеНалоговойБазыПоСтатье391" id="36">
+									<DataPath>УменьшениеНалоговойБазыПоСтатье391</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="УменьшениеНалоговойБазыПоСтатье391КонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="УменьшениеНалоговойБазыПоСтатье391ExtendedTooltip" id="82"/>
+									<Events>
+										<Event name="OnChange">УменьшениеНалоговойБазыПоСтатье391ПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="КодНалоговойЛьготыУменьшениеНалоговойБазыПоСтатье391" id="46">
+									<DataPath>КодНалоговойЛьготыУменьшениеНалоговойБазыПоСтатье391</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ChoiceButton>true</ChoiceButton>
+									<ContextMenu name="КодНалоговойЛьготыУменьшениеНалоговойБазыПоСтатье391КонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="КодНалоговойЛьготыУменьшениеНалоговойБазыПоСтатье391ExtendedTooltip" id="83"/>
+									<Events>
+										<Event name="StartChoice">КодНалоговойЛьготыУменьшениеНалоговойБазыПоСтатье391НачалоВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУменьшениеНалоговойБазыНаСумму" id="43">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Уменьшение налоговой базы на сумму</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУменьшениеНалоговойБазыНаСуммуExtendedTooltip" id="84"/>
+							<ChildItems>
+								<RadioButtonField name="НалоговаяЛьготаПоНалоговойБазеУменьшениеНалоговойБазыНаСумму" id="121">
+									<DataPath>НалоговаяЛьготаПоНалоговойБазе</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Уменьшение налоговой базы на установленную
+местным нормативным актом сумму:</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xr:DesignTimeRef">Enum.ВидНалоговойЛьготыПоНалоговойБазеПоЗемельномуНалогу.EnumValue.УменьшениеНалоговойБазы</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="НалоговаяЛьготаПоНалоговойБазеУменьшениеНалоговойБазыНаСуммуКонтекстноеМеню" id="122"/>
+									<ExtendedTooltip name="НалоговаяЛьготаПоНалоговойБазеУменьшениеНалоговойБазыНаСуммуРасширеннаяПодсказка" id="123"/>
+									<Events>
+										<Event name="OnChange">НалоговаяЛьготаПоНалоговойБазеПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+								<CheckBoxField name="УменьшениеНалоговойБазыНаСумму" id="38">
+									<DataPath>УменьшениеНалоговойБазыНаСумму</DataPath>
+									<Visible>false</Visible>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="УменьшениеНалоговойБазыНаСуммуКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="УменьшениеНалоговойБазыНаСуммуExtendedTooltip" id="86"/>
+									<Events>
+										<Event name="OnChange">УменьшениеНалоговойБазыНаСуммуПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="НеОблагаемаяНалогомСумма" id="48">
+									<DataPath>НеОблагаемаяНалогомСумма</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ChoiceButton>false</ChoiceButton>
+									<ContextMenu name="НеОблагаемаяНалогомСуммаКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="НеОблагаемаяНалогомСуммаExtendedTooltip" id="87"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЛьготаПоСуммеНалога" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Льгота в виде уменьшения суммы налога
+</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<Group>Vertical</Group>
+			<VerticalSpacing>Half</VerticalSpacing>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаЛьготаПоСуммеНалогаExtendedTooltip" id="89"/>
+			<ChildItems>
+				<RadioButtonField name="ВариантУменьшенияСуммыНалогаНеПрименяется" id="111">
+					<DataPath>ВариантУменьшенияСуммыНалога</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ColumnsCount>1</ColumnsCount>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>не применяется</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ВидНалоговойЛьготыПоСуммеНалогаПоЗемельномуНалогу.EnumValue.НеПрименяется</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВариантУменьшенияСуммыНалогаНеПрименяетсяКонтекстноеМеню" id="112"/>
+					<ExtendedTooltip name="ВариантУменьшенияСуммыНалогаНеПрименяетсяРасширеннаяПодсказка" id="113"/>
+					<Events>
+						<Event name="OnChange">ВариантУменьшенияСуммыНалогаПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<UsualGroup name="ГруппаВариантУменьшенияСуммыНалогаУменьшениеСуммыНалогаВПроцентах" id="117">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вариант уменьшения суммы налога уменьшение суммы налога в процентах</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВариантУменьшенияСуммыНалогаУменьшениеСуммыНалогаВПроцентахРасширеннаяПодсказка" id="118"/>
+					<ChildItems>
+						<RadioButtonField name="ВариантУменьшенияСуммыНалогаУменьшениеСуммыНалогаВПроцентах" id="114">
+							<DataPath>ВариантУменьшенияСуммыНалога</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ColumnsCount>1</ColumnsCount>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>в процентах:</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ВидНалоговойЛьготыПоСуммеНалогаПоЗемельномуНалогу.EnumValue.УменьшениеСуммыНалогаВПроцентах</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ВариантУменьшенияСуммыНалогаУменьшениеСуммыНалогаВПроцентахКонтекстноеМеню" id="115"/>
+							<ExtendedTooltip name="ВариантУменьшенияСуммыНалогаУменьшениеСуммыНалогаВПроцентахРасширеннаяПодсказка" id="116"/>
+							<Events>
+								<Event name="OnChange">ВариантУменьшенияСуммыНалогаПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<InputField name="ПроцентУменьшенияСуммыНалога" id="11">
+							<DataPath>ПроцентУменьшенияСуммыНалога</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ChoiceButton>false</ChoiceButton>
+							<ContextMenu name="ПроцентУменьшенияСуммыНалогаКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ПроцентУменьшенияСуммыНалогаExtendedTooltip" id="93"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВариантУменьшенияСуммыНалогаУменьшениеСуммыНалогаНаСумму" id="106">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вариант уменьшения суммы налога уменьшение суммы налога на сумму</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВариантУменьшенияСуммыНалогаУменьшениеСуммыНалогаНаСуммуРасширеннаяПодсказка" id="107"/>
+					<ChildItems>
+						<RadioButtonField name="ВариантУменьшенияСуммыНалогаУменьшениеСуммыНалогаНаСумму" id="5">
+							<DataPath>ВариантУменьшенияСуммыНалога</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ColumnsCount>1</ColumnsCount>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>на сумму:</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ВидНалоговойЛьготыПоСуммеНалогаПоЗемельномуНалогу.EnumValue.УменьшениеСуммыНалогаНаСумму</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ВариантУменьшенияСуммыНалогаУменьшениеСуммыНалогаНаСуммуКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="ВариантУменьшенияСуммыНалогаУменьшениеСуммыНалогаНаСуммуРасширеннаяПодсказка" id="90"/>
+							<Events>
+								<Event name="OnChange">ВариантУменьшенияСуммыНалогаПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<InputField name="СуммаУменьшенияСуммыНалога" id="13">
+							<DataPath>СуммаУменьшенияСуммыНалога</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ChoiceButton>false</ChoiceButton>
+							<ContextMenu name="СуммаУменьшенияСуммыНалогаКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="СуммаУменьшенияСуммыНалогаExtendedTooltip" id="97"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЛьготаВВидеСниженияНалоговойСтавки" id="104">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Льгота в виде снижения налоговой ставки
+</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Льгота в виде снижения налоговой ставки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<VerticalSpacing>Half</VerticalSpacing>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаЛьготаВВидеСниженияНалоговойСтавкиРасширеннаяПодсказка" id="105"/>
+			<ChildItems>
+				<RadioButtonField name="СнижениеНалоговойСтавкиНеПрименяется" id="19">
+					<DataPath>СнижениеНалоговойСтавки</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>не применяется</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">0</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="СнижениеНалоговойСтавкиНеПрименяетсяКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="СнижениеНалоговойСтавкиНеПрименяетсяExtendedTooltip" id="99"/>
+					<Events>
+						<Event name="OnChange">СнижениеНалоговойСтавкиПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<UsualGroup name="ГруппаСнижениеНалоговойСтавки" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа снижение налоговой ставки</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСнижениеНалоговойСтавкиExtendedTooltip" id="100"/>
+					<ChildItems>
+						<RadioButtonField name="СнижениеНалоговойСтавкиПрименяется" id="21">
+							<DataPath>СнижениеНалоговойСтавки</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>пониженная ставка налога:</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="СнижениеНалоговойСтавкиПрименяетсяКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="СнижениеНалоговойСтавкиПрименяетсяExtendedTooltip" id="101"/>
+							<Events>
+								<Event name="OnChange">СнижениеНалоговойСтавкиПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<InputField name="СниженнаяНалоговаяСтавка" id="24">
+							<DataPath>СниженнаяНалоговаяСтавка</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ChoiceButton>false</ChoiceButton>
+							<ContextMenu name="СниженнаяНалоговаяСтавкаКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="СниженнаяНалоговаяСтавкаExtendedTooltip" id="102"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ВариантУменьшенияСуммыНалога" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уменьшение суммы налога</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидНалоговойЛьготыПоСуммеНалогаПоЗемельномуНалогу</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоляНеОблагаемойНалогомПлощадиЗнаменатель" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Знаменатель (доля не облагаемой налогом площади)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ДоляНеОблагаемойНалогомПлощадиЧислитель" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Числитель (доля не облагаемой налогом площади)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="КодНалоговойЛьготыОсвобождениеОтНалогообложенияПоСтатье395" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код налоговой льготы (освобождение от налогообложения по ст. 395 НК РФ)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>7</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="КодНалоговойЛьготыУменьшениеНалоговойБазыПоСтатье391" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код налоговой льготы (уменьшение налоговой базы по ст. 391 НК РФ)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>7</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="НалоговаяЛьготаПоНалоговойБазе" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Налоговая льгота по налоговой базе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидНалоговойЛьготыПоНалоговойБазеПоЗемельномуНалогу</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="НеОблагаемаяНалогомСумма" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не облагаемая налогом сумма</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ПроцентУменьшенияСуммыНалога" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процент уменьшения суммы налога</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>7</v8:Digits>
+					<v8:FractionDigits>4</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="СнижениеНалоговойСтавки" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снижение налоговой ставки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СниженнаяНалоговаяСтавка" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сниженная налоговая ставка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>4</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="СуммаУменьшенияСуммыНалога" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма уменьшения суммы налога</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="УменьшениеНалоговойБазыНаСумму" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>на установленную местным нормативным актом сумму:</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="УменьшениеНалоговойБазыПоСтатье391" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>по ст. 391 НК РФ на 10 000 рублей, код льготы:</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Период" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НалоговаяСтавка" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Налоговая ставка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>4</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Отмена" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОК" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalSpacing>Half</VerticalSpacing>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="40">
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<InputField name="ВидПлатежа" id="4">
+					<DataPath>Запись.ВидПлатежа</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ВидПлатежаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ВидПлатежаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Организация" id="7">
+					<DataPath>Запись.Организация</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<UsualGroup name="Группа3" id="50">
+					<HorizontalStretch>true</HorizontalStretch>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="51"/>
+					<ChildItems>
+						<InputField name="АдминистраторДохода" id="44">
+							<DataPath>АдминистраторДохода</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="АдминистраторДоходаКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="АдминистраторДоходаРасширеннаяПодсказка" id="46"/>
+							<Events>
+								<Event name="StartChoice">Атрибут_НачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ВидДохода" id="47">
+							<DataPath>ВидДохода</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="ВидДоходаКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="ВидДоходаРасширеннаяПодсказка" id="49"/>
+							<Events>
+								<Event name="StartChoice">Атрибут_НачалоВыбора</Event>
+								<Event name="ChoiceProcessing">Атрибут_ОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ПодвидДохода" id="52">
+							<DataPath>ПодвидДохода</DataPath>
+							<ContextMenu name="ПодвидДоходаКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="ПодвидДоходаРасширеннаяПодсказка" id="54"/>
+						</InputField>
+						<InputField name="КОСГУ" id="55">
+							<DataPath>КОСГУ</DataPath>
+							<ContextMenu name="КОСГУКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="КОСГУРасширеннаяПодсказка" id="57"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизиты для платежных поручений</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="43"/>
+			<ChildItems>
+				<InputField name="Получатель" id="13">
+					<DataPath>Запись.Получатель</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ПолучательКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ПолучательРасширеннаяПодсказка" id="15"/>
+					<Events>
+						<Event name="OnChange">Атрибут_ПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="СчетПолучателя" id="16">
+					<DataPath>Запись.СчетПолучателя</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Владелец</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Запись.Получатель</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
+					<ContextMenu name="СчетПолучателяКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="СчетПолучателяРасширеннаяПодсказка" id="18"/>
+					<Events>
+						<Event name="OnChange">Атрибут_ПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВидПеречисления" id="19">
+					<DataPath>Запись.ВидПеречисления</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид платежа:</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ВидПеречисленияКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ВидПеречисленияРасширеннаяПодсказка" id="21"/>
+				</InputField>
+				<InputField name="КодБК" id="1">
+					<DataPath>Запись.КодБК</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="КодБККонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодБКРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="СтатусСоставителя" id="22">
+					<DataPath>Запись.СтатусСоставителя</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChooseType>false</ChooseType>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="СтатусСоставителяКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="СтатусСоставителяРасширеннаяПодсказка" id="24"/>
+					<Events>
+						<Event name="OnChange">Атрибут_ПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПоказательОснования" id="25">
+					<DataPath>Запись.ПоказательОснования</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основание</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChooseType>false</ChooseType>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ПоказательОснованияКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ПоказательОснованияРасширеннаяПодсказка" id="27"/>
+					<Events>
+						<Event name="OnChange">Атрибут_ПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПоказательТипа" id="10">
+					<DataPath>Запись.ПоказательТипа</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип платежа:</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChooseType>false</ChooseType>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ПоказательТипаКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ПоказательТипаРасширеннаяПодсказка" id="12"/>
+					<Events>
+						<Event name="OnChange">Атрибут_ПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПоказательПериода" id="34">
+					<DataPath>Запись.ПоказательПериода</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Периодичность</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Периодичность\Код таможенного органа:</v8:content>
+						</v8:item>
+					</ToolTip>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChooseType>false</ChooseType>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ПоказательПериодаКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ПоказательПериодаРасширеннаяПодсказка" id="36"/>
+					<Events>
+						<Event name="OnChange">Атрибут_ПриИзменении</Event>
+					</Events>
+				</InputField>
+				<UsualGroup name="Группа4" id="58">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="59"/>
+					<ChildItems>
+						<InputField name="НазначениеПлатежа" id="31">
+							<DataPath>Запись.НазначениеПлатежа</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="НазначениеПлатежаКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="НазначениеПлатежаРасширеннаяПодсказка" id="33"/>
+						</InputField>
+						<InputField name="ОчередностьПлатежа" id="28">
+							<DataPath>Запись.ОчередностьПлатежа</DataPath>
+							<Width>2</Width>
+							<SpinButton>true</SpinButton>
+							<ContextMenu name="ОчередностьПлатежаКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ОчередностьПлатежаРасширеннаяПодсказка" id="30"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="СтатьяДвиженияДенежныхСредств" id="37">
+					<DataPath>Запись.СтатьяДвиженияДенежныхСредств</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="СтатьяДвиженияДенежныхСредствКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="СтатьяДвиженияДенежныхСредствРасширеннаяПодсказка" id="39"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.РеквизитыУплатыНалоговИПлатежейВБюджет</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="АдминистраторДохода" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разряды 1 - 3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>3</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидДохода" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>4 - 13</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПодвидДохода" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>14 - 17</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>4</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КОСГУ" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>18 - 20</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>3</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

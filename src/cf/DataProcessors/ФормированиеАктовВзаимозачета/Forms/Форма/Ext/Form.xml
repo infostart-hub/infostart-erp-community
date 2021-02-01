@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="29">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<InputField name="НаДату" id="1">
+					<DataPath>Объект.НаДату</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаДатуКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НаДатуРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Организация" id="4">
+					<DataPath>Объект.Организация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<Button name="Сформировать" id="33">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.СформироватьАктВзаимозачета</CommandName>
+					<ExtendedTooltip name="СформироватьРасширеннаяПодсказка" id="34"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счета учета</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="false" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="32"/>
+			<ChildItems>
+				<Table name="ПараметрыФормирования" id="7">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.ПараметрыФормирования</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ПараметрыФормированияКонтекстноеМеню" id="8"/>
+					<AutoCommandBar name="ПараметрыФормированияКоманднаяПанель" id="9">
+						<ChildItems>
+							<Button name="ПараметрыФормированияЗаполнитьПоУмолчаниюПараметрыФормирования" id="35">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗаполнитьПоУмолчаниюПараметрыФормирования</CommandName>
+								<ExtendedTooltip name="ПараметрыФормированияЗаполнитьПоУмолчаниюПараметрыФормированияРасширеннаяПодсказка" id="36"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ПараметрыФормированияРасширеннаяПодсказка" id="10"/>
+					<SearchStringAddition name="ПараметрыФормированияСтрокаПоиска" id="11">
+						<AdditionSource>
+							<Item>ПараметрыФормирования</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПараметрыФормированияСтрокаПоискаКонтекстноеМеню" id="12"/>
+						<ExtendedTooltip name="ПараметрыФормированияСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПараметрыФормированияСостояниеПросмотра" id="14">
+						<AdditionSource>
+							<Item>ПараметрыФормирования</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПараметрыФормированияСостояниеПросмотраКонтекстноеМеню" id="15"/>
+						<ExtendedTooltip name="ПараметрыФормированияСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПараметрыФормированияУправлениеПоиском" id="17">
+						<AdditionSource>
+							<Item>ПараметрыФормирования</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПараметрыФормированияУправлениеПоискомКонтекстноеМеню" id="18"/>
+						<ExtendedTooltip name="ПараметрыФормированияУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="ПараметрыФормированияТОП" id="26">
+							<DataPath>Объект.ПараметрыФормирования.ТОП</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Типовая операция</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПараметрыФормированияТОПКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="ПараметрыФормированияТОПРасширеннаяПодсказка" id="28"/>
+						</InputField>
+						<InputField name="ПараметрыФормированияСчетПоставщика" id="20">
+							<DataPath>Объект.ПараметрыФормирования.СчетПоставщика</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПараметрыФормированияСчетПоставщикаКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="ПараметрыФормированияСчетПоставщикаРасширеннаяПодсказка" id="22"/>
+						</InputField>
+						<InputField name="ПараметрыФормированияСчетПокупателя" id="23">
+							<DataPath>Объект.ПараметрыФормирования.СчетПокупателя</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПараметрыФормированияСчетПокупателяКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="ПараметрыФормированияСчетПокупателяРасширеннаяПодсказка" id="25"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ФормированиеАктовВзаимозачета</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СформироватьАктВзаимозачета" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать акты взаимозачета</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыполнитьДействие</Action>
+		</Command>
+		<Command name="ЗаполнитьПоУмолчаниюПараметрыФормирования" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по умолчанию параметры формирования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьДействие</Action>
+		</Command>
+	</Commands>
+</Form>

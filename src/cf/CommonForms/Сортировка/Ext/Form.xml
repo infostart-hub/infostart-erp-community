@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Customizable>false</Customizable>
+	<CommandBarLocation>None</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="18">
+			<EnableContentChange>true</EnableContentChange>
+			<Group>Horizontal</Group>
+			<United>false</United>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="19"/>
+			<ChildItems>
+				<Table name="ДоступныеПоля" id="1">
+					<Representation>Tree</Representation>
+					<Autofill>true</Autofill>
+					<Width>30</Width>
+					<HeightInTableRows>15</HeightInTableRows>
+					<ChoiceMode>true</ChoiceMode>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>КомпоновщикНастроек.Settings.Order.OrderAvailableFields</DataPath>
+					<ContextMenu name="ДоступныеПоляКонтекстноеМеню" id="2"/>
+					<AutoCommandBar name="ДоступныеПоляКоманднаяПанель" id="3">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ДоступныеПоляРасширеннаяПодсказка" id="4"/>
+					<SearchStringAddition name="ДоступныеПоляСтрокаПоиска" id="5">
+						<AdditionSource>
+							<Item>ДоступныеПоля</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДоступныеПоляСтрокаПоискаКонтекстноеМеню" id="6"/>
+						<ExtendedTooltip name="ДоступныеПоляСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ДоступныеПоляСостояниеПросмотра" id="8">
+						<AdditionSource>
+							<Item>ДоступныеПоля</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДоступныеПоляСостояниеПросмотраКонтекстноеМеню" id="9"/>
+						<ExtendedTooltip name="ДоступныеПоляСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ДоступныеПоляУправлениеПоиском" id="11">
+						<AdditionSource>
+							<Item>ДоступныеПоля</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ДоступныеПоляУправлениеПоискомКонтекстноеМеню" id="12"/>
+						<ExtendedTooltip name="ДоступныеПоляУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+					</SearchControlAddition>
+				</Table>
+				<Table name="Порядок" id="33">
+					<Representation>List</Representation>
+					<Autofill>true</Autofill>
+					<Width>60</Width>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>КомпоновщикНастроек.Settings.Order</DataPath>
+					<CommandSet>
+						<ExcludedCommand>AddAutoOrderItem</ExcludedCommand>
+						<ExcludedCommand>AddOrderItem</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>UserSettingItemProperties</ExcludedCommand>
+					</CommandSet>
+					<ContextMenu name="ПорядокКонтекстноеМеню" id="34"/>
+					<AutoCommandBar name="ПорядокКоманднаяПанель" id="35">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="ПрименитьНастройку" id="14">
+								<Type>CommandBarButton</Type>
+								<DefaultButton>true</DefaultButton>
+								<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+								<GroupVerticalAlign>Center</GroupVerticalAlign>
+								<CommandName>Form.Command.ПрименитьНастройку</CommandName>
+								<ExtendedTooltip name="ПрименитьНастройкуРасширеннаяПодсказка" id="15"/>
+							</Button>
+							<ButtonGroup name="ПорядокГруппа1" id="46">
+								<CommandSource>Item.Порядок</CommandSource>
+								<ExtendedTooltip name="ПорядокГруппа1РасширеннаяПодсказка" id="47"/>
+							</ButtonGroup>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ПорядокРасширеннаяПодсказка" id="36"/>
+					<SearchStringAddition name="ПорядокСтрокаПоиска" id="37">
+						<AdditionSource>
+							<Item>Порядок</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПорядокСтрокаПоискаКонтекстноеМеню" id="38"/>
+						<ExtendedTooltip name="ПорядокСтрокаПоискаРасширеннаяПодсказка" id="39"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПорядокСостояниеПросмотра" id="40">
+						<AdditionSource>
+							<Item>Порядок</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПорядокСостояниеПросмотраКонтекстноеМеню" id="41"/>
+						<ExtendedTooltip name="ПорядокСостояниеПросмотраРасширеннаяПодсказка" id="42"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПорядокУправлениеПоиском" id="43">
+						<AdditionSource>
+							<Item>Порядок</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПорядокУправлениеПоискомКонтекстноеМеню" id="44"/>
+						<ExtendedTooltip name="ПорядокУправлениеПоискомРасширеннаяПодсказка" id="45"/>
+					</SearchControlAddition>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="КомпоновщикНастроек" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Компоновщик настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>dcsset:SettingsComposer</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Реквизит1" id="1">
+			<Type>
+				<v8:Type>cfg:ReportObject</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПрименитьНастройку" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить настройку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить настройку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПрименитьНастройку</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>
